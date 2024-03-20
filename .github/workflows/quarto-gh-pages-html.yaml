@@ -39,7 +39,8 @@ jobs:
         run: |
           R -e "install.packages('xml2')"
           R -e "install.packages('downlit')"
-     
+          R -e "install.packages('yaml')"
+      
       - name: Create and populate .Renviron file
         run: |
           echo "RENV_CONFIG_SANDBOX_ENABLED=FALSE" >> ~/.Renviron
