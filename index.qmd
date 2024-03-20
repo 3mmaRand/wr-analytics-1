@@ -1,0 +1,45 @@
+---
+title: "White Rose Analytics 1"
+toc: true
+toc-location: right
+---
+
+Introduction to Reproducibility in R
+Training programme for first year PhD students on the White Rose Universities (York, Sheffield, Leeds) DTP. It is designed and delivered by Emma Rand of The University of York.
+
+Overview
+An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Introduction to reproducible analyses in R comes in!
+
+R is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.
+
+
+Philosophy and approach
+It is impossible to cover everything to you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.
+
+I recognise that people will enter this training with a diverse range of previous experience in R. This is a challenge to manage but the aim is for everyone to get something out of the training no matter where they start. There will be sessions for those with and without previous experience. I recommend you:
+
+sit close to the front of the class if you are completely new to R and towards the back if you have some experience
+bring headphones to allow you to ignore tutor-led material when needed
+
+
+
+Learning outcomes
+After this workshop the successful learner will be able to:
+
+Find their way around the RStudio windows
+Create and plot data using the base package and ggplot
+Explain the rationale for scripting analysis
+Use the help pages
+Know how to make additional packages available in an R session
+Understand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import
+Summarise data in a single group or in multiple groups
+Recognise tidy data format and carry out some typical data tidying tasks
+Develop highly organised analyses including well-commented scripts that can be understood by future you and others
+Use R Markdown to produce reproducible analyses, figures and reports
+
+Precourse survey
+To help me direct you to useful training and manage diversity in previous experience during the sessions, please complete this form to indicate your current level: https://forms.gle/cpSjdcjVa7niz6iq5
+
+
+materials
+use_course

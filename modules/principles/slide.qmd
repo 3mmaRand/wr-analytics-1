@@ -1,0 +1,15 @@
+---
+title: "Principles of reproducibility"
+author: "Emma Rand"
+format: 
+  revealjs:
+    footer: "🔗 [White Rose Analytics 1](https://3mmarand.github.io/wr-analytics-1)"
+    slide-number: true
+    chalkboard: true
+    code-link: true
+    code-line-numbers: false
+bibliography: ../../references.bib
+editor: 
+  markdown: 
+    wrap: 72
+---

@@ -1,0 +1,5 @@
+---
+title: "Principles of reproducibility"
+toc: true
+toc-location: right
+---

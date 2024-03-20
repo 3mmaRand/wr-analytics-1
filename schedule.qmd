@@ -1,0 +1,19 @@
+---
+title: "Schedule"
+toc: true
+toc-location: right
+---
+
+1015 - 1030 Tutor-led for Everyone: Introduction and Principles of reproducibility
+
+1030 - 1200 Tutor-led for Beginners: Introduction to R and working with data or Supported learning for those with some R experience Tidying data and the tidyverse including the pipe
+
+1200 - 1300 Lunch
+
+1300 - 1330 Tutor-led for Everyone: Project-oriented workflow
+
+1330 - 1445 Tutor-led for Everyone: Quarto for reproducible reporting
+
+1445 - 1515 Tea and coffee break
+
+1515 - 1645 Continuation of Tutor-led for Everyone: Quarto for reproducible reporting

@@ -1,0 +1,111 @@
+project:
+  type: website
+  output-dir: _site
+
+date: last-modified
+date-format: D MMMM, YYYY
+
+website:
+  title: "White Rose Analytics 1"
+  # google-analytics: "G-TVF95J593T"
+  
+  page-footer:
+    left: "Rand E (2024). White Rose Analytics 1. <https://3mmarand.github.io/wr-analytics-1/>."
+    right:
+      - icon: mastodon
+        href: "https://mastodon.social/users/3mma"
+        text: "Emma on mastodon"
+      - icon: github
+        href: https://github.com/3mmaRand/wr-analytics-1
+        text: "Emma on GitHub"  
+  navbar:
+    background: light
+    twitter-card: true
+    site-url: https://3mmarand.github.io/wr-analytics-1/
+    repo-url: https://github.com/3mmaRand/wr-analytics-1
+    issue-url: https://github.com/3mmaRand/wr-analytics-1/issues/new/choose
+    repo-actions: [edit, issue]
+    page-navigation: true
+    search: true
+    left:
+      - text: "Welcome!"
+        file: index.qmd
+      - text: "Prerequisites"
+        file:  prerequisites.qmd
+      - text: "Schedule"
+        file:  schedule.qmd
+      - text: "Modules"
+        file:  modules/overview.qmd
+    tools:
+    right:
+      - icon: mastodon
+        href: "https://mastodon.social/users/3mma"
+        text: "Emma on mastodon"
+      - icon: github
+        href: https://github.com/3mmaRand/wr-analytics-1
+        text: "Emma on GitHub"
+
+  sidebar:
+    - title: "Modules"
+      style: "floating"
+      contents: 
+          - href: modules/overview.qmd
+          - section: "Principles of reproducibility"
+            contents: 
+             - href: modules/principles/slide.qmd
+               text: About  
+             - href: modules/principles/workshop.qmd
+               text: Workshop
+          - section: "Introduction to R and working with data"
+            contents: 
+             - href: modules/introduction/slide.qmd
+               text: About  
+             - href: modules/introduction/workshop.qmd
+               text: Workshop
+          - section: "Tidying data, tidyverse and the pipe"
+            contents: 
+             - href: modules/tidying/slide.qmd
+               text: About  
+             - href: modules/tidying/workshop.qmd
+               text: Workshop
+          - section: "Project-oriented workflow"
+            contents: 
+             - href: modules/workflow/slide.qmd
+               text: About  
+             - href: modules/workflow/workshop.qmd
+               text: Workshop
+          - section: "Quarto for reproducible reporting"
+            contents: 
+             - href: modules/quarto/slide.qmd
+               text: About  
+             - href: modules/quarto/workshop.qmd
+               text: Workshop
+execute:
+  echo: true
+  warning: false
+  output: true
+  error: true
+  collapse: true
+
+
+format:
+  html:
+    css: styles.css
+    link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/3mmarand\.github\.io\/wr-analytics-1-data'
+    theme:
+      light: [cosmo, custom.scss]
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    code-line-numbers: false
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+    
+    author-meta: Emma Rand
+
+bibliography: references.bib
+
+editor: source
