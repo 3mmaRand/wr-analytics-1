@@ -47,7 +47,7 @@
     "href": "modules/quarto/slide.html#text-formatting",
     "title": "Quarto for reproducible reporting",
     "section": "Text Formatting",
-    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italic\ns\n*\n,\n **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italic\ns\n*\n,\n\n**bold**, ***bold italics***\nitalics, bold, bold italics\n\n\ns\nuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -59,7 +59,7 @@
     "href": "modules/quarto/slide.html#headings",
     "title": "Quarto for reproducible reporting",
     "section": "Headings",
-    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\n\nHeader 3\n\n\n#### Header 4\n\n\nHeader 4",
+    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\n\nHeader 2\n\n\n### Header 3\n\n\nHeader 3\n\n\n#### Header 4\n\n\n\nHeader 4",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -71,7 +71,7 @@
     "href": "modules/quarto/slide.html#links-images",
     "title": "Quarto for reproducible reporting",
     "section": "Links & Images",
-    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)\n!",
+    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -107,7 +107,7 @@
     "href": "modules/quarto/slide.html#equations",
     "title": "Quarto for reproducible reporting",
     "section": "Equations",
-    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ni\nn\nl\ni\nne math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]\n\n\n\n\n\n\n🔗 White Rose Analytics 1",
+    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninli\nne math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]\n\n\n\n\n\n\n🔗 White Rose Analytics 1",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
