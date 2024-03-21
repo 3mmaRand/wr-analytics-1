@@ -47,7 +47,7 @@
     "href": "modules/quarto/slide.html#text-formatting",
     "title": "Quarto for reproducible reporting",
     "section": "Text Formatting",
-    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italic\ns\n*\n,\n **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -59,7 +59,7 @@
     "href": "modules/quarto/slide.html#headings",
     "title": "Quarto for reproducible reporting",
     "section": "Headings",
-    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4",
+    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\n\nHeader 3\n\n\n#### Header 4\n\n\nHeader 4",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -71,7 +71,7 @@
     "href": "modules/quarto/slide.html#links-images",
     "title": "Quarto for reproducible reporting",
     "section": "Links & Images",
-    "text": "Links & Images\n\n\n\n\n\n\nMarkdown Syntax | Output | ==============================================================+========================================================================================================+ markdown                                                 | &lt;https://github.com/3mmaRand/chaffinch&gt;                                                                                   |  &lt;https://github.com/3mmaRand/chaffinch&gt;                                         |                                                                                                        | | |\n\n\nmarkdown                                                 | [Quarto](https://github.com/3mmaRand/chaffinch)                                                                           | [Quarto](https://github.com/3mmaRand/chaffinch)                                 |                                                                                                        | | |\n\n\nmarkdown                                                 | ![Caption](512px-Chaffinch_(Fringilla_coelebs).jpg){fig-alt=\"Photo of adult male chaffinch.\"}                                     | ![Caption](512px-Chaffinch_(Fringilla_coelebs).jpg)                                     |                                                                                                        | | |\n\n\nmarkdown                                                 | [![Caption](512px-Chaffinch_(Fringilla_coelebs).jpg)](https://github.com/3mmaRand/chaffinch) [![Caption](512px-Chaffinch_(Fringilla_coelebs).jpg)](https://github.com/3mmaRand/chaffinch)               | | |\n\n\nmarkdown                                                 | [![](512px-Chaffinch_(Fringilla_coelebs).jpg){fig-alt=\"Photo of adult male chaffinch.\"}](https://github.com/3mmaRand/chaffinch) [![](512px-Chaffinch_(Fringilla_coelebs).jpg){fig-alt=\"Alt text\"}](https://github.com/3mmaRand/chaffinch)  | | |",
+    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)\n!",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -83,7 +83,19 @@
     "href": "modules/quarto/slide.html#lists",
     "title": "Quarto for reproducible reporting",
     "section": "Lists",
-    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n        - sub-sub-item 1\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n         A.  sub-sub-item 1\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n        - sub-sub-item 1\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#lists-1",
+    "href": "modules/quarto/slide.html#lists-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n         A.  sub-sub-item 1\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -95,7 +107,7 @@
     "href": "modules/quarto/slide.html#equations",
     "title": "Quarto for reproducible reporting",
     "section": "Equations",
-    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]\n\n\n\n\n\n\n🔗 White Rose Analytics 1",
+    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ni\nn\nl\ni\nne math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]\n\n\n\n\n\n\n🔗 White Rose Analytics 1",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
