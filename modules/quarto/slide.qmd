@@ -50,11 +50,7 @@ and, even more importantly, easy to read:
 | Markdown Syntax              | Output                       |
 +==============================+==============================+
 | ``` markdown                 | *italics*, **bold**, ***bold |
-| *italic                      | italics***                   |
-| s                            |                              |
-| *                            |                              |
-| ,                            |                              |
-|                              |                              |
+| *italics*,                   | italics***                   |
 | **bold**, ***bold italics*** |                              |
 | ```                          |                              |
 +------------------------------+------------------------------+
