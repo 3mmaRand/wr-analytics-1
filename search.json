@@ -11,7 +11,7 @@
     "href": "modules/quarto/slide.html#aims",
     "title": "Quarto for reproducible reporting",
     "section": "Aims",
-    "text": "Aims\nTo introduce you to Quarto for creating reproducible reports in a variety of output formats. You will also get more practice organising analyses and importing, summarising and plotting data.",
+    "text": "Aims\nTo introduce you to Quarto for creating reproducible reports in a variety of output formats. You will also get more practice organising analyses and importing, summarising and plotting data.\n🎬 Instruction to do something",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -95,7 +95,7 @@
     "href": "modules/quarto/slide.html#text-formatting",
     "title": "Quarto for reproducible reporting",
     "section": "Text Formatting",
-    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*,**bold**\nitalics, bold\n\n\n***bold italics **\nbold italics\n\n\nsuperscript^2^\nsuperscript2\n\n\nsubscript~2~\nsubscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
+    "text": "Text Formatting\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n*italics*,**bold**\n\nitalics, bold\n\n\n\n***bold italics **\nbold italics\n\n\nsuperscript^2^\nsuperscript2\n\n\n\nsubscript~2~\nsubscript2\n\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -107,7 +107,7 @@
     "href": "modules/quarto/slide.html#headings",
     "title": "Quarto for reproducible reporting",
     "section": "Headings",
-    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4",
+    "text": "Headings\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -119,7 +119,7 @@
     "href": "modules/quarto/slide.html#links-images",
     "title": "Quarto for reproducible reporting",
     "section": "Links & Images",
-    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)",
+    "text": "Links & Images\n\n\nMarkdown Syntax\nOutput\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -131,7 +131,7 @@
     "href": "modules/quarto/slide.html#lists",
     "title": "Quarto for reproducible reporting",
     "section": "Lists",
-    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n\nunordered list\n\nsub-item 1\nsub-item 2",
+    "text": "Lists\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n\nunordered list\n\nsub-item 1\nsub-item 2",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -143,7 +143,7 @@
     "href": "modules/quarto/slide.html#lists-1",
     "title": "Quarto for reproducible reporting",
     "section": "Lists",
-    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n\nordered list\nitem 2\n\nsub-item 1",
+    "text": "Lists\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n\nordered list\nitem 2\n\nsub-item 1",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -155,7 +155,7 @@
     "href": "modules/quarto/slide.html#equations",
     "title": "Quarto for reproducible reporting",
     "section": "Equations",
-    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]",
+    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\n\ndisplay math:\n\n$$E = mc^{2}$$\n\ndisplay math:\n\\[E = mc^{2}\\]",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -179,7 +179,79 @@
     "href": "modules/quarto/slide.html#div",
     "title": "Quarto for reproducible reporting",
     "section": "Div",
-    "text": "Div\nFor example:\n::: {style=\"font-size: 80%\"}\nThis content is smaller\n:::\n\nThis content is smaller\n\n\n\n\n🔗 Module overview",
+    "text": "Div\nFor example:\n::: {style=\"font-size: 80%\"}\nThis content is smaller\n:::\n\nThis content is smaller",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#start-a-new-project",
+    "href": "modules/quarto/slide.html#start-a-new-project",
+    "title": "Quarto for reproducible reporting",
+    "section": "Start a new project",
+    "text": "Start a new project\n🎬 File | New Project | New Directory | Quarto Project\n-   Browse to an appropriate place and give your project a name.\n\n-   I used `wr-chaff`\n\n-   Choose Engine: Knitr\n\n-   Turn visual markdown editor off (for now)",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#your-project-contains",
+    "href": "modules/quarto/slide.html#your-project-contains",
+    "title": "Quarto for reproducible reporting",
+    "section": "Your project contains",
+    "text": "Your project contains\n\nwr-chaff.RProj - what makes the folder an RStudio project\n_quarto.yml - the configuration file\nwr-chaff.md - the main document containing some template text\n\n🎬 Hit Render (Ctrl-Shift-K)\nNote thatwr-chaff.html is created and opened in the Viewer pane\n(may need to set in Global options to open in Viewer pane)",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#edit-the-yaml-header",
+    "href": "modules/quarto/slide.html#edit-the-yaml-header",
+    "title": "Quarto for reproducible reporting",
+    "section": "Edit the YAML header",
+    "text": "Edit the YAML header\n🎬 Add your name, and a title. Also add the engine and format\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\n---",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-some-content",
+    "href": "modules/quarto/slide.html#add-some-content",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add some content",
+    "text": "Add some content\n🎬 Add a code chunk (Ctrl-Shift-I) for a simple graph.\n\n```{r}\nhist(rnorm(100))\n```\n\n🎬 Hit Render (Ctrl-Shift-K)",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#edit-the-yaml-header-1",
+    "href": "modules/quarto/slide.html#edit-the-yaml-header-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Edit the YAML header",
+    "text": "Edit the YAML header\n🎬 Set some default code chunk options. I recommend these for reports\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\nexecute:\n  echo: false\n  include: true\n  error: false\n  message: false\n  warning: false\n\n---\n🎬 Hit Render (Ctrl-Shift-K)",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#code-chunk-options",
+    "href": "modules/quarto/slide.html#code-chunk-options",
+    "title": "Quarto for reproducible reporting",
+    "section": "Code chunk options",
+    "text": "Code chunk options\n\n\necho: false code will not be included in output\n\ninclude: true output will be included\n\nerror: false halt render if a code error occurs\n\nmessage: false messages and warnings will not be included\nwarning: false\n\n\n\n\n🔗 Module overview",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
