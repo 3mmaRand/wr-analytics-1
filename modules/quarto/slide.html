@@ -403,45 +403,101 @@ Emma Rand
 </div>
 </div>
 
-  <p class="date">21 March, 2024</p>
+  <p class="date">25 March, 2024</p>
 </section>
 <section>
 <section id="overview" class="title-slide slide level1 center">
 <h1>Overview</h1>
 
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>content</p>
+<section id="aims" class="slide level2">
+<h2>Aims</h2>
+<p>To introduce you to Quarto for creating reproducible reports in a variety of output formats. You will also get more practice organising analyses and importing, summarising and plotting data.</p>
+</section>
+<section id="learning-outcomes" class="slide level2">
+<h2>Learning Outcomes</h2>
+<p>The successful student will be able to:</p>
+<div class="smaller">
+<ul>
+<li><p>explain what Quarto and markdown are</p></li>
+<li><p>appreciate the role of the YAML header</p></li>
+<li><p>set default code chunk behaviour and that for individual chunks</p></li>
+<li><p>use headings, simple text formatting and special characters</p></li>
+<li><p>add citations and references</p></li>
+<li><p>use inline code to report results in text</p></li>
+<li><p>create automatically numbered tables and figures and cross reference them in text</p></li>
+</ul>
+</div>
+</section>
+<section id="current-process" class="slide level2">
+<h2>Current process</h2>
+<div>
+<ul>
+<li class="fragment"><p>What is your process for getting your summary data, statistical results, tables and figures in to a report / paper?</p></li>
+<li class="fragment"><p>What do you do when you get additional data that increases your sample sizes?</p></li>
+<li class="fragment"><p>How easy is it to reorder your figures and tables?</p></li>
+<li class="fragment"><p>What do you do if you formatted for one journal and now have to submit to another?</p></li>
+</ul>
+</div>
+</section>
+<section id="current-process-1" class="slide level2">
+<h2>Current process</h2>
+<div>
+<ul>
+<li class="fragment"><p>Typically people analyse, plot and write up in different programs.</p></li>
+<li class="fragment"><p>Graphs are saved to files and inserted into the final report.</p></li>
+<li class="fragment"><p>Reordering figures, tables and equations means updating everywhere they are cross-referenced.</p></li>
+<li class="fragment"><p>If the data change, the author must repeat the entire process to update the report.</p></li>
+<li class="fragment"><p>Manual labour ….. error prone</p></li>
+</ul>
+</div>
 </section></section>
 <section>
 <section id="what-is-quarto" class="title-slide slide level1 center">
-<h1>What is quarto?</h1>
+<h1>What is Quarto?</h1>
 
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>An open-source scientific and technical publishing system</p>
-<p>Create dynamic content with Python, R, Julia, and Observable.</p>
-<p>Publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.</p>
-<p>Include auto-numbered and cross-referencable equations, figures and tables</p>
-<p>Integrate with Zotero</p>
+<section id="what-is-quarto-1" class="slide level2">
+<h2>What is Quarto?</h2>
+<div>
+<ul>
+<li class="fragment"><p>An open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.</p></li>
+<li class="fragment"><p>Next generation RMarkdown. Many new features, greater standardisation and more flexibility.</p></li>
+<li class="fragment"><p>Mutli-language Python, R, Julia, and Observable.</p></li>
+<li class="fragment"><p>Include auto-numbered and cross-referencable equations, figures and tables</p></li>
+<li class="fragment"><p>Integrates with Zotero</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="demo" class="title-slide slide level1 center">
+<h1>Demo!</h1>
+
 </section>
-<section id="uses-markdown" class="slide level2">
-<h2>Uses Markdown</h2>
-<p>Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read:</p>
+<section id="key-points-from-the-demo" class="slide level2">
+<h2>Key points from the demo</h2>
+<ul>
+<li><p>Quarto mixes text and code to create dynamic reports</p></li>
+<li><p>The YAML header sets the default behaviour for the document and is between <code>---</code> at the top of the document</p></li>
+<li><p>R Code chunks are between <code>```{r}</code> and <code>```</code> and chunk options determine how/whether they run whether code/output is included in the knitted document</p></li>
+<li><p>Comments: <code>|#</code>, <code>#</code> in chunk options, <code>&lt;!-- in text --&gt;</code> but use Ctrl+Shift+C</p></li>
+</ul>
 </section></section>
 <section>
 <section id="markdown-foundations" class="title-slide slide level1 center">
 <h1>Markdown foundations</h1>
 
 </section>
+<section id="what-is-markdown" class="slide level2">
+<h2>What is Markdown?</h2>
+<p>Markdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read</p>
+</section>
 <section id="text-formatting" class="slide level2">
 <h2>Text Formatting</h2>
-<table style="width:86%;">
+<table style="width:72%;">
 <colgroup>
-<col style="width: 43%">
-<col style="width: 43%">
+<col style="width: 36%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -452,12 +508,13 @@ Emma Rand
 <tbody>
 <tr class="odd">
 <td><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>*italics*,</span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>**bold**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>**bol</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>d**, ***bold italics***</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><em>italics</em>, <strong>bold</strong>, <strong><em>bold italics</em></strong></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>s</span>
-<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>uperscript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>supers</span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>cript^2^ / subscript~2~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td>superscript<sup>2</sup> / subscript<sub>2</sub></td>
 </tr>
 <tr class="odd">
@@ -473,10 +530,10 @@ Emma Rand
 </section>
 <section id="headings" class="slide level2">
 <h2>Headings</h2>
-<table style="width:67%;">
+<table style="width:60%;">
 <colgroup>
 <col style="width: 23%">
-<col style="width: 43%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -487,25 +544,19 @@ Emma Rand
 <tbody>
 <tr class="odd">
 <td><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu"># Header 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
-<td><h1 id="header-1" class="heading-output">Header 1</h1></td>
+<td><h1 id="header-1">Header 1</h1></td>
 </tr>
 <tr class="even">
 <td><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">## Header 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
-<td><h1 id="section-2"></h1>
-<h1 id="header-2" class="heading-output">Header 2</h1></td>
+<td><h2 id="header-2">Header 2</h2></td>
 </tr>
 <tr class="odd">
 <td><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">### Header 3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
-<td><h1 id="section-3"></h1>
-<h1 id="section-4"></h1>
-<h1 id="header-3" class="heading-output">Header 3</h1></td>
+<td><h3 id="header-3">Header 3</h3></td>
 </tr>
 <tr class="even">
 <td><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">#### Header 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
-<td><h1 id="section-5"></h1>
-<h1 id="section-6"></h1>
-<h1 id="section-7"></h1>
-<h1 id="header-4" class="heading-output">Header 4</h1></td>
+<td><h4 id="header-4">Header 4</h4></td>
 </tr>
 </tbody>
 </table>
@@ -521,22 +572,24 @@ Emma Rand
 </thead>
 <tbody>
 <tr class="odd">
-<td><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a>[</span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a>Quarto](https://quarto.org)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><a href="https://quarto.org">Quarto</a></td>
 </tr>
 <tr class="even">
-<td><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="al">![Caption](images/chaff.jpg)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
-<td><img data-src="images/chaff.jpg" width="150"></td>
+<td><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a>!</span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Caption</span><span class="co">](images/chaff.jpg)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<td><img data-src="ima ges/chaff.jpg" width="150"></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="lists" class="slide level2">
 <h2>Lists</h2>
-<table style="width:83%;">
+<table style="width:69%;">
 <colgroup>
-<col style="width: 43%">
-<col style="width: 40%">
+<col style="width: 36%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -548,16 +601,12 @@ Emma Rand
 <tr class="odd">
 <td><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>unordered list</span>
 <span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a><span class="ss">    + </span>sub-item 1</span>
-<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a><span class="ss">    + </span>sub-item 2</span>
-<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a><span class="ss">        - </span>sub-sub-item 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a><span class="ss">    + </span>sub-item 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><ul>
 <li>unordered list
 <ul>
 <li>sub-item 1</li>
-<li>sub-item 2
-<ul>
-<li>sub-sub-item 1</li>
-</ul></li>
+<li>sub-item 2</li>
 </ul></li>
 </ul></td>
 </tr>
@@ -566,10 +615,10 @@ Emma Rand
 </section>
 <section id="lists-1" class="slide level2">
 <h2>Lists</h2>
-<table style="width:83%;">
+<table style="width:69%;">
 <colgroup>
-<col style="width: 43%">
-<col style="width: 40%">
+<col style="width: 36%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -581,16 +630,12 @@ Emma Rand
 <tr class="odd">
 <td><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>ordered list</span>
 <span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>item 2</span>
-<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>    i) sub-item 1</span>
-<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>         A.  sub-sub-item 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>    i) sub-item 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 <td><ol type="1">
 <li>ordered list</li>
 <li>item 2
 <ol type="i">
-<li>sub-item 1
-<ol type="A">
-<li>sub-sub-item 1</li>
-</ol></li>
+<li>sub-item 1</li>
 </ol></li>
 </ol></td>
 </tr>
@@ -626,10 +671,45 @@ Emma Rand
 </tr>
 </tbody>
 </table>
+</section>
+<section id="divs" class="slide level2">
+<h2>Divs</h2>
+<p>“Divs” are used to group content together and apply styling to that content.</p>
+<p>For example, here add a border to a region of content using a div (<code>:::</code>):</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a>::: {.smaller}</span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>This content is smaller</span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="smaller">
+<p>This content is smaller</p>
+</div>
+</section>
+<section id="divs-1" class="slide level2">
+<h2>Divs</h2>
+<p>For example, callouts</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including: </span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">`note`</span>, <span class="in">`tip`</span>, <span class="in">`warning`</span>, <span class="in">`caution`</span>, and <span class="in">`important`</span>.</span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Note that there are five types of callouts, including: <code>note</code>, <code>tip</code>, <code>warning</code>, <code>caution</code>, and <code>important</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="div" class="slide level2">
+<h2>Div</h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>🔗 <a href="https://3mmarand.github.io/wr-analytics-1">White Rose Analytics 1</a></p>
+<p>🔗 <a href="https://3mmarand.github.io/wr-analytics-1/modules/overview.html">Module overview</a></p>
 </div>
 </div>
 </section></section>

@@ -7,11 +7,11 @@
     "text": "Introduction to Reproducibility in R Training programme for first year PhD students on the White Rose Universities (York, Sheffield, Leeds) DTP. It is designed and delivered by Emma Rand of The University of York.\nOverview An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Introduction to reproducible analyses in R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\nPhilosophy and approach It is impossible to cover everything to you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.\nI recognise that people will enter this training with a diverse range of previous experience in R. This is a challenge to manage but the aim is for everyone to get something out of the training no matter where they start. There will be sessions for those with and without previous experience. I recommend you:\nsit close to the front of the class if you are completely new to R and towards the back if you have some experience bring headphones to allow you to ignore tutor-led material when needed\nLearning outcomes After this workshop the successful learner will be able to:\nFind their way around the RStudio windows Create and plot data using the base package and ggplot Explain the rationale for scripting analysis Use the help pages Know how to make additional packages available in an R session Understand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import Summarise data in a single group or in multiple groups Recognise tidy data format and carry out some typical data tidying tasks Develop highly organised analyses including well-commented scripts that can be understood by future you and others Use R Markdown to produce reproducible analyses, figures and reports\nPrecourse survey To help me direct you to useful training and manage diversity in previous experience during the sessions, please complete this form to indicate your current level: https://forms.gle/cpSjdcjVa7niz6iq5\nmaterials use_course"
   },
   {
-    "objectID": "modules/quarto/slide.html#section",
-    "href": "modules/quarto/slide.html#section",
+    "objectID": "modules/quarto/slide.html#aims",
+    "href": "modules/quarto/slide.html#aims",
     "title": "Quarto for reproducible reporting",
-    "section": "",
-    "text": "content",
+    "section": "Aims",
+    "text": "Aims\nTo introduce you to Quarto for creating reproducible reports in a variety of output formats. You will also get more practice organising analyses and importing, summarising and plotting data.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -19,11 +19,11 @@
     ]
   },
   {
-    "objectID": "modules/quarto/slide.html#section-1",
-    "href": "modules/quarto/slide.html#section-1",
+    "objectID": "modules/quarto/slide.html#learning-outcomes",
+    "href": "modules/quarto/slide.html#learning-outcomes",
     "title": "Quarto for reproducible reporting",
-    "section": "",
-    "text": "An open-source scientific and technical publishing system\nCreate dynamic content with Python, R, Julia, and Observable.\nPublish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrate with Zotero",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nThe successful student will be able to:\n\n\nexplain what Quarto and markdown are\nappreciate the role of the YAML header\nset default code chunk behaviour and that for individual chunks\nuse headings, simple text formatting and special characters\nadd citations and references\nuse inline code to report results in text\ncreate automatically numbered tables and figures and cross reference them in text",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -31,11 +31,59 @@
     ]
   },
   {
-    "objectID": "modules/quarto/slide.html#uses-markdown",
-    "href": "modules/quarto/slide.html#uses-markdown",
+    "objectID": "modules/quarto/slide.html#current-process",
+    "href": "modules/quarto/slide.html#current-process",
     "title": "Quarto for reproducible reporting",
-    "section": "Uses Markdown",
-    "text": "Uses Markdown\nMarkdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read:",
+    "section": "Current process",
+    "text": "Current process\n\n\nWhat is your process for getting your summary data, statistical results, tables and figures in to a report / paper?\nWhat do you do when you get additional data that increases your sample sizes?\nHow easy is it to reorder your figures and tables?\nWhat do you do if you formatted for one journal and now have to submit to another?",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#current-process-1",
+    "href": "modules/quarto/slide.html#current-process-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Current process",
+    "text": "Current process\n\n\nTypically people analyse, plot and write up in different programs.\nGraphs are saved to files and inserted into the final report.\nReordering figures, tables and equations means updating everywhere they are cross-referenced.\nIf the data change, the author must repeat the entire process to update the report.\nManual labour ….. error prone",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#what-is-quarto-1",
+    "href": "modules/quarto/slide.html#what-is-quarto-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\n\nAn open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.\nNext generation RMarkdown. Many new features, greater standardisation and more flexibility.\nMutli-language Python, R, Julia, and Observable.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrates with Zotero",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#key-points-from-the-demo",
+    "href": "modules/quarto/slide.html#key-points-from-the-demo",
+    "title": "Quarto for reproducible reporting",
+    "section": "Key points from the demo",
+    "text": "Key points from the demo\n\nQuarto mixes text and code to create dynamic reports\nThe YAML header sets the default behaviour for the document and is between --- at the top of the document\nR Code chunks are between ```{r} and ``` and chunk options determine how/whether they run whether code/output is included in the knitted document\nComments: |#, # in chunk options, &lt;!-- in text --&gt; but use Ctrl+Shift+C",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#what-is-markdown",
+    "href": "modules/quarto/slide.html#what-is-markdown",
+    "title": "Quarto for reproducible reporting",
+    "section": "What is Markdown?",
+    "text": "What is Markdown?\nMarkdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -47,7 +95,7 @@
     "href": "modules/quarto/slide.html#text-formatting",
     "title": "Quarto for reproducible reporting",
     "section": "Text Formatting",
-    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*,\n**bold**, ***bold italics***\nitalics, bold, bold italics\n\n\ns\nuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*,\n**bol\nd**, ***bold italics***\nitalics, bold, bold italics\n\n\nsupers\ncript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -59,7 +107,7 @@
     "href": "modules/quarto/slide.html#headings",
     "title": "Quarto for reproducible reporting",
     "section": "Headings",
-    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\n\nHeader 2\n\n\n### Header 3\n\n\nHeader 3\n\n\n#### Header 4\n\n\n\nHeader 4",
+    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -71,7 +119,7 @@
     "href": "modules/quarto/slide.html#links-images",
     "title": "Quarto for reproducible reporting",
     "section": "Links & Images",
-    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)",
+    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[\nQuarto](https://quarto.org)\nQuarto\n\n\n!\n[Caption](images/chaff.jpg)",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -83,7 +131,7 @@
     "href": "modules/quarto/slide.html#lists",
     "title": "Quarto for reproducible reporting",
     "section": "Lists",
-    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n        - sub-sub-item 1\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n\nunordered list\n\nsub-item 1\nsub-item 2",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -95,7 +143,7 @@
     "href": "modules/quarto/slide.html#lists-1",
     "title": "Quarto for reproducible reporting",
     "section": "Lists",
-    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n         A.  sub-sub-item 1\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1",
+    "text": "Lists\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n\nordered list\nitem 2\n\nsub-item 1",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -107,7 +155,43 @@
     "href": "modules/quarto/slide.html#equations",
     "title": "Quarto for reproducible reporting",
     "section": "Equations",
-    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninli\nne math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]\n\n\n\n\n\n\n🔗 White Rose Analytics 1",
+    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninli\nne math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#divs",
+    "href": "modules/quarto/slide.html#divs",
+    "title": "Quarto for reproducible reporting",
+    "section": "Divs",
+    "text": "Divs\n“Divs” are used to group content together and apply styling to that content.\nFor example, here add a border to a region of content using a div (:::):\n::: {.smaller}\nThis content is smaller\n:::\n\nThis content is smaller",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#divs-1",
+    "href": "modules/quarto/slide.html#divs-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Divs",
+    "text": "Divs\nFor example, callouts\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\n\n\n\n\n\nNote\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#div",
+    "href": "modules/quarto/slide.html#div",
+    "title": "Quarto for reproducible reporting",
+    "section": "Div",
+    "text": "Div\n\n\n\n🔗 Module overview",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
