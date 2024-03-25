@@ -3,7 +3,8 @@ title: "Quarto for reproducible reporting"
 author: "Emma Rand"
 format: 
   revealjs:
-    footer: "🔗 [White Rose Analytics 1](https://3mmarand.github.io/wr-analytics-1)"
+    theme: simple
+    footer: "🔗 [Module overview](https://3mmarand.github.io/wr-analytics-1/modules/overview.html)"
     slide-number: true
     chalkboard: true
     code-link: true
@@ -16,124 +17,195 @@ editor:
 
 # Overview
 
-## 
+## Aims
 
-content
+To introduce you to Quarto for creating reproducible reports in a
+variety of output formats. You will also get more practice organising
+analyses and importing, summarising and plotting data.
 
-# What is quarto?
+## Learning Outcomes
 
-## 
+The successful student will be able to:
 
-An open-source scientific and technical publishing system
+::: smaller
+-   explain what Quarto and markdown are
 
-Create dynamic content with Python, R, Julia, and Observable.
+-   appreciate the role of the YAML header
 
-Publish reproducible, production quality articles, presentations,
-dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and
-more.
+-   set default code chunk behaviour and that for individual chunks
 
-Include auto-numbered and cross-referencable equations, figures and
-tables
+-   use headings, simple text formatting and special characters
 
-Integrate with Zotero
+-   add citations and references
 
-## Uses Markdown
+-   use inline code to report results in text
 
-Markdown is a plain text format that is designed to be easy to write,
-and, even more importantly, easy to read:
+-   create automatically numbered tables and figures and cross reference
+    them in text
+:::
+
+## Current process
+
+::: incremental
+-   What is your process for getting your summary data, statistical
+    results, tables and figures in to a report / paper?
+
+-   What do you do when you get additional data that increases your
+    sample sizes?
+
+-   How easy is it to reorder your figures and tables?
+
+-   What do you do if you formatted for one journal and now have to
+    submit to another?
+:::
+
+## Current process
+
+::: incremental
+-   Typically people analyse, plot and write up in different programs.
+
+-   Graphs are saved to files and inserted into the final report.
+
+-   Reordering figures, tables and equations means updating everywhere
+    they are cross-referenced.
+
+-   If the data change, the author must repeat the entire process to
+    update the report.
+
+-   Manual labour ..... error prone
+:::
+
+# What is Quarto?
+
+## What is Quarto?
+
+::: incremental
+-   An open-source scientific and technical publishing system that
+    allows you to create dynamic reproducible reports in a variety of
+    output formats.
+
+-   Next generation RMarkdown. Many new features, greater
+    standardisation and more flexibility.
+
+-   Mutli-language Python, R, Julia, and Observable.
+
+-   Include auto-numbered and cross-referencable equations, figures and
+    tables
+
+-   Integrates with Zotero
+:::
+
+# Demo!
+
+## Key points from the demo
+
+-   Quarto mixes text and code to create dynamic reports
+
+-   The YAML header sets the default behaviour for the document and is
+    between `---` at the top of the document
+
+-   R Code chunks are between ```` ```{r} ```` and ```` ``` ```` and
+    chunk options determine how/whether they run whether code/output is
+    included in the knitted document
+
+-   Comments: `|#`, `#` in chunk options, `<!-- in text -->` but use
+    Ctrl+Shift+C
 
 # Markdown foundations
 
+## What is Markdown?
+
+Markdown is a plain text format that is designed to be easy to write,
+and, even more importantly, easy to read
+
 ## Text Formatting
 
-+------------------------------+------------------------------+
-| Markdown Syntax              | Output                       |
-+==============================+==============================+
-| ``` markdown                 | *italics*, **bold**, ***bold |
-| *italics*,                   | italics***                   |
-| **bold**, ***bold italics*** |                              |
-| ```                          |                              |
-+------------------------------+------------------------------+
-| ``` markdown                 | superscript^2^ /             |
-| s                            | subscript~2~                 |
-| uperscript^2^ / subscript~2~ |                              |
-| ```                          |                              |
-+------------------------------+------------------------------+
-| ``` markdown                 | ~~strikethrough~~            |
-| ~~strikethrough~~            |                              |
-| ```                          |                              |
-+------------------------------+------------------------------+
-| ``` markdown                 | `verbatim code`              |
-| `verbatim code`              |                              |
-| ```                          |                              |
-+------------------------------+------------------------------+
++-------------------------+-------------------------+
+| Markdown Syntax         | Output                  |
++=========================+=========================+
+| ``` markdown            | *italics*, **bold**,    |
+| *italics*,              | ***bold italics***      |
+| **bol                   |                         |
+| d**, ***bold italics*** |                         |
+| ```                     |                         |
++-------------------------+-------------------------+
+| ``` markdown            | superscript^2^ /        |
+| supers                  | subscript~2~            |
+| cript^2^ / subscript~2~ |                         |
+| ```                     |                         |
++-------------------------+-------------------------+
+| ``` markdown            | ~~strikethrough~~       |
+| ~~strikethrough~~       |                         |
+| ```                     |                         |
++-------------------------+-------------------------+
+| ``` markdown            | `verbatim code`         |
+| `verbatim code`         |                         |
+| ```                     |                         |
++-------------------------+-------------------------+
 
 ## Headings
 
-+----------------+------------------------------+
-| Markdown       | Output                       |
-| Syntax         |                              |
-+================+==============================+
-| ``` markdown   | # Header 1 {.heading-output} |
-| # Header 1     |                              |
-| ```            |                              |
-+----------------+------------------------------+
-| ``` markdown   | #                            |
-| ## Header 2    | # Header 2 {.heading-output} |
-| ```            |                              |
-+----------------+------------------------------+
-| ``` markdown   | #                            |
-| ### Header 3   |                              |
-| ```            | #                            |
-|                | # Header 3 {.heading-output} |
-+----------------+------------------------------+
-| ``` markdown   | #                            |
-| #### Header 4  |                              |
-| ```            | #                            |
-|                |                              |
-|                | #                            |
-|                | # Header 4 {.heading-output} |
-+----------------+------------------------------+
++----------------+-------------------------+
+| Markdown       | Output                  |
+| Syntax         |                         |
++================+=========================+
+| ``` markdown   | # Header 1              |
+| # Header 1     |                         |
+| ```            |                         |
++----------------+-------------------------+
+| ``` markdown   | ## Header 2             |
+| ## Header 2    |                         |
+| ```            |                         |
++----------------+-------------------------+
+| ``` markdown   | ### Header 3            |
+| ### Header 3   |                         |
+| ```            |                         |
++----------------+-------------------------+
+| ``` markdown   | #### Header 4           |
+| #### Header 4  |                         |
+| ```            |                         |
++----------------+-------------------------+
 
 ## Links & Images
 
-+----------------------------------+----------------------------------+
-| Markdown Syntax                  | Output                           |
-+==================================+==================================+
-| ``` markdown                     | [Quarto](https://quarto.org)     |
-| [Quarto](https://quarto.org)     |                                  |
-| ```                              |                                  |
-+----------------------------------+----------------------------------+
-| ``` markdown                     | ![                               |
-| ![Caption](images/chaff.jpg)     | ](images/chaff.jpg){width="150"} |
-| ```                              |                                  |
-+----------------------------------+----------------------------------+
++-----------------------------+-----------------------------+
+| Markdown Syntax             | Output                      |
++=============================+=============================+
+| ``` markdown                | [                           |
+| [                           | Quarto](https://quarto.org) |
+| Quarto](https://quarto.org) |                             |
+| ```                         |                             |
++-----------------------------+-----------------------------+
+| ``` markdown                | ![](ima                     |
+| !                           | ges/chaff.jpg){width="150"} |
+| [Caption](images/chaff.jpg) |                             |
+| ```                         |                             |
++-----------------------------+-----------------------------+
 
 ## Lists
 
-+------------------------------+----------------------------+
-| Markdown Syntax              | Output                     |
-+==============================+============================+
-| ``` markdown                 | -   unordered list         |
-| * unordered list             |     -   sub-item 1         |
-|     + sub-item 1             |     -   sub-item 2         |
-|     + sub-item 2             |         -   sub-sub-item 1 |
-|         - sub-sub-item 1     |                            |
-| ```                          |                            |
-+------------------------------+----------------------------+
++-------------------------+-----------------------+
+| Markdown Syntax         | Output                |
++=========================+=======================+
+| ``` markdown            | -   unordered list    |
+| * unordered list        |     -   sub-item 1    |
+|     + sub-item 1        |     -   sub-item 2    |
+|     + sub-item 2        |                       |
+| ```                     |                       |
++-------------------------+-----------------------+
 
 ## Lists
 
-+------------------------------+----------------------------+
-| Markdown Syntax              | Output                     |
-+==============================+============================+
-| ``` markdown                 | 1.  ordered list           |
-| 1. ordered list              | 2.  item 2                 |
-| 2. item 2                    |     i)  sub-item 1         |
-|     i) sub-item 1            |         A.  sub-sub-item 1 |
-|          A.  sub-sub-item 1  |                            |
-| ```                          |                            |
-+------------------------------+----------------------------+
++-------------------------+-----------------------+
+| Markdown Syntax         | Output                |
++=========================+=======================+
+| ``` markdown            | 1.  ordered list      |
+| 1. ordered list         | 2.  item 2            |
+| 2. item 2               |     i)  sub-item 1    |
+|     i) sub-item 1       |                       |
+|                         |                       |
+| ```                     |                       |
++-------------------------+-----------------------+
 
 ## Equations
 
@@ -154,3 +226,39 @@ For example:
 | $$E = mc^{2}$$        |                       |
 | ```                   |                       |
 +-----------------------+-----------------------+
+
+## Divs
+
+"Divs" are used to group content together and apply styling to that
+content.
+
+For example, here add a border to a region of content using a div
+(`:::`):
+
+``` markdown
+::: {.smaller}
+This content is smaller
+:::
+```
+
+::: smaller
+This content is smaller
+:::
+
+## Divs
+
+For example, callouts
+
+``` markdown
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+```
+
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`,
+`warning`, `caution`, and `important`.
+:::
+
+## Div
