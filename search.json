@@ -95,7 +95,7 @@
     "href": "modules/quarto/slide.html#text-formatting",
     "title": "Quarto for reproducible reporting",
     "section": "Text Formatting",
-    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*,\n**bol\nd**, ***bold italics***\nitalics, bold, bold italics\n\n\nsupers\ncript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*,**bold**\nitalics, bold\n\n\n***bold italics **\nbold italics\n\n\nsuperscript^2^\nsuperscript2\n\n\nsubscript~2~\nsubscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -119,7 +119,7 @@
     "href": "modules/quarto/slide.html#links-images",
     "title": "Quarto for reproducible reporting",
     "section": "Links & Images",
-    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[\nQuarto](https://quarto.org)\nQuarto\n\n\n!\n[Caption](images/chaff.jpg)",
+    "text": "Links & Images\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -155,7 +155,7 @@
     "href": "modules/quarto/slide.html#equations",
     "title": "Quarto for reproducible reporting",
     "section": "Equations",
-    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninli\nne math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]",
+    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\ndisplay math:\n\n$$E = mc^{2}$$\ndisplay math:\n\\[E = mc^{2}\\]",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -167,19 +167,7 @@
     "href": "modules/quarto/slide.html#divs",
     "title": "Quarto for reproducible reporting",
     "section": "Divs",
-    "text": "Divs\n“Divs” are used to group content together and apply styling to that content.\nFor example, here add a border to a region of content using a div (:::):\n::: {.smaller}\nThis content is smaller\n:::\n\nThis content is smaller",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#divs-1",
-    "href": "modules/quarto/slide.html#divs-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Divs",
-    "text": "Divs\nFor example, callouts\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\n\n\n\n\n\nNote\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.",
+    "text": "Divs\n“Divs” are used to group content together and apply styling to that content.\nFor example, callouts\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\n\n\n\n\n\nNote\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -191,7 +179,7 @@
     "href": "modules/quarto/slide.html#div",
     "title": "Quarto for reproducible reporting",
     "section": "Div",
-    "text": "Div\n\n\n\n🔗 Module overview",
+    "text": "Div\nFor example:\n::: {style=\"font-size: 80%\"}\nThis content is smaller\n:::\n\nThis content is smaller\n\n\n\n\n🔗 Module overview",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
