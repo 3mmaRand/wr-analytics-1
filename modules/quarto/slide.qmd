@@ -9,6 +9,8 @@ format:
     chalkboard: true
     code-link: true
     code-line-numbers: false
+execute:
+  eval: false
 bibliography: ../../references.bib
 editor: 
   markdown: 
@@ -22,6 +24,9 @@ editor:
 To introduce you to Quarto for creating reproducible reports in a
 variety of output formats. You will also get more practice organising
 analyses and importing, summarising and plotting data.
+
+🎬 Instruction to do something
+
 
 ## Learning Outcomes
 
@@ -259,3 +264,94 @@ This content is smaller
 ::: {style="font-size: 80%"}
 This content is smaller
 :::
+
+# Your turn!
+
+## Start a new project
+
+🎬 File | New Project | New Directory | Quarto Project
+
+    -   Browse to an appropriate place and give your project a name.
+
+    -   I used `wr-chaff`
+
+    -   Choose Engine: Knitr
+
+    -   Turn visual markdown editor off (for now)
+
+
+
+## Your project contains
+
+-    `wr-chaff.RProj` - what makes the folder an RStudio project
+
+-   `_quarto.yml` - the configuration file 
+
+-   `wr-chaff.md` - the main document containing some template text
+
+🎬 Hit Render (Ctrl-Shift-K)
+
+Note that` wr-chaff.html` is created and opened in the Viewer pane
+
+(may need to set in Global options to open in Viewer pane)
+
+
+## Edit the YAML header
+
+🎬 Add your name, and a title. Also add the engine and format 
+
+``` yml
+---
+title: "The difference in mass between subspecies of common chaffinch."
+author: "Emma Rand"
+engine: knitr
+format:
+  html
+---
+```
+
+## Add some content
+
+🎬 Add a code chunk (Ctrl-Shift-I) for a simple graph.
+
+
+```{r}
+#| echo: fenced
+hist(rnorm(100))
+```
+
+🎬 Hit Render (Ctrl-Shift-K)
+
+
+
+
+## Edit the YAML header
+
+🎬 Set some default code chunk options. I recommend these for reports
+
+
+``` yml
+---
+title: "The difference in mass between subspecies of common chaffinch."
+author: "Emma Rand"
+engine: knitr
+format:
+  html
+execute:
+  echo: false
+  include: true
+  error: false
+  message: false
+  warning: false
+
+---
+```
+🎬 Hit Render (Ctrl-Shift-K)
+
+## Code chunk options
+
+-   `echo: false`  code will not be included in output
+-   `include: true` output will be included
+-   `error: false` halt render if a code error occurs
+-   `message: false` messages and warnings will not be included
+-   `warning: false`
