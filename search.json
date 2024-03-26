@@ -299,7 +299,7 @@
     "href": "modules/quarto/slide.html#add-data-import",
     "title": "Quarto for reproducible reporting",
     "section": "Add data import",
-    "text": "Add data import\n🎬 Make a folder called data-raw\n🎬 Save chaff.txt to data-raw\n🎬 Add a code chunk with:\n\n```{r}\n#| label: import-data\nfile &lt;- \"data-raw/chaff.txt\"\nchaff &lt;- read_table(file)\n```\n\n\n🎬 Run chunks interactively\n🎬 Render",
+    "text": "Add data import\n🎬 Make a folder called data-raw\n🎬 Save chaff.txt to data-raw\n🎬 Add a code chunk with:\n\n```{r}\n#| label: import-data\nfile &lt;- \"data-raw/chaff.txt\"\nchaff &lt;- read_table(file)\n```\n\n\n🎬 Run chunks interactively\n\n\n🎬 Render",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -311,7 +311,7 @@
     "href": "modules/quarto/slide.html#add-data-summary",
     "title": "Quarto for reproducible reporting",
     "section": "Add data summary",
-    "text": "Add data summary\n🎬 Add a code chunk with:\n\n```{r}\n#| label: data-summary\nchaff_summary &lt;- chaff |&gt; \n  group_by(subspecies) |&gt;  \n  summarise(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            n = length(mass),\n            se = sd / sqrt(n))\n```",
+    "text": "Add data summary\n🎬 Add a code chunk with:\n\n```{r}\n#| label: data-summary\nchaff_summary &lt;- chaff |&gt; \n  group_by(subspecies) |&gt;  \n  summarise(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            n = length(mass),\n            se = sd / sqrt(n))\n```\n\n\n🎬 Render\nNotice the chunk labels being used in “Background Jobs”",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -347,7 +347,7 @@
     "href": "modules/quarto/slide.html#inline-code-reproducible-reporting",
     "title": "Quarto for reproducible reporting",
     "section": "Inline code: reproducible reporting",
-    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r and ` .\nFor example by writing:\nThe squareroot of 2 is 1.4142136\nyou will get:\nThe squareroot of 2 is 1.4142136",
+    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r and ` .\nFor example by writing:\nThe squareroot of 2 is r sqrt(2)`\nyou will get:\nThe squareroot of 2 is 1.4142136",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
