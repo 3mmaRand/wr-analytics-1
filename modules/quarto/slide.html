@@ -683,7 +683,7 @@ Emma Rand
 </ul>
 <div class="fragment">
 <p>🎬 Hit Render (Ctrl-Shift-K)</p>
-<p>Note that<code>wr-chaff.html</code> is created and opened in the Viewer pane</p>
+<p>Note that <code>wr-chaff.html</code> is created and opened in the Viewer pane</p>
 <p>(may need to set in Global options to open in Viewer pane)</p>
 </div>
 </section><section id="edit-the-yaml-header" class="slide level2"><h2>Edit the YAML header</h2>
@@ -745,7 +745,9 @@ Emma Rand
 <span id="cb22-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
 <span id="cb22-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
 <p><code>#| label: load-packages</code> is a code chunk label. These are useful (here) and essential (later) for cross-referencing.</p>
+</div>
 </section><section id="introduction" class="slide level2"><h2>Introduction</h2>
 <p>🎬 Add this test to the Introduction</p>
 <div style="font-size: 80%">
@@ -760,6 +762,14 @@ Emma Rand
 </section><section id="add-data-import" class="slide level2"><h2>Add data import</h2>
 <p>🎬 Make a folder called <code>data-raw</code></p>
 <p>🎬 Save <a href="data-raw/chaff.txt">chaff.txt</a> to <code>data-raw</code></p>
+<p>🎬 Add a code chunk with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: import-data</span></span>
+<span id="cb23-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">file &lt;- "data-raw/chaff.txt"</span></span>
+<span id="cb23-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">chaff &lt;- read_table(file)</span></span>
+<span id="cb23-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="fragment">
 <p>🎬 Run chunks interactively</p>
 <p>🎬 Render</p>
@@ -767,15 +777,15 @@ Emma Rand
 </section><section id="add-data-summary" class="slide level2"><h2>Add data summary</h2>
 <p>🎬 Add a code chunk with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: data-summary</span></span>
-<span id="cb23-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">chaff_summary &lt;- chaff |&gt; </span></span>
-<span id="cb23-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(subspecies) |&gt;  </span></span>
-<span id="cb23-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(mean = mean(mass, na.rm = TRUE),</span></span>
-<span id="cb23-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">            sd = sd(mass, na.rm = TRUE),</span></span>
-<span id="cb23-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">            n = length(mass),</span></span>
-<span id="cb23-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">            se = sd / sqrt(n))</span></span>
-<span id="cb23-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: data-summary</span></span>
+<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">chaff_summary &lt;- chaff |&gt; </span></span>
+<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(subspecies) |&gt;  </span></span>
+<span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(mean = mean(mass, na.rm = TRUE),</span></span>
+<span id="cb24-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">            sd = sd(mass, na.rm = TRUE),</span></span>
+<span id="cb24-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">            n = length(mass),</span></span>
+<span id="cb24-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">            se = sd / sqrt(n))</span></span>
+<span id="cb24-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="add-information-for-methods" class="slide level2"><h2>Add information for methods</h2>
 <p>🎬 Add this test to the Introduction</p>
@@ -788,19 +798,19 @@ Emma Rand
 </section><section id="extract-summary-information" class="slide level2"><h2>Extract summary information</h2>
 <p>🎬 Add a code chunk with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: extract-summary</span></span>
-<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a><span class="in"># extract values for inline reporting</span></span>
-<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a><span class="in"># sample sizes</span></span>
-<span id="cb24-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">n_coelebs &lt;- chaff_summary |&gt; </span></span>
-<span id="cb24-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">  filter(subspecies == "coelebs") |&gt; </span></span>
-<span id="cb24-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">  pull(n)</span></span>
-<span id="cb24-9"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">n_canariensis &lt;- chaff_summary |&gt; </span></span>
-<span id="cb24-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">  filter(subspecies == "canariensis") |&gt; </span></span>
-<span id="cb24-12"><a aria-hidden="true" tabindex="-1"></a><span class="in">  pull(n)</span></span>
-<span id="cb24-13"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: extract-summary</span></span>
+<span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a><span class="in"># extract values for inline reporting</span></span>
+<span id="cb25-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a aria-hidden="true" tabindex="-1"></a><span class="in"># sample sizes</span></span>
+<span id="cb25-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">n_coelebs &lt;- chaff_summary |&gt; </span></span>
+<span id="cb25-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">  filter(subspecies == "coelebs") |&gt; </span></span>
+<span id="cb25-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">  pull(n)</span></span>
+<span id="cb25-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">n_canariensis &lt;- chaff_summary |&gt; </span></span>
+<span id="cb25-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">  filter(subspecies == "canariensis") |&gt; </span></span>
+<span id="cb25-12"><a aria-hidden="true" tabindex="-1"></a><span class="in">  pull(n)</span></span>
+<span id="cb25-13"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="inline-code-reproducible-reporting" class="slide level2"><h2>Inline code: reproducible reporting</h2>
 <ul>
@@ -820,25 +830,25 @@ Emma Rand
 </section><section id="a-figure" class="slide level2"><h2>A figure</h2>
 <p>🎬 Add a code chunk with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-chaff</span></span>
-<span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">ggplot() +</span></span>
-<span id="cb25-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(data = chaff, aes(x = subspecies, y = mass),</span></span>
-<span id="cb25-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">             position = position_jitter(width = 0.1, height = 0),</span></span>
-<span id="cb25-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">             colour = "gray50") +</span></span>
-<span id="cb25-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_errorbar(data = chaff_summary, </span></span>
-<span id="cb25-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">                aes(x = subspecies, ymin = mean - se, ymax = mean + se),</span></span>
-<span id="cb25-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">                width = 0.3) +</span></span>
-<span id="cb25-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_errorbar(data = chaff_summary, </span></span>
-<span id="cb25-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">                aes(x = subspecies, ymin = mean, ymax = mean),</span></span>
-<span id="cb25-12"><a aria-hidden="true" tabindex="-1"></a><span class="in">                width = 0.2) +</span></span>
-<span id="cb25-13"><a aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_continuous(name = "Mass (g)", </span></span>
-<span id="cb25-14"><a aria-hidden="true" tabindex="-1"></a><span class="in">                     limits = c(0, 30), </span></span>
-<span id="cb25-15"><a aria-hidden="true" tabindex="-1"></a><span class="in">                     expand = c(0, 0)) +</span></span>
-<span id="cb25-16"><a aria-hidden="true" tabindex="-1"></a><span class="in">  scale_x_discrete(name = "Subspecies", </span></span>
-<span id="cb25-17"><a aria-hidden="true" tabindex="-1"></a><span class="in">                   labels = c("Canariensis", "Coelebs")) +</span></span>
-<span id="cb25-18"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic()</span></span>
-<span id="cb25-19"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-chaff</span></span>
+<span id="cb26-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">ggplot() +</span></span>
+<span id="cb26-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(data = chaff, aes(x = subspecies, y = mass),</span></span>
+<span id="cb26-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">             position = position_jitter(width = 0.1, height = 0),</span></span>
+<span id="cb26-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">             colour = "gray50") +</span></span>
+<span id="cb26-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_errorbar(data = chaff_summary, </span></span>
+<span id="cb26-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">                aes(x = subspecies, ymin = mean - se, ymax = mean + se),</span></span>
+<span id="cb26-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">                width = 0.3) +</span></span>
+<span id="cb26-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_errorbar(data = chaff_summary, </span></span>
+<span id="cb26-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">                aes(x = subspecies, ymin = mean, ymax = mean),</span></span>
+<span id="cb26-12"><a aria-hidden="true" tabindex="-1"></a><span class="in">                width = 0.2) +</span></span>
+<span id="cb26-13"><a aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_continuous(name = "Mass (g)", </span></span>
+<span id="cb26-14"><a aria-hidden="true" tabindex="-1"></a><span class="in">                     limits = c(0, 30), </span></span>
+<span id="cb26-15"><a aria-hidden="true" tabindex="-1"></a><span class="in">                     expand = c(0, 0)) +</span></span>
+<span id="cb26-16"><a aria-hidden="true" tabindex="-1"></a><span class="in">  scale_x_discrete(name = "Subspecies", </span></span>
+<span id="cb26-17"><a aria-hidden="true" tabindex="-1"></a><span class="in">                   labels = c("Canariensis", "Coelebs")) +</span></span>
+<span id="cb26-18"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic()</span></span>
+<span id="cb26-19"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>🎬 Render</p>
 <p>Note: It is automatically labelled as Figure 1!</p>

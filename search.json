@@ -215,7 +215,7 @@
     "href": "modules/quarto/slide.html#your-project-contains",
     "title": "Quarto for reproducible reporting",
     "section": "Your project contains",
-    "text": "Your project contains\n\nwr-chaff.RProj - what makes the folder an RStudio project\n_quarto.yml - the configuration file\nwr-chaff.md - the main document containing some template text\n\n\n🎬 Hit Render (Ctrl-Shift-K)\nNote thatwr-chaff.html is created and opened in the Viewer pane\n(may need to set in Global options to open in Viewer pane)",
+    "text": "Your project contains\n\nwr-chaff.RProj - what makes the folder an RStudio project\n_quarto.yml - the configuration file\nwr-chaff.md - the main document containing some template text\n\n\n🎬 Hit Render (Ctrl-Shift-K)\nNote that wr-chaff.html is created and opened in the Viewer pane\n(may need to set in Global options to open in Viewer pane)",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -275,7 +275,7 @@
     "href": "modules/quarto/slide.html#content-1",
     "title": "Quarto for reproducible reporting",
     "section": "Content",
-    "text": "Content\n🎬 Delete everything except the YAML header.\n🎬 Add headings for: Introduction, Methods, Results, Discussion, and References\n🎬 Add a code chunk for package loading\n\n```{r}\n#| label: load-packages\nlibrary(tidyverse)\n```\n\n#| label: load-packages is a code chunk label. These are useful (here) and essential (later) for cross-referencing.",
+    "text": "Content\n🎬 Delete everything except the YAML header.\n🎬 Add headings for: Introduction, Methods, Results, Discussion, and References\n🎬 Add a code chunk for package loading\n\n```{r}\n#| label: load-packages\nlibrary(tidyverse)\n```\n\n\n#| label: load-packages is a code chunk label. These are useful (here) and essential (later) for cross-referencing.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -299,7 +299,7 @@
     "href": "modules/quarto/slide.html#add-data-import",
     "title": "Quarto for reproducible reporting",
     "section": "Add data import",
-    "text": "Add data import\n🎬 Make a folder called data-raw\n🎬 Save chaff.txt to data-raw\n\n🎬 Run chunks interactively\n🎬 Render",
+    "text": "Add data import\n🎬 Make a folder called data-raw\n🎬 Save chaff.txt to data-raw\n🎬 Add a code chunk with:\n\n```{r}\n#| label: import-data\nfile &lt;- \"data-raw/chaff.txt\"\nchaff &lt;- read_table(file)\n```\n\n\n🎬 Run chunks interactively\n🎬 Render",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
