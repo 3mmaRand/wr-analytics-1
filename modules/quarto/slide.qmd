@@ -425,16 +425,19 @@ the Canary Islands.
 . . .
 
 
-🎬 Make "common chaffinch" a link to  https://en.wikipedia.org/wiki/Common_chaffinch
+🎬 Make "common chaffinch" a link to  <https://en.wikipedia.org/wiki/Common_chaffinch>
 
 
 ## Add data import
 
 🎬 Make a folder called `data-raw`
 
+. . .
 
 
 🎬 Save [chaff.txt](data-raw/chaff.txt) to `data-raw`
+
+. . .
 
 
 🎬 Add a code chunk with:
@@ -481,7 +484,7 @@ Notice the chunk labels being used in "Background Jobs"
 
 ## Add information for methods
 
-🎬 Add this test to the Introduction
+🎬 Add this text to the Introduction
 
 ::: {style="font-size: 80%"}
 
@@ -492,7 +495,8 @@ spring scales. Analysis was carried out with R and tidyverse packages.
 
 . . . 
 
-It would be good
+It would be good to to hard code those numbers in the text. What if
+we get more data. Or we just misremember or mis-type the numbers?
 
 ## Extract summary information
 
@@ -524,7 +528,7 @@ n_canariensis <- chaff_summary |>
 
 . . . 
 
-Inline code goes between \`r\` and \` .
+Inline code goes between \`r and \` .
 
 For example by writing:
 
@@ -579,20 +583,133 @@ Note: It is automatically labelled as Figure 1!
 ## Cross referencing
 
 The label of the code chunk is important when creating figures 
-because it is used to cross reference the figure in the text.
+because it is used to cross reference the figure in the text. We give 
+cross references with `@` followed by the label of the code chunk.
 
 . . .
 
 That is starts with a `fig-` prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.
 
-🎬 Add
+🎬 Add a sentence with a cross reference to the figure:
+
+::: {style="font-size: 80%"}
 
 Canariensis have higher mass than coelebs. See \@fig-chaff
 
+:::
+
 ## A figure legend
+
+There are two ways to add a legend:
+
+1.  Add the `fig-cap` chunk option: `fig-cap: "Mass of chaffinches"` to the code chunk.
+
+2.  Use a div.
+
+. . .
+
+2. Is much more flexible:
+
+-   You can include inline code, citations, special characters and formatting
+
+-   You can more easily make multipanel figures
+
+
+## A figure legend with a div
+
+🎬 Add a div by adding:
+
+-   removing the `fig-cap` option **and** the `label` option
+
+-   `:::` before and after the code chunk
+
+-   placing the label after the opening `:::` like this: `::: {#fig-chaff}`
+    Note the `#` is important for numbering
+
+-   Putting the legend text between the code chunk and the closing  `:::`
+
+
+. . . 
+
+In the example figure legend I have included inline code and formatting
+
+
+## Set the figure size and alignment
+
+🎬 Add a chunk options `fig-width`, `fig-height` and `fig-align` to the code chunk:
+
+
+```{r}
+#| echo: fenced
+#| fig-width: 3.5
+#| fig-height: 3.5
+ggplot() +
+  geom_point(data = chaff, aes(x = subspecies, y = mass),
+             position = position_jitter(width = 0.1, height = 0),
+             colour = "gray50") +
+  geom_errorbar(data = chaff_summary, 
+                aes(x = subspecies, ymin = mean - se, ymax = mean + se),
+                width = 0.3) +
+  geom_errorbar(data = chaff_summary, 
+                aes(x = subspecies, ymin = mean, ymax = mean),
+                width = 0.2) +
+  scale_y_continuous(name = "Mass (g)", 
+                     limits = c(0, 30), 
+                     expand = c(0, 0)) +
+  scale_x_discrete(name = "Subspecies", 
+                   labels = c("Canariensis", "Coelebs")) +
+  theme_classic()
+```
 
 
 ## Two panel figure
+
+::: incremental
+
+-   We are going to add another figure, this time a figure with two 
+    panels (it's an unnecessary figure for this data, but works for 
+    demonstration).
+
+-   The figure will be two histogram of the mass of each subspecies.
+
+-   We will again use a div which will contain two code chunks, 
+    one for each graph. 
+    
+-   Their will be a label on the div for the figure as a whole and 
+    labels on each of the chunk to cross reference the sub figures.
+
+-   Figure layout information will be added to the div.
+
+
+:::
+
+
+## Two panel figure
+
+🎬 Add these two chunks to the Results section below the last figure 
+   (make sure you're outside the last div)
+
+
+```{r}
+#| echo: fenced
+#| label: fig-hist-canariensis
+chaff |> filter(subspecies == "canariensis") |>
+  ggplot(aes(x = mass)) +
+  geom_histgram(bins = 10) +
+  theme_minimal()
+```
+
+
+```{r}
+#| label: fig-hist-coelebs
+chaff |> filter(subspecies == "coelebs") |>
+  ggplot(aes(x = mass)) +
+  geom_histgram(bins = 10) +
+  theme_minimal()
+```
+
+
+
 
 ## Change the order of the figures
 
