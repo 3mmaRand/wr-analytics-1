@@ -451,6 +451,7 @@ chaff <- read_table(file)
 
 🎬 Run chunks interactively
 
+. . . 
 
 🎬 Render
 
@@ -470,6 +471,13 @@ chaff_summary <- chaff |>
             n = length(mass),
             se = sd / sqrt(n))
 ```
+
+
+. . . 
+
+🎬 Render
+
+Notice the chunk labels being used in "Background Jobs"
 
 ## Add information for methods
 
@@ -520,7 +528,7 @@ Inline code goes between ``` `r ``` and ``` ` ``` .
 
 For example by writing:
 
-The squareroot of 2 is ```  `r sqrt(2) ` ```
+The squareroot of 2 is ` `r ` `sqrt(2)`
 
 you will get:
 
