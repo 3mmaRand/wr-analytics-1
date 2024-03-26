@@ -632,12 +632,14 @@ There are two ways to add a legend:
 
 . . . 
 
-In the example figure legend I have included inline code and formatting
+In the example figure legend I have included inline code, formatting and
+a special character using inline math.
 
 
 ## Set the figure size and alignment
 
-🎬 Add a chunk options `fig-width`, `fig-height` and `fig-align` to the code chunk:
+🎬 Add a chunk options `fig-width`, `fig-height` and `fig-align` to 
+   the code chunk:
 
 
 ```{r}
@@ -763,7 +765,7 @@ chaff_summary |>
   knitr::kable(caption = "Summary of mass(g) for the two subspecies of chaffinch.")
 ```
 
-. . .
+## Tables
 
 Just as the `fig-` prefix matters for corrected numbering of figures, the 
 `tbl-` prefix is important for the corrected numbering of figures.
@@ -772,13 +774,86 @@ Just as the label of the code chunk is important for cross referencing
 of figures so it is for tables and we use `@` followed by the label 
 of the code chunk to cross reference the table in the text.
 
+. . .
+
+🎬 Add a sentence with a cross reference to the table.
 
 ## Tables - improve format
 
+The decimal places are over-the-top. They can be set 
+
+1. in the table by adding `digits = 2` to the `kable()` function
+
+2. For the document overall by adding:
+
+```{r}
+#| echo: fenced
+options(digits = 2)
+```
+
+🎬 Do one of these.
+
+## Tables - improve format
+
+A handy tidyverse function, `str_to_sentence()`, can be used  for 
+converting lower case to sentence case. We will do this for column
+names
+
+. . .
+
+🎬 Add `col.names = names(chaff_summary) |> str_to_sentence()` to the 
+   `kable()` function
+
+
+## The visual editor!
+::: incremental
+
+-   The visual editor is a WYSIWYG editor for Quarto documents and can
+    be accessed by clicking the `Visual Editor` button in the top right
+    Or by Ctrl-Shift-F4
+
+-   It makes it easier to add and edit content (although I find I 
+    often want to use the source)
+    
+-   It is especially useful for adding citations.
+
+-   Especially if you use zotero.
+
+## Citations
+
+You can add citations for R and packages, from doi, from a .bib file, 
+or from zotero.
+
+🎬 Put your cursor where you want the citation to go and click the 
+   `Insert` button in the top right and select `Citation`
+   (Ctrl-Shift-F8) and add a citation for the `tidverse` package.
+
+. . .
+
+🎬 Render
+
+. . .
+
+-   the in-text citation has been added
+
+-   the reference has been added to the references section
+
+-   a `references.bib` file has been created in the project folder
 
 
 ## Citations
 
+🎬 Put your cursor after "plumage" in the Introduction and click the 
+   `Insert` button in the top right and select `Citation`
+   (Ctrl-Shift-F8). Select From DOI and paste in 10.1016/j.ympev.2009.07.018
+
+. . .
+
+🎬 Render
+
+. . .
+
+You can also add citations to the .bib file manually. E.g. for R itself
 
 ## Extra exercises
 
@@ -788,9 +863,5 @@ of the code chunk to cross reference the table in the text.
    the chaffinch subspecies to the multi-panel figure.
 
 
-##
+## Summary
 
-##
-
-
-##
