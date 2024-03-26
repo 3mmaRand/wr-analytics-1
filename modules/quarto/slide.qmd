@@ -273,13 +273,27 @@ This content is smaller
 
 🎬 File | New Project | New Directory | Quarto Project
 
-    -   Browse to an appropriate place and give your project a name.
+-   Browse to an appropriate place and give your project a name.
 
-    -   I used `wr-chaff`
+-   I used `wr-chaff`
 
-    -   Choose Engine: Knitr
+-   Choose Engine: Knitr
 
-    -   Turn visual markdown editor off (for now)
+-   Turn visual markdown editor off (for now)
+
+## Start a new project
+
+🎬 Change some RStudio settings. Tools | Global Options
+
+-   General:
+
+    -   Turn off the three "Restore ...." options
+
+    -   Turn "Save workspace to .RData on exit" to Never
+
+-   R Markdown:
+
+    -   Turn "Show output preview in:" to to Viewer pane
 
 
 
@@ -290,6 +304,8 @@ This content is smaller
 -   `_quarto.yml` - the configuration file 
 
 -   `wr-chaff.md` - the main document containing some template text
+
+. . . 
 
 🎬 Hit Render (Ctrl-Shift-K)
 
@@ -387,6 +403,7 @@ and essential (later) for cross-referencing.
 
 🎬 Add this test to the Introduction
 
+
 ::: {style="font-size: 80%"}
 A number of subspecies of the common chaffinch, Fringilla
 coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these
@@ -395,7 +412,11 @@ and Asia and the "canariensis group" that occurs on
 the Canary Islands.
 :::
 
+. . .
+
 🎬 Make the species name italic
+
+. . .
 
 
 🎬 Make "common chaffinch" a link to  https://en.wikipedia.org/wiki/Common_chaffinch
@@ -405,9 +426,14 @@ the Canary Islands.
 
 🎬 Make a folder called `data-raw`
 
+
+
 🎬 Save [chaff.txt](data-raw/chaff.txt) to `data-raw`
 
+. . .
+
 🎬 Run chunks interactively
+
 
 🎬 Render
 
@@ -439,6 +465,9 @@ We randomly sampled 20 *F. c. coelebs* males and
 spring scales. Analysis was carried out with R and tidyverse packages.
 :::
 
+. . . 
+
+It would be good
 
 ## Extract summary information
 
@@ -462,10 +491,59 @@ n_canariensis <- chaff_summary |>
 
 ## Inline code: reproducible reporting
 
+-   Inline code is how you include a variable value, like a sample 
+    size, mean or statistical result, in a section of text.
+
+-   In fact, any code output can be inserted directly into the text 
+    of a .qmd file using inline code.
+
+. . . 
+
+Inline code goes between ``` `r and ` ``` .
+
+For example by writing:
+
+The squareroot of 2 is ```  `r sqrt(2) ` ```
+
+you will get:
+
+The squareroot of 2 is `r sqrt(2)
+
+
+## Inline code: reproducible reporting
+
+🎬 Replace the sample sizes in the Methods text with inline code
+
+``` markdown
+We randomly sampled `r n_coelebs`  *F. c. coelebs* males
+```
+
 
 
 ## A figure
 
+🎬 Add a code chunk with:
+
+```{r}
+#| echo: fenced
+#| label: fig-chaff
+ggplot() +
+  geom_point(data = chaff, aes(x = subspecies, y = mass),
+             position = position_jitter(width = 0.1, height = 0),
+             colour = "gray50") +
+  geom_errorbar(data = chaff_summary, 
+                aes(x = subspecies, ymin = mean - se, ymax = mean + se),
+                width = 0.3) +
+  geom_errorbar(data = chaff_summary, 
+                aes(x = subspecies, ymin = mean, ymax = mean),
+                width = 0.2) +
+  scale_y_continuous(name = "Mass (g)", 
+                     limits = c(0, 30), 
+                     expand = c(0, 0)) +
+  scale_x_discrete(name = "Subspecies", 
+                   labels = c("Canariensis", "Coelebs")) +
+  theme_classic()
+```
 
 ## A figure legend
 
