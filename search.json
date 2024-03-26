@@ -407,7 +407,7 @@
     "href": "modules/quarto/slide.html#a-figure-legend-with-a-div",
     "title": "Quarto for reproducible reporting",
     "section": "A figure legend with a div",
-    "text": "A figure legend with a div\n🎬 Add a div by adding:\n\nremoving the fig-cap option and the label option\n::: before and after the code chunk\nplacing the label after the opening ::: like this: ::: {#fig-chaff} Note the # is important for numbering\nPutting the legend text between the code chunk and the closing :::\n\n\nIn the example figure legend I have included inline code and formatting",
+    "text": "A figure legend with a div\n🎬 Add a div by adding:\n\nremoving the fig-cap option and the label option\n::: before and after the code chunk\nplacing the label after the opening ::: like this: ::: {#fig-chaff} Note the # is important for numbering\nPutting the legend text between the code chunk and the closing :::\n\n\nIn the example figure legend I have included inline code, formatting and a special character using inline math.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -467,7 +467,19 @@
     "href": "modules/quarto/slide.html#tables",
     "title": "Quarto for reproducible reporting",
     "section": "Tables",
-    "text": "Tables\nThere are several ways to add tables to a document. We will use the knitr::kable() function to create a table from a data frame or the summary information\n\n🎬 Add a table of the summary information for the chaffinch data:\n\n\nTable 1\n\n```{r}\n#| label: tbl-chaff\nchaff_summary |&gt; \n  knitr::kable(caption = \"Summary of mass(g) for the two subspecies of chaffinch.\")\n```\n\n\n\n\n\nJust as the fig- prefix matters for corrected numbering of figures, the tbl- prefix is important for the corrected numbering of figures.\nJust as the label of the code chunk is important for cross referencing of figures so it is for tables and we use @ followed by the label of the code chunk to cross reference the table in the text.",
+    "text": "Tables\nThere are several ways to add tables to a document. We will use the knitr::kable() function to create a table from a data frame or the summary information\n\n🎬 Add a table of the summary information for the chaffinch data:\n\n\nTable 1\n\n```{r}\n#| label: tbl-chaff\nchaff_summary |&gt; \n  knitr::kable(caption = \"Summary of mass(g) for the two subspecies of chaffinch.\")\n```",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#tables-1",
+    "href": "modules/quarto/slide.html#tables-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Tables",
+    "text": "Tables\nJust as the fig- prefix matters for corrected numbering of figures, the tbl- prefix is important for the corrected numbering of figures.\nJust as the label of the code chunk is important for cross referencing of figures so it is for tables and we use @ followed by the label of the code chunk to cross reference the table in the text.\n\n🎬 Add a sentence with a cross reference to the table.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -479,7 +491,31 @@
     "href": "modules/quarto/slide.html#tables---improve-format",
     "title": "Quarto for reproducible reporting",
     "section": "Tables - improve format",
-    "text": "Tables - improve format",
+    "text": "Tables - improve format\nThe decimal places are over-the-top. They can be set\n\nin the table by adding digits = 2 to the kable() function\nFor the document overall by adding:\n\n\n```{r}\noptions(digits = 2)\n```\n\n🎬 Do one of these.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#tables---improve-format-1",
+    "href": "modules/quarto/slide.html#tables---improve-format-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Tables - improve format",
+    "text": "Tables - improve format\nA handy tidyverse function, str_to_sentence(), can be used for converting lower case to sentence case. We will do this for column names\n\n🎬 Add col.names = names(chaff_summary) |&gt; str_to_sentence() to the kable() function",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#the-visual-editor",
+    "href": "modules/quarto/slide.html#the-visual-editor",
+    "title": "Quarto for reproducible reporting",
+    "section": "The visual editor!",
+    "text": "The visual editor!\n::: incremental\n\nThe visual editor is a WYSIWYG editor for Quarto documents and can be accessed by clicking the Visual Editor button in the top right Or by Ctrl-Shift-F4\nIt makes it easier to add and edit content (although I find I often want to use the source)\nIt is especially useful for adding citations.\nEspecially if you use zotero.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -491,7 +527,19 @@
     "href": "modules/quarto/slide.html#citations",
     "title": "Quarto for reproducible reporting",
     "section": "Citations",
-    "text": "Citations",
+    "text": "Citations\nYou can add citations for R and packages, from doi, from a .bib file, or from zotero.\n🎬 Put your cursor where you want the citation to go and click the Insert button in the top right and select Citation (Ctrl-Shift-F8) and add a citation for the tidverse package.\n\n🎬 Render\n\n\n\nthe in-text citation has been added\nthe reference has been added to the references section\na references.bib file has been created in the project folder",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#citations-1",
+    "href": "modules/quarto/slide.html#citations-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Citations",
+    "text": "Citations\n🎬 Put your cursor after “plumage” in the Introduction and click the Insert button in the top right and select Citation (Ctrl-Shift-F8). Select From DOI and paste in 10.1016/j.ympev.2009.07.018\n\n🎬 Render\n\n\nYou can also add citations to the .bib file manually. E.g. for R itself",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -511,11 +559,11 @@
     ]
   },
   {
-    "objectID": "modules/quarto/slide.html#section-2",
-    "href": "modules/quarto/slide.html#section-2",
+    "objectID": "modules/quarto/slide.html#summary",
+    "href": "modules/quarto/slide.html#summary",
     "title": "Quarto for reproducible reporting",
-    "section": "",
-    "text": "🔗 Module overview",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n🔗 Module overview",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",

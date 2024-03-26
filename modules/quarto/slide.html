@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.552">
 <meta name="author" content="Emma Rand">
 <title>White Rose Analytics 1 - Quarto for reproducible reporting</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -897,7 +897,7 @@ Emma Rand
 <li><p>Putting the legend text between the code chunk and the closing <code>:::</code></p></li>
 </ul>
 <div class="fragment">
-<p>In the example figure legend I have included inline code and formatting</p>
+<p>In the example figure legend I have included inline code, formatting and a special character using inline math.</p>
 </div>
 </section><section id="set-the-figure-size-and-alignment" class="slide level2"><h2>Set the figure size and alignment</h2>
 <p>🎬 Add a chunk options <code>fig-width</code>, <code>fig-height</code> and <code>fig-align</code> to the code chunk:</p>
@@ -989,17 +989,60 @@ Table&nbsp;1
 </figure>
 </div>
 </div>
-<div class="fragment">
+</section><section id="tables-1" class="slide level2"><h2>Tables</h2>
 <p>Just as the <code>fig-</code> prefix matters for corrected numbering of figures, the <code>tbl-</code> prefix is important for the corrected numbering of figures.</p>
 <p>Just as the label of the code chunk is important for cross referencing of figures so it is for tables and we use <code>@</code> followed by the label of the code chunk to cross reference the table in the text.</p>
+<div class="fragment">
+<p>🎬 Add a sentence with a cross reference to the table.</p>
 </div>
 </section><section id="tables---improve-format" class="slide level2"><h2>Tables - improve format</h2>
-</section><section id="citations" class="slide level2"><h2>Citations</h2>
+<p>The decimal places are over-the-top. They can be set</p>
+<ol type="1">
+<li><p>in the table by adding <code>digits = 2</code> to the <code>kable()</code> function</p></li>
+<li><p>For the document overall by adding:</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">options(digits = 2)</span></span>
+<span id="cb30-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>🎬 Do one of these.</p>
+</section><section id="tables---improve-format-1" class="slide level2"><h2>Tables - improve format</h2>
+<p>A handy tidyverse function, <code>str_to_sentence()</code>, can be used for converting lower case to sentence case. We will do this for column names</p>
+<div class="fragment">
+<p>🎬 Add <code>col.names = names(chaff_summary) |&gt; str_to_sentence()</code> to the <code>kable()</code> function</p>
+</div>
+</section><section id="the-visual-editor" class="slide level2"><h2>The visual editor!</h2>
+<p>::: incremental</p>
+<ul>
+<li><p>The visual editor is a WYSIWYG editor for Quarto documents and can be accessed by clicking the <code>Visual Editor</code> button in the top right Or by Ctrl-Shift-F4</p></li>
+<li><p>It makes it easier to add and edit content (although I find I often want to use the source)</p></li>
+<li><p>It is especially useful for adding citations.</p></li>
+<li><p>Especially if you use zotero.</p></li>
+</ul></section><section id="citations" class="slide level2"><h2>Citations</h2>
+<p>You can add citations for R and packages, from doi, from a .bib file, or from zotero.</p>
+<p>🎬 Put your cursor where you want the citation to go and click the <code>Insert</code> button in the top right and select <code>Citation</code> (Ctrl-Shift-F8) and add a citation for the <code>tidverse</code> package.</p>
+<div class="fragment">
+<p>🎬 Render</p>
+</div>
+<div class="fragment">
+<ul>
+<li><p>the in-text citation has been added</p></li>
+<li><p>the reference has been added to the references section</p></li>
+<li><p>a <code>references.bib</code> file has been created in the project folder</p></li>
+</ul>
+</div>
+</section><section id="citations-1" class="slide level2"><h2>Citations</h2>
+<p>🎬 Put your cursor after “plumage” in the Introduction and click the <code>Insert</code> button in the top right and select <code>Citation</code> (Ctrl-Shift-F8). Select From DOI and paste in 10.1016/j.ympev.2009.07.018</p>
+<div class="fragment">
+<p>🎬 Render</p>
+</div>
+<div class="fragment">
+<p>You can also add citations to the .bib file manually. E.g. for R itself</p>
+</div>
 </section><section id="extra-exercises" class="slide level2"><h2>Extra exercises</h2>
 <p>🎬 Make a folder called <code>images</code> and save these two images of the subspecies to it: <a href="images/canariensis.jpg">canariensis.jpg</a> and <a href="images/coelebs.jpg">coelebs.jpg</a>. Then add images of each of the chaffinch subspecies to the multi-panel figure.</p>
-</section><section id="section" class="slide level2"><h2></h2>
-</section><section id="section-1" class="slide level2"><h2></h2>
-</section><section id="section-2" class="slide level2"><h2></h2>
+</section><section id="summary" class="slide level2"><h2>Summary</h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
