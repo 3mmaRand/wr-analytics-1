@@ -528,7 +528,7 @@ Inline code goes between ``` `r ``` and ``` ` ``` .
 
 For example by writing:
 
-The squareroot of 2 is ` `r ` `sqrt(2)`
+The squareroot of 2 is ``` `r ``` `sqrt(2)`
 
 you will get:
 
@@ -544,7 +544,7 @@ The squareroot of 2 is `r sqrt(2)`
 
 ## A figure
 
-🎬 Add a code chunk with:
+🎬 Add a code chunk to the Results section with:
 
 ```{r}
 #| echo: fenced
@@ -567,7 +567,7 @@ ggplot() +
   theme_classic()
 ```
 
-
+. . . 
 
 🎬 Render
 
@@ -577,6 +577,17 @@ Note: It is automatically labelled as Figure 1!
 
 
 ## Cross referencing
+
+The label of the code chunk is important when creating figures 
+because it is used to cross reference the figure in the text.
+
+. . .
+
+That is starts with a `fig-` prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.
+
+🎬 Add
+
+Canariensis have higher mass than coelebs. See \@fig-chaff
 
 ## A figure legend
 
