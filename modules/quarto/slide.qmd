@@ -528,11 +528,12 @@ n_canariensis <- chaff_summary |>
 
 . . . 
 
-Inline code goes between \`r and \` .
+
+Inline code goes between \`r\` and \` .
 
 For example by writing:
 
-The squareroot of 2 is \`r sqrt(2) \`
+The squareroot of 2 is \`r `sqrt(2)` \`
 
 you will get:
 
