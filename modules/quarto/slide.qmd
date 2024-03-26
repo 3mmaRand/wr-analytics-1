@@ -701,7 +701,9 @@ chaff |> filter(subspecies == "canariensis") |>
 ```
 
 
+
 ```{r}
+#| echo: fenced
 #| label: fig-hist-coelebs
 chaff |> filter(subspecies == "coelebs") |>
   ggplot(aes(x = mass)) +
