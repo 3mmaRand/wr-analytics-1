@@ -111,7 +111,9 @@ The successful student will be able to:
 
 -   R Code chunks are between ```` ```{r} ```` and ```` ``` ```` and
     chunk options determine how/whether they run whether code/output is
-    included in the knitted document
+    included in the rendered document
+    
+-   You can run code chunk interactively or through rendering
 
 -   Comments: `|#`, `#` in chunk options, `<!-- in text -->` but use
     Ctrl+Shift+C
@@ -177,17 +179,17 @@ and, even more importantly, easy to read
 
 ## Links & Images
 
-+-----------------------------------+-------------------------------+
-| Markdown Syntax                   | Output                        |
-+===================================+===============================+
-| ``` markdown                      | [Quarto](https://quarto.org)  |
-| [Quarto](https://quarto.org)      |                               |
-| ```                               |                               |
-+-----------------------------------+-------------------------------+
-| ``` markdown                      | ![](i                         |
-| ![Caption](images/chaff.jpg)      | mages/chaff.jpg){width="150"} |
-| ```                               |                               |
-+-----------------------------------+-------------------------------+
++------------------------------+-------------------------------------+
+| Markdown Syntax              | Output                              |
++==============================+=====================================+
+| ``` markdown                 | [Quarto](https://quarto.org)        |
+| [Quarto](https://quarto.org) |                                     |
+| ```                          |                                     |
++------------------------------+-------------------------------------+
+| ``` markdown                 | ![](images/chaff.jpg){width="150"}  |
+| ![Caption](images/chaff.jpg) |                                     |
+| ```                          |                                     |
++------------------------------+-------------------------------------+
 
 ## Lists
 
@@ -355,3 +357,140 @@ execute:
 -   `error: false` halt render if a code error occurs
 -   `message: false` messages and warnings will not be included
 -   `warning: false`
+
+🎬 Experiment with change the options and re-rendering. Try misspelling
+    `rnorm` to see the error option in action.
+
+# Content
+
+
+## Content
+
+🎬 Delete everything except the YAML header.
+
+🎬 Add headings for: Introduction, Methods, Results, Discussion, 
+   and  References
+
+🎬 Add a code chunk for package loading
+
+
+```{r}
+#| echo: fenced
+#| label: load-packages
+library(tidyverse)
+```
+
+`#| label: load-packages` is a code chunk label. These are useful (here)
+and essential (later) for cross-referencing.
+
+## Introduction
+
+🎬 Add this test to the Introduction
+
+::: {style="font-size: 80%"}
+A number of subspecies of the common chaffinch, Fringilla
+coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these
+subspecies are the "coelebs group"  that occurs in Europe
+and Asia and the "canariensis group" that occurs on
+the Canary Islands.
+:::
+
+🎬 Make the species name italic
+
+
+🎬 Make "common chaffinch" a link to  https://en.wikipedia.org/wiki/Common_chaffinch
+
+
+## Add data import
+
+🎬 Make a folder called `data-raw`
+
+🎬 Save [chaff.txt](data-raw/chaff.txt) to `data-raw`
+
+🎬 Run chunks interactively
+
+🎬 Render
+
+
+## Add data summary
+
+🎬 Add a code chunk with:
+
+
+```{r}
+#| echo: fenced
+#| label: data-summary
+chaff_summary <- chaff |> 
+  group_by(subspecies) |>  
+  summarise(mean = mean(mass, na.rm = TRUE),
+            sd = sd(mass, na.rm = TRUE),
+            n = length(mass),
+            se = sd / sqrt(n))
+```
+
+## Add information for methods
+
+🎬 Add this test to the Introduction
+
+::: {style="font-size: 80%"}
+
+We randomly sampled 20 *F. c. coelebs* males and
+20 *F. c. palmae* males and determined their mass with
+spring scales. Analysis was carried out with R and tidyverse packages.
+:::
+
+
+## Extract summary information
+
+🎬 Add a code chunk with:
+
+```{r}
+#| echo: fenced
+#| label: extract-summary
+# extract values for inline reporting
+
+# sample sizes
+n_coelebs <- chaff_summary |> 
+  filter(subspecies == "coelebs") |> 
+  pull(n)
+
+n_canariensis <- chaff_summary |> 
+  filter(subspecies == "canariensis") |> 
+  pull(n)
+```
+
+
+## Inline code: reproducible reporting
+
+
+
+## A figure
+
+
+## A figure legend
+
+
+## Cross referencing
+
+
+## Two panel figure
+
+## Change the order of the figures
+
+
+## A table
+
+
+
+## Citations
+
+
+##
+
+
+##
+
+##
+
+
+##

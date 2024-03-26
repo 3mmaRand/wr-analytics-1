@@ -78,8 +78,7 @@ website:
             contents: 
              - href: modules/quarto/slide.qmd
                text: About  
-             - href: modules/quarto/workshop.qmd
-               text: Workshop
+
 execute:
   echo: true
   warning: false
