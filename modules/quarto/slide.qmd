@@ -309,7 +309,7 @@ This content is smaller
 
 🎬 Hit Render (Ctrl-Shift-K)
 
-Note that` wr-chaff.html` is created and opened in the Viewer pane
+Note that `wr-chaff.html` is created and opened in the Viewer pane
 
 (may need to set in Global options to open in Viewer pane)
 
@@ -384,8 +384,10 @@ execute:
 
 🎬 Delete everything except the YAML header.
 
+
 🎬 Add headings for: Introduction, Methods, Results, Discussion, 
    and  References
+
 
 🎬 Add a code chunk for package loading
 
@@ -395,6 +397,8 @@ execute:
 #| label: load-packages
 library(tidyverse)
 ```
+
+. . . 
 
 `#| label: load-packages` is a code chunk label. These are useful (here)
 and essential (later) for cross-referencing.
@@ -414,7 +418,9 @@ the Canary Islands.
 
 . . .
 
+
 🎬 Make the species name italic
+
 
 . . .
 
@@ -429,6 +435,17 @@ the Canary Islands.
 
 
 🎬 Save [chaff.txt](data-raw/chaff.txt) to `data-raw`
+
+
+🎬 Add a code chunk with:
+
+
+```{r}
+#| echo: fenced
+#| label: import-data
+file <- "data-raw/chaff.txt"
+chaff <- read_table(file)
+```
 
 . . .
 
