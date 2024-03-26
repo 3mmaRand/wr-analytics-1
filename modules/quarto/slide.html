@@ -826,7 +826,7 @@ Emma Rand
 <div class="fragment">
 <p>Inline code goes between <code>`r</code> and <code>`</code> .</p>
 <p>For example by writing:</p>
-<p>The squareroot of 2 is <code></code>r <code></code>sqrt(2)`</p>
+<p>The squareroot of 2 is <code>`r</code> <code>sqrt(2)</code></p>
 <p>you will get:</p>
 <p>The squareroot of 2 is 1.4142136</p>
 </div>
@@ -834,7 +834,7 @@ Emma Rand
 <p>🎬 Replace the sample sizes in the Methods text with inline code</p>
 <p>🎬 Render</p>
 </section><section id="a-figure" class="slide level2"><h2>A figure</h2>
-<p>🎬 Add a code chunk with:</p>
+<p>🎬 Add a code chunk to the Results section with:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb26-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-chaff</span></span>
@@ -856,9 +856,17 @@ Emma Rand
 <span id="cb26-18"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic()</span></span>
 <span id="cb26-19"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
 <p>🎬 Render</p>
 <p>Note: It is automatically labelled as Figure 1!</p>
+</div>
 </section><section id="cross-referencing" class="slide level2"><h2>Cross referencing</h2>
+<p>The label of the code chunk is important when creating figures because it is used to cross reference the figure in the text.</p>
+<div class="fragment">
+<p>That is starts with a <code>fig-</code> prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.</p>
+<p>🎬 Add</p>
+<p>Canariensis have higher mass than coelebs. See @fig-chaff</p>
+</div>
 </section><section id="a-figure-legend" class="slide level2"><h2>A figure legend</h2>
 </section><section id="two-panel-figure" class="slide level2"><h2>Two panel figure</h2>
 </section><section id="change-the-order-of-the-figures" class="slide level2"><h2>Change the order of the figures</h2>

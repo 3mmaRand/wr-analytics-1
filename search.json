@@ -347,7 +347,7 @@
     "href": "modules/quarto/slide.html#inline-code-reproducible-reporting",
     "title": "Quarto for reproducible reporting",
     "section": "Inline code: reproducible reporting",
-    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r and ` .\nFor example by writing:\nThe squareroot of 2 is r sqrt(2)`\nyou will get:\nThe squareroot of 2 is 1.4142136",
+    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r and ` .\nFor example by writing:\nThe squareroot of 2 is `r sqrt(2)\nyou will get:\nThe squareroot of 2 is 1.4142136",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -371,7 +371,7 @@
     "href": "modules/quarto/slide.html#a-figure",
     "title": "Quarto for reproducible reporting",
     "section": "A figure",
-    "text": "A figure\n🎬 Add a code chunk with:\n\n```{r}\n#| label: fig-chaff\nggplot() +\n  geom_point(data = chaff, aes(x = subspecies, y = mass),\n             position = position_jitter(width = 0.1, height = 0),\n             colour = \"gray50\") +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean - se, ymax = mean + se),\n                width = 0.3) +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean, ymax = mean),\n                width = 0.2) +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 30), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Subspecies\", \n                   labels = c(\"Canariensis\", \"Coelebs\")) +\n  theme_classic()\n```\n\n🎬 Render\nNote: It is automatically labelled as Figure 1!",
+    "text": "A figure\n🎬 Add a code chunk to the Results section with:\n\n```{r}\n#| label: fig-chaff\nggplot() +\n  geom_point(data = chaff, aes(x = subspecies, y = mass),\n             position = position_jitter(width = 0.1, height = 0),\n             colour = \"gray50\") +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean - se, ymax = mean + se),\n                width = 0.3) +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean, ymax = mean),\n                width = 0.2) +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 30), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Subspecies\", \n                   labels = c(\"Canariensis\", \"Coelebs\")) +\n  theme_classic()\n```\n\n\n🎬 Render\nNote: It is automatically labelled as Figure 1!",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -383,7 +383,7 @@
     "href": "modules/quarto/slide.html#cross-referencing",
     "title": "Quarto for reproducible reporting",
     "section": "Cross referencing",
-    "text": "Cross referencing",
+    "text": "Cross referencing\nThe label of the code chunk is important when creating figures because it is used to cross reference the figure in the text.\n\nThat is starts with a fig- prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.\n🎬 Add\nCanariensis have higher mass than coelebs. See @fig-chaff",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
