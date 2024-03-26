@@ -532,7 +532,7 @@ Inline code goes between \`r and \` .
 
 For example by writing:
 
-The squareroot of 2 is \`r `sqrt(2)` \`
+The squareroot of 2 is \`r sqrt(2) \`
 
 you will get:
 
@@ -695,7 +695,7 @@ ggplot() +
 #| label: fig-hist-canariensis
 chaff |> filter(subspecies == "canariensis") |>
   ggplot(aes(x = mass)) +
-  geom_histgram(bins = 10) +
+  geom_histogram(bins = 10) +
   theme_minimal()
 ```
 
@@ -704,14 +704,42 @@ chaff |> filter(subspecies == "canariensis") |>
 #| label: fig-hist-coelebs
 chaff |> filter(subspecies == "coelebs") |>
   ggplot(aes(x = mass)) +
-  geom_histgram(bins = 10) +
+  geom_histogram(bins = 10) +
   theme_minimal()
 ```
 
 
+If you render, you'll see that the two figures are added as separate figures.
+
+## Two panel figure
+
+To make them into one figure we need to use a div.
+
+🎬 Add the div a round those chunks
+
+`::: {##fig-histograms layout-ncol=2}`
+
+......
+
+`:::`
+
+. . .
+
+🎬 Render
+
+. . .
+
+🎬 Add a figure legend to the two panel figure
 
 
-## Change the order of the figures
+. . .
+
+🎬 Add a sentence with a cross reference to the figure. Can you cross
+reference the sub figures?
+
+. . .
+
+🎬 Change the order of the figures
 
 
 ## A table
