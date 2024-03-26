@@ -443,7 +443,7 @@
     "href": "modules/quarto/slide.html#two-panel-figure-1",
     "title": "Quarto for reproducible reporting",
     "section": "Two panel figure",
-    "text": "Two panel figure\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n```\n\n\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n\nIf you render, you’ll see that the two figures are added as separate figures.",
+    "text": "Two panel figure\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n```\n\n\n```{r}\n#| label: fig-hist-coelebs\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n```\n\nIf you render, you’ll see that the two figures are added as separate figures.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",

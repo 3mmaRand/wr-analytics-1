@@ -945,10 +945,13 @@ Emma Rand
 <span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">chaff</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">subspecies</span> <span class="op">==</span> <span class="st">"coelebs"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">mass</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">geom_histogram</span><span class="op">(</span>bins <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-hist-coelebs</span></span>
+<span id="cb29-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">chaff |&gt; filter(subspecies == "coelebs") |&gt;</span></span>
+<span id="cb29-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot(aes(x = mass)) +</span></span>
+<span id="cb29-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_histogram(bins = 10) +</span></span>
+<span id="cb29-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb29-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you render, you’ll see that the two figures are added as separate figures.</p>
 </section><section id="two-panel-figure-2" class="slide level2"><h2>Two panel figure</h2>
