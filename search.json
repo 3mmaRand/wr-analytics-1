@@ -299,7 +299,7 @@
     "href": "modules/quarto/slide.html#add-data-import",
     "title": "Quarto for reproducible reporting",
     "section": "Add data import",
-    "text": "Add data import\n🎬 Make a folder called data-raw\n🎬 Save chaff.txt to data-raw\n🎬 Add a code chunk with:\n\n```{r}\n#| label: import-data\nfile &lt;- \"data-raw/chaff.txt\"\nchaff &lt;- read_table(file)\n```\n\n\n🎬 Run chunks interactively\n\n\n🎬 Render",
+    "text": "Add data import\n🎬 Make a folder called data-raw\n\n🎬 Save chaff.txt to data-raw\n\n\n🎬 Add a code chunk with:\n\n```{r}\n#| label: import-data\nfile &lt;- \"data-raw/chaff.txt\"\nchaff &lt;- read_table(file)\n```\n\n\n\n🎬 Run chunks interactively\n\n\n🎬 Render",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -323,7 +323,7 @@
     "href": "modules/quarto/slide.html#add-information-for-methods",
     "title": "Quarto for reproducible reporting",
     "section": "Add information for methods",
-    "text": "Add information for methods\n🎬 Add this test to the Introduction\n\nWe randomly sampled 20 F. c. coelebs males and 20 F. c. palmae males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.\n\n\nIt would be good",
+    "text": "Add information for methods\n🎬 Add this text to the Introduction\n\nWe randomly sampled 20 F. c. coelebs males and 20 F. c. palmae males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.\n\n\nIt would be good to to hard code those numbers in the text. What if we get more data. Or we just misremember or mis-type the numbers?",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -383,7 +383,7 @@
     "href": "modules/quarto/slide.html#cross-referencing",
     "title": "Quarto for reproducible reporting",
     "section": "Cross referencing",
-    "text": "Cross referencing\nThe label of the code chunk is important when creating figures because it is used to cross reference the figure in the text.\n\nThat is starts with a fig- prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.\n🎬 Add\nCanariensis have higher mass than coelebs. See @fig-chaff",
+    "text": "Cross referencing\nThe label of the code chunk is important when creating figures because it is used to cross reference the figure in the text. We give cross references with @ followed by the label of the code chunk.\n\nThat is starts with a fig- prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.\n🎬 Add a sentence with a cross reference to the figure:\n\nCanariensis have higher mass than coelebs. See @fig-chaff",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -395,7 +395,31 @@
     "href": "modules/quarto/slide.html#a-figure-legend",
     "title": "Quarto for reproducible reporting",
     "section": "A figure legend",
-    "text": "A figure legend",
+    "text": "A figure legend\nThere are two ways to add a legend:\n\nAdd the fig-cap chunk option: fig-cap: \"Mass of chaffinches\" to the code chunk.\nUse a div.\n\n\n\nIs much more flexible:\n\n\nYou can include inline code, citations, special characters and formatting\nYou can more easily make multipanel figures",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#a-figure-legend-with-a-div",
+    "href": "modules/quarto/slide.html#a-figure-legend-with-a-div",
+    "title": "Quarto for reproducible reporting",
+    "section": "A figure legend with a div",
+    "text": "A figure legend with a div\n🎬 Add a div by adding:\n\nremoving the fig-cap option and the label option\n::: before and after the code chunk\nplacing the label after the opening ::: like this: ::: {#fig-chaff} Note the # is important for numbering\nPutting the legend text between the code chunk and the closing :::\n\n\nIn the example figure legend I have included inline code and formatting",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#set-the-figure-size-and-alignment",
+    "href": "modules/quarto/slide.html#set-the-figure-size-and-alignment",
+    "title": "Quarto for reproducible reporting",
+    "section": "Set the figure size and alignment",
+    "text": "Set the figure size and alignment\n🎬 Add a chunk options fig-width, fig-height and fig-align to the code chunk:\n\n```{r}\n#| fig-width: 3.5\n#| fig-height: 3.5\nggplot() +\n  geom_point(data = chaff, aes(x = subspecies, y = mass),\n             position = position_jitter(width = 0.1, height = 0),\n             colour = \"gray50\") +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean - se, ymax = mean + se),\n                width = 0.3) +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean, ymax = mean),\n                width = 0.2) +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 30), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Subspecies\", \n                   labels = c(\"Canariensis\", \"Coelebs\")) +\n  theme_classic()\n```",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -407,7 +431,7 @@
     "href": "modules/quarto/slide.html#two-panel-figure",
     "title": "Quarto for reproducible reporting",
     "section": "Two panel figure",
-    "text": "Two panel figure",
+    "text": "Two panel figure\n\n\nWe are going to add another figure, this time a figure with two panels (it’s an unnecessary figure for this data, but works for demonstration).\nThe figure will be two histogram of the mass of each subspecies.\nWe will again use a div which will contain two code chunks, one for each graph.\nTheir will be a label on the div for the figure as a whole and labels on each of the chunk to cross reference the sub figures.\nFigure layout information will be added to the div.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -415,11 +439,23 @@
     ]
   },
   {
-    "objectID": "modules/quarto/slide.html#change-the-order-of-the-figures",
-    "href": "modules/quarto/slide.html#change-the-order-of-the-figures",
+    "objectID": "modules/quarto/slide.html#two-panel-figure-1",
+    "href": "modules/quarto/slide.html#two-panel-figure-1",
     "title": "Quarto for reproducible reporting",
-    "section": "Change the order of the figures",
-    "text": "Change the order of the figures",
+    "section": "Two panel figure",
+    "text": "Two panel figure\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n```\n\n\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n\nIf you render, you’ll see that the two figures are added as separate figures.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#two-panel-figure-2",
+    "href": "modules/quarto/slide.html#two-panel-figure-2",
+    "title": "Quarto for reproducible reporting",
+    "section": "Two panel figure",
+    "text": "Two panel figure\nTo make them into one figure we need to use a div.\n🎬 Add the div a round those chunks\n::: {##fig-histograms layout-ncol=2}\n……\n:::\n\n🎬 Render\n\n\n🎬 Add a figure legend to the two panel figure\n\n\n🎬 Add a sentence with a cross reference to the figure. Can you cross reference the sub figures?\n\n\n🎬 Change the order of the figures",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",

@@ -757,11 +757,14 @@ Emma Rand
 <p>🎬 Make the species name italic</p>
 </div>
 <div class="fragment">
-<p>🎬 Make “common chaffinch” a link to https://en.wikipedia.org/wiki/Common_chaffinch</p>
+<p>🎬 Make “common chaffinch” a link to <a href="https://en.wikipedia.org/wiki/Common_chaffinch" class="uri">https://en.wikipedia.org/wiki/Common_chaffinch</a></p>
 </div>
 </section><section id="add-data-import" class="slide level2"><h2>Add data import</h2>
 <p>🎬 Make a folder called <code>data-raw</code></p>
+<div class="fragment">
 <p>🎬 Save <a href="data-raw/chaff.txt">chaff.txt</a> to <code>data-raw</code></p>
+</div>
+<div class="fragment">
 <p>🎬 Add a code chunk with:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -769,6 +772,7 @@ Emma Rand
 <span id="cb23-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">file &lt;- "data-raw/chaff.txt"</span></span>
 <span id="cb23-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">chaff &lt;- read_table(file)</span></span>
 <span id="cb23-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="fragment">
 <p>🎬 Run chunks interactively</p>
@@ -794,12 +798,12 @@ Emma Rand
 <p>Notice the chunk labels being used in “Background Jobs”</p>
 </div>
 </section><section id="add-information-for-methods" class="slide level2"><h2>Add information for methods</h2>
-<p>🎬 Add this test to the Introduction</p>
+<p>🎬 Add this text to the Introduction</p>
 <div style="font-size: 80%">
 <p>We randomly sampled 20 <em>F. c.&nbsp;coelebs</em> males and 20 <em>F. c.&nbsp;palmae</em> males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.</p>
 </div>
 <div class="fragment">
-<p>It would be good</p>
+<p>It would be good to to hard code those numbers in the text. What if we get more data. Or we just misremember or mis-type the numbers?</p>
 </div>
 </section><section id="extract-summary-information" class="slide level2"><h2>Extract summary information</h2>
 <p>🎬 Add a code chunk with:</p>
@@ -861,15 +865,110 @@ Emma Rand
 <p>Note: It is automatically labelled as Figure 1!</p>
 </div>
 </section><section id="cross-referencing" class="slide level2"><h2>Cross referencing</h2>
-<p>The label of the code chunk is important when creating figures because it is used to cross reference the figure in the text.</p>
+<p>The label of the code chunk is important when creating figures because it is used to cross reference the figure in the text. We give cross references with <code>@</code> followed by the label of the code chunk.</p>
 <div class="fragment">
 <p>That is starts with a <code>fig-</code> prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.</p>
-<p>🎬 Add</p>
+<p>🎬 Add a sentence with a cross reference to the figure:</p>
+<div style="font-size: 80%">
 <p>Canariensis have higher mass than coelebs. See @fig-chaff</p>
 </div>
+</div>
 </section><section id="a-figure-legend" class="slide level2"><h2>A figure legend</h2>
+<p>There are two ways to add a legend:</p>
+<ol type="1">
+<li><p>Add the <code>fig-cap</code> chunk option: <code>fig-cap: "Mass of chaffinches"</code> to the code chunk.</p></li>
+<li><p>Use a div.</p></li>
+</ol>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Is much more flexible:</li>
+</ol>
+<ul>
+<li><p>You can include inline code, citations, special characters and formatting</p></li>
+<li><p>You can more easily make multipanel figures</p></li>
+</ul>
+</div>
+</section><section id="a-figure-legend-with-a-div" class="slide level2"><h2>A figure legend with a div</h2>
+<p>🎬 Add a div by adding:</p>
+<ul>
+<li><p>removing the <code>fig-cap</code> option <strong>and</strong> the <code>label</code> option</p></li>
+<li><p><code>:::</code> before and after the code chunk</p></li>
+<li><p>placing the label after the opening <code>:::</code> like this: <code>::: {#fig-chaff}</code> Note the <code>#</code> is important for numbering</p></li>
+<li><p>Putting the legend text between the code chunk and the closing <code>:::</code></p></li>
+</ul>
+<div class="fragment">
+<p>In the example figure legend I have included inline code and formatting</p>
+</div>
+</section><section id="set-the-figure-size-and-alignment" class="slide level2"><h2>Set the figure size and alignment</h2>
+<p>🎬 Add a chunk options <code>fig-width</code>, <code>fig-height</code> and <code>fig-align</code> to the code chunk:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-width: 3.5</span></span>
+<span id="cb27-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-height: 3.5</span></span>
+<span id="cb27-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">ggplot() +</span></span>
+<span id="cb27-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(data = chaff, aes(x = subspecies, y = mass),</span></span>
+<span id="cb27-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">             position = position_jitter(width = 0.1, height = 0),</span></span>
+<span id="cb27-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">             colour = "gray50") +</span></span>
+<span id="cb27-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_errorbar(data = chaff_summary, </span></span>
+<span id="cb27-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">                aes(x = subspecies, ymin = mean - se, ymax = mean + se),</span></span>
+<span id="cb27-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">                width = 0.3) +</span></span>
+<span id="cb27-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_errorbar(data = chaff_summary, </span></span>
+<span id="cb27-12"><a aria-hidden="true" tabindex="-1"></a><span class="in">                aes(x = subspecies, ymin = mean, ymax = mean),</span></span>
+<span id="cb27-13"><a aria-hidden="true" tabindex="-1"></a><span class="in">                width = 0.2) +</span></span>
+<span id="cb27-14"><a aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_continuous(name = "Mass (g)", </span></span>
+<span id="cb27-15"><a aria-hidden="true" tabindex="-1"></a><span class="in">                     limits = c(0, 30), </span></span>
+<span id="cb27-16"><a aria-hidden="true" tabindex="-1"></a><span class="in">                     expand = c(0, 0)) +</span></span>
+<span id="cb27-17"><a aria-hidden="true" tabindex="-1"></a><span class="in">  scale_x_discrete(name = "Subspecies", </span></span>
+<span id="cb27-18"><a aria-hidden="true" tabindex="-1"></a><span class="in">                   labels = c("Canariensis", "Coelebs")) +</span></span>
+<span id="cb27-19"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_classic()</span></span>
+<span id="cb27-20"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section><section id="two-panel-figure" class="slide level2"><h2>Two panel figure</h2>
-</section><section id="change-the-order-of-the-figures" class="slide level2"><h2>Change the order of the figures</h2>
+<div>
+<ul>
+<li class="fragment"><p>We are going to add another figure, this time a figure with two panels (it’s an unnecessary figure for this data, but works for demonstration).</p></li>
+<li class="fragment"><p>The figure will be two histogram of the mass of each subspecies.</p></li>
+<li class="fragment"><p>We will again use a div which will contain two code chunks, one for each graph.</p></li>
+<li class="fragment"><p>Their will be a label on the div for the figure as a whole and labels on each of the chunk to cross reference the sub figures.</p></li>
+<li class="fragment"><p>Figure layout information will be added to the div.</p></li>
+</ul>
+</div>
+</section><section id="two-panel-figure-1" class="slide level2"><h2>Two panel figure</h2>
+<p>🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-hist-canariensis</span></span>
+<span id="cb28-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">chaff |&gt; filter(subspecies == "canariensis") |&gt;</span></span>
+<span id="cb28-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot(aes(x = mass)) +</span></span>
+<span id="cb28-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">  geom_histogram(bins = 10) +</span></span>
+<span id="cb28-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">chaff</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">subspecies</span> <span class="op">==</span> <span class="st">"coelebs"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">mass</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span>bins <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you render, you’ll see that the two figures are added as separate figures.</p>
+</section><section id="two-panel-figure-2" class="slide level2"><h2>Two panel figure</h2>
+<p>To make them into one figure we need to use a div.</p>
+<p>🎬 Add the div a round those chunks</p>
+<p><code>::: {##fig-histograms layout-ncol=2}</code></p>
+<p>……</p>
+<p><code>:::</code></p>
+<div class="fragment">
+<p>🎬 Render</p>
+</div>
+<div class="fragment">
+<p>🎬 Add a figure legend to the two panel figure</p>
+</div>
+<div class="fragment">
+<p>🎬 Add a sentence with a cross reference to the figure. Can you cross reference the sub figures?</p>
+</div>
+<div class="fragment">
+<p>🎬 Change the order of the figures</p>
+</div>
 </section><section id="a-table" class="slide level2"><h2>A table</h2>
 </section><section id="citations" class="slide level2"><h2>Citations</h2>
 </section><section id="section" class="slide level2"><h2></h2>
