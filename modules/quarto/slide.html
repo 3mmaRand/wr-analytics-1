@@ -972,12 +972,34 @@ Emma Rand
 <div class="fragment">
 <p>🎬 Change the order of the figures</p>
 </div>
-</section><section id="a-table" class="slide level2"><h2>A table</h2>
+</section><section id="tables" class="slide level2"><h2>Tables</h2>
+<p>There are several ways to add tables to a document. We will use the <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">knitr::kable()</a></code> function to create a table from a data frame or the summary information</p>
+<div class="fragment">
+<p>🎬 Add a table of the summary information for the chaffinch data:</p>
+<div id="tbl-chaff" class="cell quarto-float">
+<figure class="quarto-float quarto-float-tbl"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-chaff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
+</figcaption><div aria-describedby="tbl-chaff-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="tbl-chaff"><pre class="sourceCode markdown cell code-with-copy"><code class="sourceCode markdown"><span id="tbl-chaff-1"><a href="#tbl-chaff-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="tbl-chaff-2"><a href="#tbl-chaff-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: tbl-chaff</span></span>
+<span id="tbl-chaff-3"><a href="#tbl-chaff-3" aria-hidden="true" tabindex="-1"></a><span class="in">chaff_summary |&gt; </span></span>
+<span id="tbl-chaff-4"><a href="#tbl-chaff-4" aria-hidden="true" tabindex="-1"></a><span class="in">  knitr::kable(caption = "Summary of mass(g) for the two subspecies of chaffinch.")</span></span>
+<span id="tbl-chaff-5"><a href="#tbl-chaff-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p>Just as the <code>fig-</code> prefix matters for corrected numbering of figures, the <code>tbl-</code> prefix is important for the corrected numbering of figures.</p>
+<p>Just as the label of the code chunk is important for cross referencing of figures so it is for tables and we use <code>@</code> followed by the label of the code chunk to cross reference the table in the text.</p>
+</div>
+</section><section id="tables---improve-format" class="slide level2"><h2>Tables - improve format</h2>
 </section><section id="citations" class="slide level2"><h2>Citations</h2>
+</section><section id="extra-exercises" class="slide level2"><h2>Extra exercises</h2>
+<p>🎬 Make a folder called <code>images</code> and save these two images of the subspecies to it: <a href="images/canariensis.jpg">canariensis.jpg</a> and <a href="images/coelebs.jpg">coelebs.jpg</a>. Then add images of each of the chaffinch subspecies to the multi-panel figure.</p>
 </section><section id="section" class="slide level2"><h2></h2>
 </section><section id="section-1" class="slide level2"><h2></h2>
 </section><section id="section-2" class="slide level2"><h2></h2>
-</section><section id="section-3" class="slide level2"><h2></h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

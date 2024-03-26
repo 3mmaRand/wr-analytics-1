@@ -463,11 +463,23 @@
     ]
   },
   {
-    "objectID": "modules/quarto/slide.html#a-table",
-    "href": "modules/quarto/slide.html#a-table",
+    "objectID": "modules/quarto/slide.html#tables",
+    "href": "modules/quarto/slide.html#tables",
     "title": "Quarto for reproducible reporting",
-    "section": "A table",
-    "text": "A table",
+    "section": "Tables",
+    "text": "Tables\nThere are several ways to add tables to a document. We will use the knitr::kable() function to create a table from a data frame or the summary information\n\n🎬 Add a table of the summary information for the chaffinch data:\n\n\nTable 1\n\n```{r}\n#| label: tbl-chaff\nchaff_summary |&gt; \n  knitr::kable(caption = \"Summary of mass(g) for the two subspecies of chaffinch.\")\n```\n\n\n\n\n\nJust as the fig- prefix matters for corrected numbering of figures, the tbl- prefix is important for the corrected numbering of figures.\nJust as the label of the code chunk is important for cross referencing of figures so it is for tables and we use @ followed by the label of the code chunk to cross reference the table in the text.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#tables---improve-format",
+    "href": "modules/quarto/slide.html#tables---improve-format",
+    "title": "Quarto for reproducible reporting",
+    "section": "Tables - improve format",
+    "text": "Tables - improve format",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -487,8 +499,20 @@
     ]
   },
   {
-    "objectID": "modules/quarto/slide.html#section-3",
-    "href": "modules/quarto/slide.html#section-3",
+    "objectID": "modules/quarto/slide.html#extra-exercises",
+    "href": "modules/quarto/slide.html#extra-exercises",
+    "title": "Quarto for reproducible reporting",
+    "section": "Extra exercises",
+    "text": "Extra exercises\n🎬 Make a folder called images and save these two images of the subspecies to it: canariensis.jpg and coelebs.jpg. Then add images of each of the chaffinch subspecies to the multi-panel figure.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#section-2",
+    "href": "modules/quarto/slide.html#section-2",
     "title": "Quarto for reproducible reporting",
     "section": "",
     "text": "🔗 Module overview",
