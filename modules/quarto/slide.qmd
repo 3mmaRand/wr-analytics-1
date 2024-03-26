@@ -499,7 +499,7 @@ n_canariensis <- chaff_summary |>
 
 . . . 
 
-Inline code goes between ``` `r and ` ``` .
+Inline code goes between ``` `r ``` and ``` ` ``` .
 
 For example by writing:
 
@@ -507,7 +507,7 @@ The squareroot of 2 is ```  `r sqrt(2) ` ```
 
 you will get:
 
-The squareroot of 2 is `r sqrt(2)
+The squareroot of 2 is `r sqrt(2)`
 
 
 ## Inline code: reproducible reporting
@@ -519,6 +519,7 @@ We randomly sampled `r n_coelebs`  *F. c. coelebs* males
 ```
 
 
+🎬 Render
 
 ## A figure
 
@@ -545,10 +546,18 @@ ggplot() +
   theme_classic()
 ```
 
-## A figure legend
+
+
+🎬 Render
+
+Note: It is automatically labelled as Figure 1!
+
+
 
 
 ## Cross referencing
+
+## A figure legend
 
 
 ## Two panel figure
