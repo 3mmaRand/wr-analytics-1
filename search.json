@@ -347,7 +347,7 @@
     "href": "modules/quarto/slide.html#inline-code-reproducible-reporting",
     "title": "Quarto for reproducible reporting",
     "section": "Inline code: reproducible reporting",
-    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r and ` .\nFor example by writing:\nThe squareroot of 2 is `r sqrt(2)\nyou will get:\nThe squareroot of 2 is 1.4142136",
+    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r` and ` .\nFor example by writing:\nThe squareroot of 2 is `r sqrt(2) `\nyou will get:\nThe squareroot of 2 is 1.4142136",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
