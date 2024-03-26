@@ -71,7 +71,7 @@
     "href": "modules/quarto/slide.html#key-points-from-the-demo",
     "title": "Quarto for reproducible reporting",
     "section": "Key points from the demo",
-    "text": "Key points from the demo\n\nQuarto mixes text and code to create dynamic reports\nThe YAML header sets the default behaviour for the document and is between --- at the top of the document\nR Code chunks are between ```{r} and ``` and chunk options determine how/whether they run whether code/output is included in the knitted document\nComments: |#, # in chunk options, &lt;!-- in text --&gt; but use Ctrl+Shift+C",
+    "text": "Key points from the demo\n\nQuarto mixes text and code to create dynamic reports\nThe YAML header sets the default behaviour for the document and is between --- at the top of the document\nR Code chunks are between ```{r} and ``` and chunk options determine how/whether they run whether code/output is included in the rendered document\nYou can run code chunk interactively or through rendering\nComments: |#, # in chunk options, &lt;!-- in text --&gt; but use Ctrl+Shift+C",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -251,7 +251,187 @@
     "href": "modules/quarto/slide.html#code-chunk-options",
     "title": "Quarto for reproducible reporting",
     "section": "Code chunk options",
-    "text": "Code chunk options\n\n\necho: false code will not be included in output\n\ninclude: true output will be included\n\nerror: false halt render if a code error occurs\n\nmessage: false messages and warnings will not be included\nwarning: false\n\n\n\n\n🔗 Module overview",
+    "text": "Code chunk options\n\n\necho: false code will not be included in output\n\ninclude: true output will be included\n\nerror: false halt render if a code error occurs\n\nmessage: false messages and warnings will not be included\nwarning: false\n\n🎬 Experiment with change the options and re-rendering. Try misspelling rnorm to see the error option in action.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#content-1",
+    "href": "modules/quarto/slide.html#content-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Content",
+    "text": "Content\n🎬 Delete everything except the YAML header.\n🎬 Add headings for: Introduction, Methods, Results, Discussion, and References\n🎬 Add a code chunk for package loading\n\n```{r}\n#| label: load-packages\nlibrary(tidyverse)\n```\n\n#| label: load-packages is a code chunk label. These are useful (here) and essential (later) for cross-referencing.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#introduction",
+    "href": "modules/quarto/slide.html#introduction",
+    "title": "Quarto for reproducible reporting",
+    "section": "Introduction",
+    "text": "Introduction\n🎬 Add this test to the Introduction\n\nA number of subspecies of the common chaffinch, Fringilla coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these subspecies are the “coelebs group” that occurs in Europe and Asia and the “canariensis group” that occurs on the Canary Islands.\n\n🎬 Make the species name italic\n🎬 Make “common chaffinch” a link to https://en.wikipedia.org/wiki/Common_chaffinch",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-data-import",
+    "href": "modules/quarto/slide.html#add-data-import",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add data import",
+    "text": "Add data import\n🎬 Make a folder called data-raw\n🎬 Save chaff.txt to data-raw\n🎬 Run chunks interactively\n🎬 Render",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-data-summary",
+    "href": "modules/quarto/slide.html#add-data-summary",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add data summary",
+    "text": "Add data summary\n🎬 Add a code chunk with:\n\n```{r}\n#| label: data-summary\nchaff_summary &lt;- chaff |&gt; \n  group_by(subspecies) |&gt;  \n  summarise(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            n = length(mass),\n            se = sd / sqrt(n))\n```",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-information-for-methods",
+    "href": "modules/quarto/slide.html#add-information-for-methods",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add information for methods",
+    "text": "Add information for methods\n🎬 Add this test to the Introduction\n\nWe randomly sampled 20 F. c. coelebs males and 20 F. c. palmae males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#extract-summary-information",
+    "href": "modules/quarto/slide.html#extract-summary-information",
+    "title": "Quarto for reproducible reporting",
+    "section": "Extract summary information",
+    "text": "Extract summary information\n🎬 Add a code chunk with:\n\n```{r}\n#| label: extract-summary\n# extract values for inline reporting\n\n# sample sizes\nn_coelebs &lt;- chaff_summary |&gt; \n  filter(subspecies == \"coelebs\") |&gt; \n  pull(n)\n\nn_canariensis &lt;- chaff_summary |&gt; \n  filter(subspecies == \"canariensis\") |&gt; \n  pull(n)\n```",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#inline-code-reproducible-reporting",
+    "href": "modules/quarto/slide.html#inline-code-reproducible-reporting",
+    "title": "Quarto for reproducible reporting",
+    "section": "Inline code: reproducible reporting",
+    "text": "Inline code: reproducible reporting",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#a-figure",
+    "href": "modules/quarto/slide.html#a-figure",
+    "title": "Quarto for reproducible reporting",
+    "section": "A figure",
+    "text": "A figure",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#a-figure-legend",
+    "href": "modules/quarto/slide.html#a-figure-legend",
+    "title": "Quarto for reproducible reporting",
+    "section": "A figure legend",
+    "text": "A figure legend",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#cross-referencing",
+    "href": "modules/quarto/slide.html#cross-referencing",
+    "title": "Quarto for reproducible reporting",
+    "section": "Cross referencing",
+    "text": "Cross referencing",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#two-panel-figure",
+    "href": "modules/quarto/slide.html#two-panel-figure",
+    "title": "Quarto for reproducible reporting",
+    "section": "Two panel figure",
+    "text": "Two panel figure",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#change-the-order-of-the-figures",
+    "href": "modules/quarto/slide.html#change-the-order-of-the-figures",
+    "title": "Quarto for reproducible reporting",
+    "section": "Change the order of the figures",
+    "text": "Change the order of the figures",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#a-table",
+    "href": "modules/quarto/slide.html#a-table",
+    "title": "Quarto for reproducible reporting",
+    "section": "A table",
+    "text": "A table",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#citations",
+    "href": "modules/quarto/slide.html#citations",
+    "title": "Quarto for reproducible reporting",
+    "section": "Citations",
+    "text": "Citations",
+    "crumbs": [
+      "Modules",
+      "Quarto for reproducible reporting",
+      "About"
+    ]
+  },
+  {
+    "objectID": "modules/quarto/slide.html#section-3",
+    "href": "modules/quarto/slide.html#section-3",
+    "title": "Quarto for reproducible reporting",
+    "section": "",
+    "text": "🔗 Module overview",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",

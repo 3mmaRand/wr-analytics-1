@@ -402,7 +402,7 @@ Emma Rand
 </div>
 </div>
 
-  <p class="date">25 March, 2024</p>
+  <p class="date">26 March, 2024</p>
 </section><section><section id="overview" class="title-slide slide level1 center"><h1>Overview</h1>
 
 </section><section id="aims" class="slide level2"><h2>Aims</h2>
@@ -458,7 +458,8 @@ Emma Rand
 <ul>
 <li><p>Quarto mixes text and code to create dynamic reports</p></li>
 <li><p>The YAML header sets the default behaviour for the document and is between <code>---</code> at the top of the document</p></li>
-<li><p>R Code chunks are between <code>```{r}</code> and <code>```</code> and chunk options determine how/whether they run whether code/output is included in the knitted document</p></li>
+<li><p>R Code chunks are between <code>```{r}</code> and <code>```</code> and chunk options determine how/whether they run whether code/output is included in the rendered document</p></li>
+<li><p>You can run code chunk interactively or through rendering</p></li>
 <li><p>Comments: <code>|#</code>, <code>#</code> in chunk options, <code>&lt;!-- in text --&gt;</code> but use Ctrl+Shift+C</p></li>
 </ul></section></section><section><section id="markdown-foundations" class="title-slide slide level1 center"><h1>Markdown foundations</h1>
 
@@ -545,7 +546,7 @@ Emma Rand
 </tr>
 <tr class="even">
 <td><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="al">![Caption](images/chaff.jpg)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
-<td><img data-src="i mages/chaff.jpg" width="150"></td>
+<td><img data-src="images/chaff.jpg" width="150"></td>
 </tr>
 </tbody>
 </table></section><section id="lists" class="slide level2"><h2>Lists</h2>
@@ -715,6 +716,79 @@ Emma Rand
 <code>message: false</code> messages and warnings will not be included</li>
 <li><code>warning: false</code></li>
 </ul>
+<p>🎬 Experiment with change the options and re-rendering. Try misspelling <code>rnorm</code> to see the error option in action.</p>
+</section></section><section><section id="content" class="title-slide slide level1 center"><h1>Content</h1>
+
+</section><section id="content-1" class="slide level2"><h2>Content</h2>
+<p>🎬 Delete everything except the YAML header.</p>
+<p>🎬 Add headings for: Introduction, Methods, Results, Discussion, and References</p>
+<p>🎬 Add a code chunk for package loading</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: load-packages</span></span>
+<span id="cb23-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb23-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>#| label: load-packages</code> is a code chunk label. These are useful (here) and essential (later) for cross-referencing.</p>
+</section><section id="introduction" class="slide level2"><h2>Introduction</h2>
+<p>🎬 Add this test to the Introduction</p>
+<div style="font-size: 80%">
+<p>A number of subspecies of the common chaffinch, Fringilla coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these subspecies are the “coelebs group” that occurs in Europe and Asia and the “canariensis group” that occurs on the Canary Islands.</p>
+</div>
+<p>🎬 Make the species name italic</p>
+<p>🎬 Make “common chaffinch” a link to https://en.wikipedia.org/wiki/Common_chaffinch</p>
+</section><section id="add-data-import" class="slide level2"><h2>Add data import</h2>
+<p>🎬 Make a folder called <code>data-raw</code></p>
+<p>🎬 Save <a href="data-raw/chaff.txt">chaff.txt</a> to <code>data-raw</code></p>
+<p>🎬 Run chunks interactively</p>
+<p>🎬 Render</p>
+</section><section id="add-data-summary" class="slide level2"><h2>Add data summary</h2>
+<p>🎬 Add a code chunk with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: data-summary</span></span>
+<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a><span class="in">chaff_summary &lt;- chaff |&gt; </span></span>
+<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(subspecies) |&gt;  </span></span>
+<span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(mean = mean(mass, na.rm = TRUE),</span></span>
+<span id="cb24-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">            sd = sd(mass, na.rm = TRUE),</span></span>
+<span id="cb24-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">            n = length(mass),</span></span>
+<span id="cb24-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">            se = sd / sqrt(n))</span></span>
+<span id="cb24-9"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="add-information-for-methods" class="slide level2"><h2>Add information for methods</h2>
+<p>🎬 Add this test to the Introduction</p>
+<div style="font-size: 80%">
+<p>We randomly sampled 20 <em>F. c.&nbsp;coelebs</em> males and 20 <em>F. c.&nbsp;palmae</em> males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.</p>
+</div>
+</section><section id="extract-summary-information" class="slide level2"><h2>Extract summary information</h2>
+<p>🎬 Add a code chunk with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a><span class="in">#| label: extract-summary</span></span>
+<span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a><span class="in"># extract values for inline reporting</span></span>
+<span id="cb25-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a aria-hidden="true" tabindex="-1"></a><span class="in"># sample sizes</span></span>
+<span id="cb25-6"><a aria-hidden="true" tabindex="-1"></a><span class="in">n_coelebs &lt;- chaff_summary |&gt; </span></span>
+<span id="cb25-7"><a aria-hidden="true" tabindex="-1"></a><span class="in">  filter(subspecies == "coelebs") |&gt; </span></span>
+<span id="cb25-8"><a aria-hidden="true" tabindex="-1"></a><span class="in">  pull(n)</span></span>
+<span id="cb25-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-10"><a aria-hidden="true" tabindex="-1"></a><span class="in">n_canariensis &lt;- chaff_summary |&gt; </span></span>
+<span id="cb25-11"><a aria-hidden="true" tabindex="-1"></a><span class="in">  filter(subspecies == "canariensis") |&gt; </span></span>
+<span id="cb25-12"><a aria-hidden="true" tabindex="-1"></a><span class="in">  pull(n)</span></span>
+<span id="cb25-13"><a aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="inline-code-reproducible-reporting" class="slide level2"><h2>Inline code: reproducible reporting</h2>
+</section><section id="a-figure" class="slide level2"><h2>A figure</h2>
+</section><section id="a-figure-legend" class="slide level2"><h2>A figure legend</h2>
+</section><section id="cross-referencing" class="slide level2"><h2>Cross referencing</h2>
+</section><section id="two-panel-figure" class="slide level2"><h2>Two panel figure</h2>
+</section><section id="change-the-order-of-the-figures" class="slide level2"><h2>Change the order of the figures</h2>
+</section><section id="a-table" class="slide level2"><h2>A table</h2>
+</section><section id="citations" class="slide level2"><h2>Citations</h2>
+</section><section id="section" class="slide level2"><h2></h2>
+</section><section id="section-1" class="slide level2"><h2></h2>
+</section><section id="section-2" class="slide level2"><h2></h2>
+</section><section id="section-3" class="slide level2"><h2></h2>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
