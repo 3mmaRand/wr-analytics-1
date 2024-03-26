@@ -745,14 +745,47 @@ reference the sub figures?
 🎬 Change the order of the figures
 
 
-## A table
+## Tables
+
+There are several ways to add tables to a document. We will use the 
+`knitr::kable()` function to create a table from a data frame or the 
+summary information
+
+. . .
+
+🎬 Add a table of the summary information for the chaffinch data:
+
+
+```{r}
+#| echo: fenced
+#| label: tbl-chaff
+chaff_summary |> 
+  knitr::kable(caption = "Summary of mass(g) for the two subspecies of chaffinch.")
+```
+
+. . .
+
+Just as the `fig-` prefix matters for corrected numbering of figures, the 
+`tbl-` prefix is important for the corrected numbering of figures.
+
+Just as the label of the code chunk is important for cross referencing 
+of figures so it is for tables and we use `@` followed by the label 
+of the code chunk to cross reference the table in the text.
+
+
+## Tables - improve format
 
 
 
 ## Citations
 
 
-##
+## Extra exercises
+
+🎬 Make a folder called `images` and save these two images of the 
+   subspecies to it: [canariensis.jpg](images/canariensis.jpg) and
+   [coelebs.jpg](images/coelebs.jpg). Then add images of each of 
+   the chaffinch subspecies to the multi-panel figure.
 
 
 ##
