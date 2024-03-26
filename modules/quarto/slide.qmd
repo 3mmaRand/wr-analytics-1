@@ -514,10 +514,6 @@ The squareroot of 2 is `r sqrt(2)`
 
 🎬 Replace the sample sizes in the Methods text with inline code
 
-``` markdown
-We randomly sampled ``` `r n_coelebs` ``` *F. c. coelebs* males
-```
-
 
 🎬 Render
 
