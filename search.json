@@ -11,7 +11,7 @@
     "href": "modules/quarto/slide.html#aims",
     "title": "Quarto for reproducible reporting",
     "section": "Aims",
-    "text": "Aims\nTo introduce you to Quarto for creating reproducible reports in a variety of output formats. You will also get more practice organising analyses and importing, summarising and plotting data.\n🎬 Instruction to do something",
+    "text": "Aims\n\nTo introduce you to Quarto for creating reproducible reports in a variety of output formats.\nYou will also get more practice organising analyses and importing, summarising and plotting data.\n\n\n🎬 An instruction to do something",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -35,7 +35,7 @@
     "href": "modules/quarto/slide.html#current-process",
     "title": "Quarto for reproducible reporting",
     "section": "Current process",
-    "text": "Current process\n\n\nWhat is your process for getting your summary data, statistical results, tables and figures in to a report / paper?\nWhat do you do when you get additional data that increases your sample sizes?\nHow easy is it to reorder your figures and tables?\nWhat do you do if you formatted for one journal and now have to submit to another?",
+    "text": "Current process\n\n\n\nWhat is your process for getting your summary data, statistical results, tables and figures in to a report / paper?\n90% of you use Word/Pages/Writer/Googledocs\n\nWhat do you do when you get additional data that increases your sample sizes?\nHow easy is it to reorder your figures and tables?\nWhat do you do if you formatted for one journal and now have to submit to another?",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -119,7 +119,7 @@
     "href": "modules/quarto/slide.html#links-images",
     "title": "Quarto for reproducible reporting",
     "section": "Links & Images",
-    "text": "Links & Images\n\n\nMarkdown Syntax\nOutput\n\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![Caption](images/chaff.jpg)",
+    "text": "Links & Images\n\n\nMarkdown Syntax\nOutput\n\n\n\n[\nQuarto](https://quarto.org)\nQuarto\n\n\n!\n[Caption](images/chaff.jpg)",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -287,7 +287,7 @@
     "href": "modules/quarto/slide.html#introduction",
     "title": "Quarto for reproducible reporting",
     "section": "Introduction",
-    "text": "Introduction\n🎬 Add this test to the Introduction\n\nA number of subspecies of the common chaffinch, Fringilla coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these subspecies are the “coelebs group” that occurs in Europe and Asia and the “canariensis group” that occurs on the Canary Islands.\n\n\n🎬 Make the species name italic\n\n\n🎬 Make “common chaffinch” a link to https://en.wikipedia.org/wiki/Common_chaffinch",
+    "text": "Introduction\n🎬 Add this test to the Introduction\n\n\nA number of subspecies of the common chaffinch, Fringilla coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these subspecies are the “coelebs group” that occurs in Europe and Asia and the “canariensis group” that occurs on the Canary Islands.\n\n\n\n🎬 Make the species name italic\n\n\n🎬 Make “common chaffinch” a link to https://en.wikipedia.org/wiki/Common_chaffinch",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -323,7 +323,7 @@
     "href": "modules/quarto/slide.html#add-information-for-methods",
     "title": "Quarto for reproducible reporting",
     "section": "Add information for methods",
-    "text": "Add information for methods\n🎬 Add this text to the Introduction\n\nWe randomly sampled 20 F. c. coelebs males and 20 F. c. palmae males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.\n\n\nIt would be good to to hard code those numbers in the text. What if we get more data. Or we just misremember or mis-type the numbers?",
+    "text": "Add information for methods\n🎬 Add this text to the Introduction\n\n\nWe randomly sampled 20 F. c. coelebs males and 20 F. c. palmae males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.\n\n\n\nIt would be good not to have “hard coded” those numbers in the text. What if we get more data. Or we just misremember or mis-type the numbers?",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -383,7 +383,7 @@
     "href": "modules/quarto/slide.html#cross-referencing",
     "title": "Quarto for reproducible reporting",
     "section": "Cross referencing",
-    "text": "Cross referencing\nThe label of the code chunk is important when creating figures because it is used to cross reference the figure in the text. We give cross references with @ followed by the label of the code chunk.\n\nThat is starts with a fig- prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.\n🎬 Add a sentence with a cross reference to the figure:\n\nCanariensis have higher mass than coelebs. See @fig-chaff",
+    "text": "Cross referencing\nThe label of the code chunk is important when creating figures because it is used to cross reference the figure in the text. We give cross references with @ followed by the label of the code chunk.\n\nThat is starts with a fig- prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.\n🎬 Add a sentence with a cross reference to the figure:\n\n\nCanariensis have higher mass than coelebs. See @fig-chaff",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -443,7 +443,7 @@
     "href": "modules/quarto/slide.html#two-panel-figure-1",
     "title": "Quarto for reproducible reporting",
     "section": "Two panel figure",
-    "text": "Two panel figure\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n```\n\n\n```{r}\n#| label: fig-hist-coelebs\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 10) +\n  theme_minimal()\n```\n\nIf you render, you’ll see that the two figures are added as separate figures.",
+    "text": "Two panel figure\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\n\n```{r}\n#| label: fig-hist-coelebs\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\nIf you render, you’ll see that the two figures are added as separate figures.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -515,7 +515,7 @@
     "href": "modules/quarto/slide.html#the-visual-editor",
     "title": "Quarto for reproducible reporting",
     "section": "The visual editor!",
-    "text": "The visual editor!\n::: incremental\n\nThe visual editor is a WYSIWYG editor for Quarto documents and can be accessed by clicking the Visual Editor button in the top right Or by Ctrl-Shift-F4\nIt makes it easier to add and edit content (although I find I often want to use the source)\nIt is especially useful for adding citations.\nEspecially if you use zotero.",
+    "text": "The visual editor!\n\n\nThe visual editor is a WYSIWYG editor for Quarto documents. It can be accessed by clicking the Visual Editor button in the top right or by Ctrl-Shift-F4\nIt makes it easier to add and edit content (although I find I often want to use the source)\nIt is especially useful for adding citations.\nEspecially if you use zotero.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -563,7 +563,7 @@
     "href": "modules/quarto/slide.html#summary",
     "title": "Quarto for reproducible reporting",
     "section": "Summary",
-    "text": "Summary\n\n\n\n🔗 Module overview",
+    "text": "Summary\n\n\nQuarto is a Mutli-language scientific publishing system for creating dynamic reproducible reports in a many formats. It is based on R Markdown.\nThe YAML header provides metadata and sets the default behaviour for the document\nCode chunk options determine how/whether they run whether code/output is included in the rendered document\nCode can be run interactively\n“Divs” are used to group content together and apply styling to that content.\nFigures, images, tables and equations can be numbered automatically and cross referenced in text. The fig- and tbl- (etc) prefixes are important for this.\nYou can add citations and references.\n\n\n\n\n\n🔗 Module overview",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
