@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "White Rose Analytics 1",
-    "section": "",
-    "text": "Introduction to Reproducibility in R Training programme for first year PhD students on the White Rose Universities (York, Sheffield, Leeds) DTP. It is designed and delivered by Emma Rand of The University of York.\nOverview An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Introduction to reproducible analyses in R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\nPhilosophy and approach It is impossible to cover everything to you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.\nI recognise that people will enter this training with a diverse range of previous experience in R. This is a challenge to manage but the aim is for everyone to get something out of the training no matter where they start. There will be sessions for those with and without previous experience. I recommend you:\nsit close to the front of the class if you are completely new to R and towards the back if you have some experience bring headphones to allow you to ignore tutor-led material when needed\nLearning outcomes After this workshop the successful learner will be able to:\nFind their way around the RStudio windows Create and plot data using the base package and ggplot Explain the rationale for scripting analysis Use the help pages Know how to make additional packages available in an R session Understand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import Summarise data in a single group or in multiple groups Recognise tidy data format and carry out some typical data tidying tasks Develop highly organised analyses including well-commented scripts that can be understood by future you and others Use R Markdown to produce reproducible analyses, figures and reports\nPrecourse survey To help me direct you to useful training and manage diversity in previous experience during the sessions, please complete this form to indicate your current level: https://forms.gle/cpSjdcjVa7niz6iq5\nmaterials use_course"
-  },
-  {
     "objectID": "modules/quarto/slide.html#aims",
     "href": "modules/quarto/slide.html#aims",
     "title": "Quarto for reproducible reporting",
@@ -563,7 +556,7 @@
     "href": "modules/quarto/slide.html#summary",
     "title": "Quarto for reproducible reporting",
     "section": "Summary",
-    "text": "Summary\n\n\nQuarto is a Mutli-language scientific publishing system for creating dynamic reproducible reports in a many formats. It is based on R Markdown.\nThe YAML header provides metadata and sets the default behaviour for the document\nCode chunk options determine how/whether they run whether code/output is included in the rendered document\nCode can be run interactively\n“Divs” are used to group content together and apply styling to that content.\nFigures, images, tables and equations can be numbered automatically and cross referenced in text. The fig- and tbl- (etc) prefixes are important for this.\nYou can add citations and references.\n\n\n\n\n\n🔗 Module overview",
+    "text": "Summary\n\n\nQuarto is a Mutli-language scientific publishing system for creating dynamic reproducible reports in a many formats. It is based on R Markdown.\nThe YAML header provides metadata and sets the default behaviour for the document\nCode chunk options determine how/whether they run whether code/output is included in the rendered document\nCode can be run interactively\n“Divs” are used to group content together and apply styling to that content.\nFigures, images, tables and equations can be numbered automatically and cross referenced in text. The fig- and tbl- (etc) prefixes are important for this.\nYou can add citations and references.",
     "crumbs": [
       "Modules",
       "Quarto for reproducible reporting",
@@ -575,7 +568,35 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "1015 - 1030 Tutor-led for Everyone: Introduction and Principles of reproducibility\n1030 - 1200 Tutor-led for Beginners: Introduction to R and working with data or Supported learning for those with some R experience Tidying data and the tidyverse including the pipe\n1200 - 1300 Lunch\n1300 - 1330 Tutor-led for Everyone: Project-oriented workflow\n1330 - 1445 Tutor-led for Everyone: Quarto for reproducible reporting\n1445 - 1515 Tea and coffee break\n1515 - 1645 Continuation of Tutor-led for Everyone: Quarto for reproducible reporting"
+    "text": "9.30am – 11am: Session 1 90 mins\n11am – 11.30am: break\n11.30am – 12.15pm: Session 2 45 mins\n12.15pm – 1pm: lunch\n1pm – 2.30pm: Session 3 90 mins"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "White Rose Analytics 1",
+    "section": "",
+    "text": "Training programme for first year PhD students on the White Rose Universities (York, Sheffield, Leeds) DTP. It is designed and delivered by Emma Rand of The University of York.\n\n\nAn increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Introduction to reproducible analyses in R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\n\n\n\nIt is impossible to cover everything to you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.\n\n\n\nAfter this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using the base package and ggplot\nExplain the rationale for scripting analysis\nUse the help pages\nKnow how to make additional packages available in an R session\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nRecognise tidy data format and carry out some typical data tidying tasks\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "White Rose Analytics 1",
+    "section": "",
+    "text": "An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Introduction to reproducible analyses in R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming."
+  },
+  {
+    "objectID": "index.html#philosophy-and-approach",
+    "href": "index.html#philosophy-and-approach",
+    "title": "White Rose Analytics 1",
+    "section": "",
+    "text": "It is impossible to cover everything to you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually."
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "White Rose Analytics 1",
+    "section": "",
+    "text": "After this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using the base package and ggplot\nExplain the rationale for scripting analysis\nUse the help pages\nKnow how to make additional packages available in an R session\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nRecognise tidy data format and carry out some typical data tidying tasks\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
   },
   {
     "objectID": "prerequisites.html",
