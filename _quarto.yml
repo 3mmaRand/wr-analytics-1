@@ -10,11 +10,8 @@ website:
   # google-analytics: "G-TVF95J593T"
   
   page-footer:
-    left: "Rand E (2024). White Rose Analytics 1. <https://3mmarand.github.io/wr-analytics-1/>."
+    left: "Rand E (2025). White Rose Analytics 1. <https://3mmarand.github.io/wr-analytics-1/>."
     right:
-      - icon: mastodon
-        href: "https://mastodon.social/users/3mma"
-        text: "Emma on mastodon"
       - icon: github
         href: https://github.com/3mmaRand/wr-analytics-1
         text: "Emma on GitHub"  
@@ -38,9 +35,6 @@ website:
         file:  modules/overview.qmd
     tools:
     right:
-      - icon: mastodon
-        href: "https://mastodon.social/users/3mma"
-        text: "Emma on mastodon"
       - icon: github
         href: https://github.com/3mmaRand/wr-analytics-1
         text: "Emma on GitHub"
@@ -85,7 +79,7 @@ execute:
   output: true
   error: true
   collapse: true
-
+  freeze: auto
 
 format:
   html:
@@ -104,6 +98,11 @@ format:
       margin-width: 300px
     
     author-meta: Emma Rand
+
+metadata-files:
+  - _downlit.yml
+
+fig-dpi: 600
 
 bibliography: references.bib
 

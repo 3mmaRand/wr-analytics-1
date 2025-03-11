@@ -4,16 +4,12 @@ toc: true
 toc-location: right
 ---
 
-1015 - 1030 Tutor-led for Everyone: Introduction and Principles of reproducibility
+9.30am – 11am: Session 1 90 mins
 
-1030 - 1200 Tutor-led for Beginners: Introduction to R and working with data or Supported learning for those with some R experience Tidying data and the tidyverse including the pipe
+11am – 11.30am: break
 
-1200 - 1300 Lunch
+11.30am – 12.15pm: Session 2 45 mins
 
-1300 - 1330 Tutor-led for Everyone: Project-oriented workflow
+12.15pm – 1pm: lunch
 
-1330 - 1445 Tutor-led for Everyone: Quarto for reproducible reporting
-
-1445 - 1515 Tea and coffee break
-
-1515 - 1645 Continuation of Tutor-led for Everyone: Quarto for reproducible reporting
+1pm – 2.30pm: Session 3 90 mins

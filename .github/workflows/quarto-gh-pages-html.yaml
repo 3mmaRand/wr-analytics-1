@@ -1,5 +1,7 @@
 # based on: https://github.com/quarto-dev/quarto-actions/blob/main/examples/quarto-book-gh-pages.yaml
 
+name: Render and deploy Book
+
 on:
   push:
     branches: main
@@ -8,7 +10,8 @@ on:
   # to be able to trigger a manual build
   workflow_dispatch:
 
-name: Render and deploy Book
+permissions:
+  contents: write
 
 
 jobs:
