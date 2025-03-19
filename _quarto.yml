@@ -51,7 +51,7 @@ format:
   html:
     css: styles.css
     link-external-newwindow: true
-    link-external-filter: '^(?:http:|https:)\/\/3mmarand\.github\.io\/wr-analytics-1-data'
+    link-external-filter: '^(?:http:|https:)\/\/3mmarand\.github\.io\/wr-analytics-1'
     theme:
       light: [cosmo, custom.scss]
     code-copy: true
