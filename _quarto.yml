@@ -6,11 +6,11 @@ date: last-modified
 date-format: D MMMM, YYYY
 
 website:
-  title: "White Rose Analytics 1"
+  title: "White Rose Analytics 1: Reproducibility with R"
   # google-analytics: "G-TVF95J593T"
   
   page-footer:
-    left: "Rand E (2025). White Rose Analytics 1. <https://3mmarand.github.io/wr-analytics-1/>."
+    left: "Rand E (2025). White Rose Analytics 1: Reproducibility with R. <https://3mmarand.github.io/wr-analytics-1/>."
     right:
       - icon: github
         href: https://github.com/3mmaRand/wr-analytics-1
@@ -29,49 +29,13 @@ website:
         file: index.qmd
       - text: "Prerequisites"
         file:  prerequisites.qmd
-      - text: "Schedule"
+      - text: "Schedule and materials"
         file:  schedule.qmd
-      - text: "Modules"
-        file:  modules/overview.qmd
     tools:
     right:
       - icon: github
         href: https://github.com/3mmaRand/wr-analytics-1
         text: "Emma on GitHub"
-
-  sidebar:
-    - title: "Modules"
-      style: "floating"
-      contents: 
-          - href: modules/overview.qmd
-          - section: "Principles of reproducibility"
-            contents: 
-             - href: modules/principles/slide.qmd
-               text: About  
-             - href: modules/principles/workshop.qmd
-               text: Workshop
-          - section: "Introduction to R and working with data"
-            contents: 
-             - href: modules/introduction/slide.qmd
-               text: About  
-             - href: modules/introduction/workshop.qmd
-               text: Workshop
-          - section: "Tidying data, tidyverse and the pipe"
-            contents: 
-             - href: modules/tidying/slide.qmd
-               text: About  
-             - href: modules/tidying/workshop.qmd
-               text: Workshop
-          - section: "Project-oriented workflow"
-            contents: 
-             - href: modules/workflow/slide.qmd
-               text: About  
-             - href: modules/workflow/workshop.qmd
-               text: Workshop
-          - section: "Quarto for reproducible reporting"
-            contents: 
-             - href: modules/quarto/slide.qmd
-               text: About  
 
 execute:
   echo: true
@@ -80,6 +44,8 @@ execute:
   error: true
   collapse: true
   freeze: auto
+
+engine: knitr
 
 format:
   html:

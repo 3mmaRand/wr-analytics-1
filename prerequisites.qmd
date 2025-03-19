@@ -4,31 +4,23 @@ toc: true
 toc-location: right
 ---
 
-Pre-course instructions for participants
+# Pre-course instructions for participants
 
-Precourse survey
+There are Windows PCs at the venue and you are **not** required to 
+bring your own machine. Participants from outside of York will 
+be provided with a temporary IT account. However, if you prefer to 
+work on your own machine please follow the instructions below.
 
-To help me direct you to useful training and manage diversity in previous experience during the sessions, please complete this form to indicate your current level: https://forms.gle/cpSjdcjVa7niz6iq5
+## Computing requirements
+Laptops should have the following installed prior to attending 
+and attempting the materials.
 
-Results 2023
+-   R version 4.4.1 or higher: https://cloud.r-project.org/
+-   RStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/
+-   these R packages from CRAN: tidyverse, janitor. Once you have 
+    installed R and RStudio, start RStudio up and go to the Packages 
+    tab in the bottom right pane; click Install and type the name of 
+    the package you want to install in the box that appears. 
+    Then wait until you get the cursor (>) back in the console window.
 
-Facilities
-
-There are Windows PCs at the venue and you are not required to bring your own machine. Participants from outside of York will be provided with a temporary IT account. However, if you prefer to work on your own machine please follow the instructions in Computing requirements
-
-Computing requirements
-Laptops should have the following installed prior to attending attempting the materials.
-
-R version 4.3.1 or higher: https://cloud.r-project.org/
-RStudio Version: 2023.12.1+402 or higher: https://posit.co/download/rstudio-desktop/
-Quarto v1.4.550 or higher: https://quarto.org/docs/get-started/
-Development Tools: RTools (windows) or xcode(mac)
-these R packages from CRAN: devtools, usethis, tidyverse, janitor
-quarto install tinytex
-Installing packages
-From CRAN
-Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (>) back in the console window.
-
-RStudio Cloud
-If installing R and RStudio is tricky or impossible with your set up (e.g., if you only have a chrome book) then you can use https://rstudio.cloud/. This is a version of RStudio that runs in your browser. It is free for 15 hours but you will need to make an account. You will still need to install packages.
 

@@ -1,5 +1,0 @@
----
-title: "Introduction to R and working with data"
-toc: true
-toc-location: right
----

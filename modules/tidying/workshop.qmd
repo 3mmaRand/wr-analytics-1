@@ -1,5 +1,0 @@
----
-title: "Tidying data, tidyverse and the pipe"
-toc: true
-toc-location: right
----

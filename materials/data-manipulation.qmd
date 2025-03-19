@@ -1,0 +1,6 @@
+---
+title: "Data manipulation"
+toc: true
+toc-location: right
+---
+

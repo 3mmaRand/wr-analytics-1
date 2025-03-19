@@ -1,5 +1,0 @@
----
-title: "Module Overview"
-toc: true
-toc-location: right
----

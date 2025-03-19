@@ -4,12 +4,34 @@ toc: true
 toc-location: right
 ---
 
-9.30am – 11am: Session 1 90 mins
+## 9.30am – 11am: Session 1 90 mins
 
-11am – 11.30am: break
+[Principles of reproducibility](materials/principles-of-reproducibility.qmd) 20 mins
 
-11.30am – 12.15pm: Session 2 45 mins
+-   Introduction 
+-   Principles of reproducibility 
 
-12.15pm – 1pm: lunch
+[Introduction to R and RStudio](materials/introduction-to-r-and-rstudio.qmd) 70 mins
 
-1pm – 2.30pm: Session 3 90 mins
+-  Finding your way round RStudio
+-  Typing in data and plotting it
+-  Importing data
+-  Working directories and file paths
+
+
+## 11am – 11.30am: break
+
+## 11.30am – 12.15pm: Session 2 45 mins
+
+[Data manipulation](materials/data-manipulation.qmd) 
+
+-   Filtering rows 1
+-   Adding columns
+-   Summarising
+-   Writing data to a file
+
+## 12.15pm – 1pm: lunch
+
+## 1pm – 2.30pm: Session 3 90 mins
+
+[Reproducible reports with Quarto](materials/reproducible-reports-with-quarto.qmd) 90 mins
