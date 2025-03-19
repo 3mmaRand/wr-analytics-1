@@ -1,588 +1,31 @@
 [
   {
-    "objectID": "modules/quarto/slide.html#aims",
-    "href": "modules/quarto/slide.html#aims",
-    "title": "Quarto for reproducible reporting",
-    "section": "Aims",
-    "text": "Aims\n\nTo introduce you to Quarto for creating reproducible reports in a variety of output formats.\nYou will also get more practice organising analyses and importing, summarising and plotting data.\n\n\n🎬 An instruction to do something",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#learning-outcomes",
-    "href": "modules/quarto/slide.html#learning-outcomes",
-    "title": "Quarto for reproducible reporting",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\nThe successful student will be able to:\n\n\nexplain what Quarto and markdown are\nappreciate the role of the YAML header\nset default code chunk behaviour and that for individual chunks\nuse headings, simple text formatting and special characters\nadd citations and references\nuse inline code to report results in text\ncreate automatically numbered tables and figures and cross reference them in text",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#current-process",
-    "href": "modules/quarto/slide.html#current-process",
-    "title": "Quarto for reproducible reporting",
-    "section": "Current process",
-    "text": "Current process\n\n\n\nWhat is your process for getting your summary data, statistical results, tables and figures in to a report / paper?\n90% of you use Word/Pages/Writer/Googledocs\n\nWhat do you do when you get additional data that increases your sample sizes?\nHow easy is it to reorder your figures and tables?\nWhat do you do if you formatted for one journal and now have to submit to another?",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#current-process-1",
-    "href": "modules/quarto/slide.html#current-process-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Current process",
-    "text": "Current process\n\n\nTypically people analyse, plot and write up in different programs.\nGraphs are saved to files and inserted into the final report.\nReordering figures, tables and equations means updating everywhere they are cross-referenced.\nIf the data change, the author must repeat the entire process to update the report.\nManual labour ….. error prone",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#what-is-quarto-1",
-    "href": "modules/quarto/slide.html#what-is-quarto-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "What is Quarto?",
-    "text": "What is Quarto?\n\n\nAn open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.\nNext generation RMarkdown. Many new features, greater standardisation and more flexibility.\nMutli-language Python, R, Julia, and Observable.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrates with Zotero",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#key-points-from-the-demo",
-    "href": "modules/quarto/slide.html#key-points-from-the-demo",
-    "title": "Quarto for reproducible reporting",
-    "section": "Key points from the demo",
-    "text": "Key points from the demo\n\nQuarto mixes text and code to create dynamic reports\nThe YAML header sets the default behaviour for the document and is between --- at the top of the document\nR Code chunks are between ```{r} and ``` and chunk options determine how/whether they run whether code/output is included in the rendered document\nYou can run code chunk interactively or through rendering\nComments: |#, # in chunk options, &lt;!-- in text --&gt; but use Ctrl+Shift+C",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#what-is-markdown",
-    "href": "modules/quarto/slide.html#what-is-markdown",
-    "title": "Quarto for reproducible reporting",
-    "section": "What is Markdown?",
-    "text": "What is Markdown?\nMarkdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#text-formatting",
-    "href": "modules/quarto/slide.html#text-formatting",
-    "title": "Quarto for reproducible reporting",
-    "section": "Text Formatting",
-    "text": "Text Formatting\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n*italics*,**bold**\n\nitalics, bold\n\n\n\n***bold italics **\nbold italics\n\n\nsuperscript^2^\nsuperscript2\n\n\n\nsubscript~2~\nsubscript2\n\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#headings",
-    "href": "modules/quarto/slide.html#headings",
-    "title": "Quarto for reproducible reporting",
-    "section": "Headings",
-    "text": "Headings\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#links-images",
-    "href": "modules/quarto/slide.html#links-images",
-    "title": "Quarto for reproducible reporting",
-    "section": "Links & Images",
-    "text": "Links & Images\n\n\nMarkdown Syntax\nOutput\n\n\n\n[\nQuarto](https://quarto.org)\nQuarto\n\n\n!\n[Caption](images/chaff.jpg)",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#lists",
-    "href": "modules/quarto/slide.html#lists",
-    "title": "Quarto for reproducible reporting",
-    "section": "Lists",
-    "text": "Lists\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n\nunordered list\n\nsub-item 1\nsub-item 2",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#lists-1",
-    "href": "modules/quarto/slide.html#lists-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Lists",
-    "text": "Lists\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n\nordered list\nitem 2\n\nsub-item 1",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#equations",
-    "href": "modules/quarto/slide.html#equations",
-    "title": "Quarto for reproducible reporting",
-    "section": "Equations",
-    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\n\ndisplay math:\n\n$$E = mc^{2}$$\n\ndisplay math:\n\\[E = mc^{2}\\]",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#divs",
-    "href": "modules/quarto/slide.html#divs",
-    "title": "Quarto for reproducible reporting",
-    "section": "Divs",
-    "text": "Divs\n“Divs” are used to group content together and apply styling to that content.\nFor example, callouts\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\n\n\n\n\n\nNote\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#div",
-    "href": "modules/quarto/slide.html#div",
-    "title": "Quarto for reproducible reporting",
-    "section": "Div",
-    "text": "Div\nFor example:\n::: {style=\"font-size: 80%\"}\nThis content is smaller\n:::\n\nThis content is smaller",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#start-a-new-project",
-    "href": "modules/quarto/slide.html#start-a-new-project",
-    "title": "Quarto for reproducible reporting",
-    "section": "Start a new project",
-    "text": "Start a new project\n🎬 File | New Project | New Directory | Quarto Project\n\nBrowse to an appropriate place and give your project a name.\nI used wr-chaff\nChoose Engine: Knitr\nTurn visual markdown editor off (for now)",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#start-a-new-project-1",
-    "href": "modules/quarto/slide.html#start-a-new-project-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Start a new project",
-    "text": "Start a new project\n🎬 Change some RStudio settings. Tools | Global Options\n\n\nGeneral:\n\nTurn off the three “Restore ….” options\nTurn “Save workspace to .RData on exit” to Never\n\n\n\nR Markdown:\n\nTurn “Show output preview in:” to to Viewer pane",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#your-project-contains",
-    "href": "modules/quarto/slide.html#your-project-contains",
-    "title": "Quarto for reproducible reporting",
-    "section": "Your project contains",
-    "text": "Your project contains\n\nwr-chaff.RProj - what makes the folder an RStudio project\n_quarto.yml - the configuration file\nwr-chaff.md - the main document containing some template text\n\n\n🎬 Hit Render (Ctrl-Shift-K)\nNote that wr-chaff.html is created and opened in the Viewer pane\n(may need to set in Global options to open in Viewer pane)",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#edit-the-yaml-header",
-    "href": "modules/quarto/slide.html#edit-the-yaml-header",
-    "title": "Quarto for reproducible reporting",
-    "section": "Edit the YAML header",
-    "text": "Edit the YAML header\n🎬 Add your name, and a title. Also add the engine and format\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\n---",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#add-some-content",
-    "href": "modules/quarto/slide.html#add-some-content",
-    "title": "Quarto for reproducible reporting",
-    "section": "Add some content",
-    "text": "Add some content\n🎬 Add a code chunk (Ctrl-Shift-I) for a simple graph.\n\n```{r}\nhist(rnorm(100))\n```\n\n🎬 Hit Render (Ctrl-Shift-K)",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#edit-the-yaml-header-1",
-    "href": "modules/quarto/slide.html#edit-the-yaml-header-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Edit the YAML header",
-    "text": "Edit the YAML header\n🎬 Set some default code chunk options. I recommend these for reports\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\nexecute:\n  echo: false\n  include: true\n  error: false\n  message: false\n  warning: false\n\n---\n🎬 Hit Render (Ctrl-Shift-K)",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#code-chunk-options",
-    "href": "modules/quarto/slide.html#code-chunk-options",
-    "title": "Quarto for reproducible reporting",
-    "section": "Code chunk options",
-    "text": "Code chunk options\n\n\necho: false code will not be included in output\n\ninclude: true output will be included\n\nerror: false halt render if a code error occurs\n\nmessage: false messages and warnings will not be included\nwarning: false\n\n🎬 Experiment with change the options and re-rendering. Try misspelling rnorm to see the error option in action.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#content-1",
-    "href": "modules/quarto/slide.html#content-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Content",
-    "text": "Content\n🎬 Delete everything except the YAML header.\n🎬 Add headings for: Introduction, Methods, Results, Discussion, and References\n🎬 Add a code chunk for package loading\n\n```{r}\n#| label: load-packages\nlibrary(tidyverse)\n```\n\n\n#| label: load-packages is a code chunk label. These are useful (here) and essential (later) for cross-referencing.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#introduction",
-    "href": "modules/quarto/slide.html#introduction",
-    "title": "Quarto for reproducible reporting",
-    "section": "Introduction",
-    "text": "Introduction\n🎬 Add this test to the Introduction\n\n\nA number of subspecies of the common chaffinch, Fringilla coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these subspecies are the “coelebs group” that occurs in Europe and Asia and the “canariensis group” that occurs on the Canary Islands.\n\n\n\n🎬 Make the species name italic\n\n\n🎬 Make “common chaffinch” a link to https://en.wikipedia.org/wiki/Common_chaffinch",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#add-data-import",
-    "href": "modules/quarto/slide.html#add-data-import",
-    "title": "Quarto for reproducible reporting",
-    "section": "Add data import",
-    "text": "Add data import\n🎬 Make a folder called data-raw\n\n🎬 Save chaff.txt to data-raw\n\n\n🎬 Add a code chunk with:\n\n```{r}\n#| label: import-data\nfile &lt;- \"data-raw/chaff.txt\"\nchaff &lt;- read_table(file)\n```\n\n\n\n🎬 Run chunks interactively\n\n\n🎬 Render",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#add-data-summary",
-    "href": "modules/quarto/slide.html#add-data-summary",
-    "title": "Quarto for reproducible reporting",
-    "section": "Add data summary",
-    "text": "Add data summary\n🎬 Add a code chunk with:\n\n```{r}\n#| label: data-summary\nchaff_summary &lt;- chaff |&gt; \n  group_by(subspecies) |&gt;  \n  summarise(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            n = length(mass),\n            se = sd / sqrt(n))\n```\n\n\n🎬 Render\nNotice the chunk labels being used in “Background Jobs”",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#add-information-for-methods",
-    "href": "modules/quarto/slide.html#add-information-for-methods",
-    "title": "Quarto for reproducible reporting",
-    "section": "Add information for methods",
-    "text": "Add information for methods\n🎬 Add this text to the Introduction\n\n\nWe randomly sampled 20 F. c. coelebs males and 20 F. c. palmae males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.\n\n\n\nIt would be good not to have “hard coded” those numbers in the text. What if we get more data. Or we just misremember or mis-type the numbers?",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#extract-summary-information",
-    "href": "modules/quarto/slide.html#extract-summary-information",
-    "title": "Quarto for reproducible reporting",
-    "section": "Extract summary information",
-    "text": "Extract summary information\n🎬 Add a code chunk with:\n\n```{r}\n#| label: extract-summary\n# extract values for inline reporting\n\n# sample sizes\nn_coelebs &lt;- chaff_summary |&gt; \n  filter(subspecies == \"coelebs\") |&gt; \n  pull(n)\n\nn_canariensis &lt;- chaff_summary |&gt; \n  filter(subspecies == \"canariensis\") |&gt; \n  pull(n)\n```",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#inline-code-reproducible-reporting",
-    "href": "modules/quarto/slide.html#inline-code-reproducible-reporting",
-    "title": "Quarto for reproducible reporting",
-    "section": "Inline code: reproducible reporting",
-    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r` and ` .\nFor example by writing:\nThe squareroot of 2 is `r sqrt(2) `\nyou will get:\nThe squareroot of 2 is 1.4142136",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#inline-code-reproducible-reporting-1",
-    "href": "modules/quarto/slide.html#inline-code-reproducible-reporting-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Inline code: reproducible reporting",
-    "text": "Inline code: reproducible reporting\n🎬 Replace the sample sizes in the Methods text with inline code\n🎬 Render",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#a-figure",
-    "href": "modules/quarto/slide.html#a-figure",
-    "title": "Quarto for reproducible reporting",
-    "section": "A figure",
-    "text": "A figure\n🎬 Add a code chunk to the Results section with:\n\n```{r}\n#| label: fig-chaff\nggplot() +\n  geom_point(data = chaff, aes(x = subspecies, y = mass),\n             position = position_jitter(width = 0.1, height = 0),\n             colour = \"gray50\") +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean - se, ymax = mean + se),\n                width = 0.3) +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean, ymax = mean),\n                width = 0.2) +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 30), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Subspecies\", \n                   labels = c(\"Canariensis\", \"Coelebs\")) +\n  theme_classic()\n```\n\n\n🎬 Render\nNote: It is automatically labelled as Figure 1!",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#cross-referencing",
-    "href": "modules/quarto/slide.html#cross-referencing",
-    "title": "Quarto for reproducible reporting",
-    "section": "Cross referencing",
-    "text": "Cross referencing\nThe label of the code chunk is important when creating figures because it is used to cross reference the figure in the text. We give cross references with @ followed by the label of the code chunk.\n\nThat is starts with a fig- prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.\n🎬 Add a sentence with a cross reference to the figure:\n\n\nCanariensis have higher mass than coelebs. See @fig-chaff",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#a-figure-legend",
-    "href": "modules/quarto/slide.html#a-figure-legend",
-    "title": "Quarto for reproducible reporting",
-    "section": "A figure legend",
-    "text": "A figure legend\nThere are two ways to add a legend:\n\nAdd the fig-cap chunk option: fig-cap: \"Mass of chaffinches\" to the code chunk.\nUse a div.\n\n\n\nIs much more flexible:\n\n\nYou can include inline code, citations, special characters and formatting\nYou can more easily make multipanel figures",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#a-figure-legend-with-a-div",
-    "href": "modules/quarto/slide.html#a-figure-legend-with-a-div",
-    "title": "Quarto for reproducible reporting",
-    "section": "A figure legend with a div",
-    "text": "A figure legend with a div\n🎬 Add a div by adding:\n\nremoving the fig-cap option and the label option\n::: before and after the code chunk\nplacing the label after the opening ::: like this: ::: {#fig-chaff} Note the # is important for numbering\nPutting the legend text between the code chunk and the closing :::\n\n\nIn the example figure legend I have included inline code, formatting and a special character using inline math.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#set-the-figure-size-and-alignment",
-    "href": "modules/quarto/slide.html#set-the-figure-size-and-alignment",
-    "title": "Quarto for reproducible reporting",
-    "section": "Set the figure size and alignment",
-    "text": "Set the figure size and alignment\n🎬 Add a chunk options fig-width, fig-height and fig-align to the code chunk:\n\n```{r}\n#| fig-width: 3.5\n#| fig-height: 3.5\nggplot() +\n  geom_point(data = chaff, aes(x = subspecies, y = mass),\n             position = position_jitter(width = 0.1, height = 0),\n             colour = \"gray50\") +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean - se, ymax = mean + se),\n                width = 0.3) +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean, ymax = mean),\n                width = 0.2) +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 30), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Subspecies\", \n                   labels = c(\"Canariensis\", \"Coelebs\")) +\n  theme_classic()\n```",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#two-panel-figure",
-    "href": "modules/quarto/slide.html#two-panel-figure",
-    "title": "Quarto for reproducible reporting",
-    "section": "Two panel figure",
-    "text": "Two panel figure\n\n\nWe are going to add another figure, this time a figure with two panels (it’s an unnecessary figure for this data, but works for demonstration).\nThe figure will be two histogram of the mass of each subspecies.\nWe will again use a div which will contain two code chunks, one for each graph.\nTheir will be a label on the div for the figure as a whole and labels on each of the chunk to cross reference the sub figures.\nFigure layout information will be added to the div.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#two-panel-figure-1",
-    "href": "modules/quarto/slide.html#two-panel-figure-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Two panel figure",
-    "text": "Two panel figure\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\n\n```{r}\n#| label: fig-hist-coelebs\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\nIf you render, you’ll see that the two figures are added as separate figures.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#two-panel-figure-2",
-    "href": "modules/quarto/slide.html#two-panel-figure-2",
-    "title": "Quarto for reproducible reporting",
-    "section": "Two panel figure",
-    "text": "Two panel figure\nTo make them into one figure we need to use a div.\n🎬 Add the div a round those chunks\n::: {##fig-histograms layout-ncol=2}\n……\n:::\n\n🎬 Render\n\n\n🎬 Add a figure legend to the two panel figure\n\n\n🎬 Add a sentence with a cross reference to the figure. Can you cross reference the sub figures?\n\n\n🎬 Change the order of the figures",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#tables",
-    "href": "modules/quarto/slide.html#tables",
-    "title": "Quarto for reproducible reporting",
-    "section": "Tables",
-    "text": "Tables\nThere are several ways to add tables to a document. We will use the knitr::kable() function to create a table from a data frame or the summary information\n\n🎬 Add a table of the summary information for the chaffinch data:\n\n\nTable 1\n\n```{r}\n#| label: tbl-chaff\nchaff_summary |&gt; \n  knitr::kable(caption = \"Summary of mass(g) for the two subspecies of chaffinch.\")\n```",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#tables-1",
-    "href": "modules/quarto/slide.html#tables-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Tables",
-    "text": "Tables\nJust as the fig- prefix matters for corrected numbering of figures, the tbl- prefix is important for the corrected numbering of figures.\nJust as the label of the code chunk is important for cross referencing of figures so it is for tables and we use @ followed by the label of the code chunk to cross reference the table in the text.\n\n🎬 Add a sentence with a cross reference to the table.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#tables---improve-format",
-    "href": "modules/quarto/slide.html#tables---improve-format",
-    "title": "Quarto for reproducible reporting",
-    "section": "Tables - improve format",
-    "text": "Tables - improve format\nThe decimal places are over-the-top. They can be set\n\nin the table by adding digits = 2 to the kable() function\nFor the document overall by adding:\n\n\n```{r}\noptions(digits = 2)\n```\n\n🎬 Do one of these.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#tables---improve-format-1",
-    "href": "modules/quarto/slide.html#tables---improve-format-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Tables - improve format",
-    "text": "Tables - improve format\nA handy tidyverse function, str_to_sentence(), can be used for converting lower case to sentence case. We will do this for column names\n\n🎬 Add col.names = names(chaff_summary) |&gt; str_to_sentence() to the kable() function",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#the-visual-editor",
-    "href": "modules/quarto/slide.html#the-visual-editor",
-    "title": "Quarto for reproducible reporting",
-    "section": "The visual editor!",
-    "text": "The visual editor!\n\n\nThe visual editor is a WYSIWYG editor for Quarto documents. It can be accessed by clicking the Visual Editor button in the top right or by Ctrl-Shift-F4\nIt makes it easier to add and edit content (although I find I often want to use the source)\nIt is especially useful for adding citations.\nEspecially if you use zotero.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#citations",
-    "href": "modules/quarto/slide.html#citations",
-    "title": "Quarto for reproducible reporting",
-    "section": "Citations",
-    "text": "Citations\nYou can add citations for R and packages, from doi, from a .bib file, or from zotero.\n🎬 Put your cursor where you want the citation to go and click the Insert button in the top right and select Citation (Ctrl-Shift-F8) and add a citation for the tidverse package.\n\n🎬 Render\n\n\n\nthe in-text citation has been added\nthe reference has been added to the references section\na references.bib file has been created in the project folder",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#citations-1",
-    "href": "modules/quarto/slide.html#citations-1",
-    "title": "Quarto for reproducible reporting",
-    "section": "Citations",
-    "text": "Citations\n🎬 Put your cursor after “plumage” in the Introduction and click the Insert button in the top right and select Citation (Ctrl-Shift-F8). Select From DOI and paste in 10.1016/j.ympev.2009.07.018\n\n🎬 Render\n\n\nYou can also add citations to the .bib file manually. E.g. for R itself",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#extra-exercises",
-    "href": "modules/quarto/slide.html#extra-exercises",
-    "title": "Quarto for reproducible reporting",
-    "section": "Extra exercises",
-    "text": "Extra exercises\n🎬 Make a folder called images and save these two images of the subspecies to it: canariensis.jpg and coelebs.jpg. Then add images of each of the chaffinch subspecies to the multi-panel figure.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "modules/quarto/slide.html#summary",
-    "href": "modules/quarto/slide.html#summary",
-    "title": "Quarto for reproducible reporting",
-    "section": "Summary",
-    "text": "Summary\n\n\nQuarto is a Mutli-language scientific publishing system for creating dynamic reproducible reports in a many formats. It is based on R Markdown.\nThe YAML header provides metadata and sets the default behaviour for the document\nCode chunk options determine how/whether they run whether code/output is included in the rendered document\nCode can be run interactively\n“Divs” are used to group content together and apply styling to that content.\nFigures, images, tables and equations can be numbered automatically and cross referenced in text. The fig- and tbl- (etc) prefixes are important for this.\nYou can add citations and references.",
-    "crumbs": [
-      "Modules",
-      "Quarto for reproducible reporting",
-      "About"
-    ]
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
+    "objectID": "prerequisites.html",
+    "href": "prerequisites.html",
+    "title": "Prerequisites",
     "section": "",
-    "text": "9.30am – 11am: Session 1 90 mins\n11am – 11.30am: break\n11.30am – 12.15pm: Session 2 45 mins\n12.15pm – 1pm: lunch\n1pm – 2.30pm: Session 3 90 mins"
+    "text": "There are Windows PCs at the venue and you are not required to bring your own machine. Participants from outside of York will be provided with a temporary IT account. However, if you prefer to work on your own machine please follow the instructions below.\n\n\nLaptops should have the following installed prior to attending and attempting the materials.\n\nR version 4.4.1 or higher: https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nthese R packages from CRAN: tidyverse, janitor. Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window."
+  },
+  {
+    "objectID": "prerequisites.html#computing-requirements",
+    "href": "prerequisites.html#computing-requirements",
+    "title": "Prerequisites",
+    "section": "",
+    "text": "Laptops should have the following installed prior to attending and attempting the materials.\n\nR version 4.4.1 or higher: https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nthese R packages from CRAN: tidyverse, janitor. Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "White Rose Analytics 1",
     "section": "",
-    "text": "Training programme for first year PhD students on the White Rose Universities (York, Sheffield, Leeds) DTP. It is designed and delivered by Emma Rand of The University of York.\n\n\nAn increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Introduction to reproducible analyses in R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\n\n\n\nIt is impossible to cover everything to you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.\n\n\n\nAfter this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using the base package and ggplot\nExplain the rationale for scripting analysis\nUse the help pages\nKnow how to make additional packages available in an R session\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nRecognise tidy data format and carry out some typical data tidying tasks\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
+    "text": "Training for first year PhD students on the White Rose Universities (York, Sheffield, Leeds) DTP in Mechanistic Biology. It is designed and delivered by Emma Rand of The University of York.\n\n\nAn increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Reproducibility with R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\nThis workshop will introduce you to R and RStudio, the most widely used interface for working with R. You will learn how to import data, manipulate it, summarise it and plot it. You will how to use an organised project-oriented workflow with well commented scripts so that you can understand you work in the future and share it with others. In addition, you will learn what a working directory and a file path are - these are key concepts in computing generally but ones which are often not taught to biologists.\n\n\n\nIt is impossible to cover everything to you might ever need! Different people will use different methods and tools. Topics have been chosen because they are: foundational, widely applicable and transferable conceptually.\n\n\n\nAfter this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nExplain the rationale for scripting analysis\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
   },
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
     "title": "White Rose Analytics 1",
     "section": "",
-    "text": "An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Introduction to reproducible analyses in R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming."
+    "text": "An increase in the complexity and scale of biological data means biologists are increasingly required to develop the data skills needed to design reproducible workflows for the simulation, collection, organisation, processing, analysis and presentation of data. Developing such data skills requires at least some coding, also known as scripting. This makes your work (everything you do with your raw data) explicitly described, totally transparent and completely reproducible. However, learning to code can be a daunting prospect for many biologists! That’s where an Reproducibility with R comes in!\nR is a free and open source language especially well-suited to data analysis and visualisation and has a relatively inclusive and newbie-friendly community. R caters to users who do not see themselves as programmers, but then allows them to slide gradually into programming.\nThis workshop will introduce you to R and RStudio, the most widely used interface for working with R. You will learn how to import data, manipulate it, summarise it and plot it. You will how to use an organised project-oriented workflow with well commented scripts so that you can understand you work in the future and share it with others. In addition, you will learn what a working directory and a file path are - these are key concepts in computing generally but ones which are often not taught to biologists."
   },
   {
     "objectID": "index.html#philosophy-and-approach",
@@ -596,13 +39,377 @@
     "href": "index.html#learning-outcomes",
     "title": "White Rose Analytics 1",
     "section": "",
-    "text": "After this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using the base package and ggplot\nExplain the rationale for scripting analysis\nUse the help pages\nKnow how to make additional packages available in an R session\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nRecognise tidy data format and carry out some typical data tidying tasks\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
+    "text": "After this workshop the successful learner will be able to:\n\nFind their way around the RStudio windows\nCreate and plot data using ggplot\nExplain the rationale for scripting analysis\nKnow how to load packages\nUnderstand what is meant by the working directory, absolute and relative paths and be able to apply these concepts to data import\nSummarise data in a single group or in multiple groups\nDevelop highly organised analyses including well-commented scripts that can be understood by future you and others"
   },
   {
-    "objectID": "prerequisites.html",
-    "href": "prerequisites.html",
-    "title": "Prerequisites",
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
     "section": "",
-    "text": "Pre-course instructions for participants\nPrecourse survey\nTo help me direct you to useful training and manage diversity in previous experience during the sessions, please complete this form to indicate your current level: https://forms.gle/cpSjdcjVa7niz6iq5\nResults 2023\nFacilities\nThere are Windows PCs at the venue and you are not required to bring your own machine. Participants from outside of York will be provided with a temporary IT account. However, if you prefer to work on your own machine please follow the instructions in Computing requirements\nComputing requirements Laptops should have the following installed prior to attending attempting the materials.\nR version 4.3.1 or higher: https://cloud.r-project.org/ RStudio Version: 2023.12.1+402 or higher: https://posit.co/download/rstudio-desktop/ Quarto v1.4.550 or higher: https://quarto.org/docs/get-started/ Development Tools: RTools (windows) or xcode(mac) these R packages from CRAN: devtools, usethis, tidyverse, janitor quarto install tinytex Installing packages From CRAN Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window.\nRStudio Cloud If installing R and RStudio is tricky or impossible with your set up (e.g., if you only have a chrome book) then you can use https://rstudio.cloud/. This is a version of RStudio that runs in your browser. It is free for 15 hours but you will need to make an account. You will still need to install packages."
+    "text": "Principles of reproducibility 20 mins\n\nIntroduction\nPrinciples of reproducibility\n\nIntroduction to R and RStudio 70 mins\n\nFinding your way round RStudio\nTyping in data and plotting it\nImporting data\nWorking directories and file paths"
+  },
+  {
+    "objectID": "schedule.html#am-11am-session-1-90-mins",
+    "href": "schedule.html#am-11am-session-1-90-mins",
+    "title": "Schedule",
+    "section": "",
+    "text": "Principles of reproducibility 20 mins\n\nIntroduction\nPrinciples of reproducibility\n\nIntroduction to R and RStudio 70 mins\n\nFinding your way round RStudio\nTyping in data and plotting it\nImporting data\nWorking directories and file paths"
+  },
+  {
+    "objectID": "schedule.html#am-11.30am-break",
+    "href": "schedule.html#am-11.30am-break",
+    "title": "Schedule",
+    "section": "11am – 11.30am: break",
+    "text": "11am – 11.30am: break"
+  },
+  {
+    "objectID": "schedule.html#am-12.15pm-session-2-45-mins",
+    "href": "schedule.html#am-12.15pm-session-2-45-mins",
+    "title": "Schedule",
+    "section": "11.30am – 12.15pm: Session 2 45 mins",
+    "text": "11.30am – 12.15pm: Session 2 45 mins\nData manipulation\n\nFiltering rows 1\nAdding columns\nSummarising\nWriting data to a file"
+  },
+  {
+    "objectID": "schedule.html#pm-1pm-lunch",
+    "href": "schedule.html#pm-1pm-lunch",
+    "title": "Schedule",
+    "section": "12.15pm – 1pm: lunch",
+    "text": "12.15pm – 1pm: lunch"
+  },
+  {
+    "objectID": "schedule.html#pm-2.30pm-session-3-90-mins",
+    "href": "schedule.html#pm-2.30pm-session-3-90-mins",
+    "title": "Schedule",
+    "section": "1pm – 2.30pm: Session 3 90 mins",
+    "text": "1pm – 2.30pm: Session 3 90 mins\nReproducible reports with Quarto 90 mins"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#aims",
+    "href": "modules/quarto/slide.html#aims",
+    "title": "Quarto for reproducible reporting",
+    "section": "Aims",
+    "text": "Aims\n\nTo introduce you to Quarto for creating reproducible reports in a variety of output formats.\nYou will also get more practice organising analyses and importing, summarising and plotting data.\n\n\n🎬 An instruction to do something"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#learning-outcomes",
+    "href": "modules/quarto/slide.html#learning-outcomes",
+    "title": "Quarto for reproducible reporting",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nThe successful student will be able to:\n\n\nexplain what Quarto and markdown are\nappreciate the role of the YAML header\nset default code chunk behaviour and that for individual chunks\nuse headings, simple text formatting and special characters\nadd citations and references\nuse inline code to report results in text\ncreate automatically numbered tables and figures and cross reference them in text"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#current-process",
+    "href": "modules/quarto/slide.html#current-process",
+    "title": "Quarto for reproducible reporting",
+    "section": "Current process",
+    "text": "Current process\n\n\n\nWhat is your process for getting your summary data, statistical results, tables and figures in to a report / paper?\n90% of you use Word/Pages/Writer/Googledocs\n\nWhat do you do when you get additional data that increases your sample sizes?\nHow easy is it to reorder your figures and tables?\nWhat do you do if you formatted for one journal and now have to submit to another?"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#current-process-1",
+    "href": "modules/quarto/slide.html#current-process-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Current process",
+    "text": "Current process\n\n\nTypically people analyse, plot and write up in different programs.\nGraphs are saved to files and inserted into the final report.\nReordering figures, tables and equations means updating everywhere they are cross-referenced.\nIf the data change, the author must repeat the entire process to update the report.\nManual labour ….. error prone"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#what-is-quarto-1",
+    "href": "modules/quarto/slide.html#what-is-quarto-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\n\n\nAn open-source scientific and technical publishing system that allows you to create dynamic reproducible reports in a variety of output formats.\nNext generation RMarkdown. Many new features, greater standardisation and more flexibility.\nMutli-language Python, R, Julia, and Observable.\nInclude auto-numbered and cross-referencable equations, figures and tables\nIntegrates with Zotero"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#key-points-from-the-demo",
+    "href": "modules/quarto/slide.html#key-points-from-the-demo",
+    "title": "Quarto for reproducible reporting",
+    "section": "Key points from the demo",
+    "text": "Key points from the demo\n\nQuarto mixes text and code to create dynamic reports\nThe YAML header sets the default behaviour for the document and is between --- at the top of the document\nR Code chunks are between ```{r} and ``` and chunk options determine how/whether they run whether code/output is included in the rendered document\nYou can run code chunk interactively or through rendering\nComments: |#, # in chunk options, &lt;!-- in text --&gt; but use Ctrl+Shift+C"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#what-is-markdown",
+    "href": "modules/quarto/slide.html#what-is-markdown",
+    "title": "Quarto for reproducible reporting",
+    "section": "What is Markdown?",
+    "text": "What is Markdown?\nMarkdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#text-formatting",
+    "href": "modules/quarto/slide.html#text-formatting",
+    "title": "Quarto for reproducible reporting",
+    "section": "Text Formatting",
+    "text": "Text Formatting\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n*italics*,**bold**\n\nitalics, bold\n\n\n\n***bold italics **\nbold italics\n\n\nsuperscript^2^\nsuperscript2\n\n\n\nsubscript~2~\nsubscript2\n\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#headings",
+    "href": "modules/quarto/slide.html#headings",
+    "title": "Quarto for reproducible reporting",
+    "section": "Headings",
+    "text": "Headings\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#links-images",
+    "href": "modules/quarto/slide.html#links-images",
+    "title": "Quarto for reproducible reporting",
+    "section": "Links & Images",
+    "text": "Links & Images\n\n\nMarkdown Syntax\nOutput\n\n\n\n[\nQuarto](https://quarto.org)\nQuarto\n\n\n!\n[Caption](images/chaff.jpg)"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#lists",
+    "href": "modules/quarto/slide.html#lists",
+    "title": "Quarto for reproducible reporting",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n* unordered list\n    + sub-item 1\n    + sub-item 2\n\nunordered list\n\nsub-item 1\nsub-item 2"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#lists-1",
+    "href": "modules/quarto/slide.html#lists-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Lists",
+    "text": "Lists\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n\nordered list\nitem 2\n\nsub-item 1"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#equations",
+    "href": "modules/quarto/slide.html#equations",
+    "title": "Quarto for reproducible reporting",
+    "section": "Equations",
+    "text": "Equations\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E=mc^{2}\\)\n\n\n\ndisplay math:\n\n$$E = mc^{2}$$\n\ndisplay math:\n\\[E = mc^{2}\\]"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#divs",
+    "href": "modules/quarto/slide.html#divs",
+    "title": "Quarto for reproducible reporting",
+    "section": "Divs",
+    "text": "Divs\n“Divs” are used to group content together and apply styling to that content.\nFor example, callouts\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\n\n\n\n\n\nNote\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#div",
+    "href": "modules/quarto/slide.html#div",
+    "title": "Quarto for reproducible reporting",
+    "section": "Div",
+    "text": "Div\nFor example:\n::: {style=\"font-size: 80%\"}\nThis content is smaller\n:::\n\nThis content is smaller"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#start-a-new-project",
+    "href": "modules/quarto/slide.html#start-a-new-project",
+    "title": "Quarto for reproducible reporting",
+    "section": "Start a new project",
+    "text": "Start a new project\n🎬 File | New Project | New Directory | Quarto Project\n\nBrowse to an appropriate place and give your project a name.\nI used wr-chaff\nChoose Engine: Knitr\nTurn visual markdown editor off (for now)"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#start-a-new-project-1",
+    "href": "modules/quarto/slide.html#start-a-new-project-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Start a new project",
+    "text": "Start a new project\n🎬 Change some RStudio settings. Tools | Global Options\n\n\nGeneral:\n\nTurn off the three “Restore ….” options\nTurn “Save workspace to .RData on exit” to Never\n\n\n\nR Markdown:\n\nTurn “Show output preview in:” to to Viewer pane"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#your-project-contains",
+    "href": "modules/quarto/slide.html#your-project-contains",
+    "title": "Quarto for reproducible reporting",
+    "section": "Your project contains",
+    "text": "Your project contains\n\nwr-chaff.RProj - what makes the folder an RStudio project\n_quarto.yml - the configuration file\nwr-chaff.md - the main document containing some template text\n\n\n🎬 Hit Render (Ctrl-Shift-K)\nNote that wr-chaff.html is created and opened in the Viewer pane\n(may need to set in Global options to open in Viewer pane)"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#edit-the-yaml-header",
+    "href": "modules/quarto/slide.html#edit-the-yaml-header",
+    "title": "Quarto for reproducible reporting",
+    "section": "Edit the YAML header",
+    "text": "Edit the YAML header\n🎬 Add your name, and a title. Also add the engine and format\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\n---"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-some-content",
+    "href": "modules/quarto/slide.html#add-some-content",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add some content",
+    "text": "Add some content\n🎬 Add a code chunk (Ctrl-Shift-I) for a simple graph.\n\n```{r}\nhist(rnorm(100))\n```\n\n🎬 Hit Render (Ctrl-Shift-K)"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#edit-the-yaml-header-1",
+    "href": "modules/quarto/slide.html#edit-the-yaml-header-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Edit the YAML header",
+    "text": "Edit the YAML header\n🎬 Set some default code chunk options. I recommend these for reports\n---\ntitle: \"The difference in mass between subspecies of common chaffinch.\"\nauthor: \"Emma Rand\"\nengine: knitr\nformat:\n  html\nexecute:\n  echo: false\n  include: true\n  error: false\n  message: false\n  warning: false\n\n---\n🎬 Hit Render (Ctrl-Shift-K)"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#code-chunk-options",
+    "href": "modules/quarto/slide.html#code-chunk-options",
+    "title": "Quarto for reproducible reporting",
+    "section": "Code chunk options",
+    "text": "Code chunk options\n\n\necho: false code will not be included in output\n\ninclude: true output will be included\n\nerror: false halt render if a code error occurs\n\nmessage: false messages and warnings will not be included\nwarning: false\n\n🎬 Experiment with change the options and re-rendering. Try misspelling rnorm to see the error option in action."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#content-1",
+    "href": "modules/quarto/slide.html#content-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Content",
+    "text": "Content\n🎬 Delete everything except the YAML header.\n🎬 Add headings for: Introduction, Methods, Results, Discussion, and References\n🎬 Add a code chunk for package loading\n\n```{r}\n#| label: load-packages\nlibrary(tidyverse)\n```\n\n\n#| label: load-packages is a code chunk label. These are useful (here) and essential (later) for cross-referencing."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#introduction",
+    "href": "modules/quarto/slide.html#introduction",
+    "title": "Quarto for reproducible reporting",
+    "section": "Introduction",
+    "text": "Introduction\n🎬 Add this test to the Introduction\n\n\nA number of subspecies of the common chaffinch, Fringilla coelebs, have been described based principally on the differences in the pattern and colour of the adult male plumage. Two of groups of these subspecies are the “coelebs group” that occurs in Europe and Asia and the “canariensis group” that occurs on the Canary Islands.\n\n\n\n🎬 Make the species name italic\n\n\n🎬 Make “common chaffinch” a link to https://en.wikipedia.org/wiki/Common_chaffinch"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-data-import",
+    "href": "modules/quarto/slide.html#add-data-import",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add data import",
+    "text": "Add data import\n🎬 Make a folder called data-raw\n\n🎬 Save chaff.txt to data-raw\n\n\n🎬 Add a code chunk with:\n\n```{r}\n#| label: import-data\nfile &lt;- \"data-raw/chaff.txt\"\nchaff &lt;- read_table(file)\n```\n\n\n\n🎬 Run chunks interactively\n\n\n🎬 Render"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-data-summary",
+    "href": "modules/quarto/slide.html#add-data-summary",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add data summary",
+    "text": "Add data summary\n🎬 Add a code chunk with:\n\n```{r}\n#| label: data-summary\nchaff_summary &lt;- chaff |&gt; \n  group_by(subspecies) |&gt;  \n  summarise(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            n = length(mass),\n            se = sd / sqrt(n))\n```\n\n\n🎬 Render\nNotice the chunk labels being used in “Background Jobs”"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#add-information-for-methods",
+    "href": "modules/quarto/slide.html#add-information-for-methods",
+    "title": "Quarto for reproducible reporting",
+    "section": "Add information for methods",
+    "text": "Add information for methods\n🎬 Add this text to the Introduction\n\n\nWe randomly sampled 20 F. c. coelebs males and 20 F. c. palmae males and determined their mass with spring scales. Analysis was carried out with R and tidyverse packages.\n\n\n\nIt would be good not to have “hard coded” those numbers in the text. What if we get more data. Or we just misremember or mis-type the numbers?"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#extract-summary-information",
+    "href": "modules/quarto/slide.html#extract-summary-information",
+    "title": "Quarto for reproducible reporting",
+    "section": "Extract summary information",
+    "text": "Extract summary information\n🎬 Add a code chunk with:\n\n```{r}\n#| label: extract-summary\n# extract values for inline reporting\n\n# sample sizes\nn_coelebs &lt;- chaff_summary |&gt; \n  filter(subspecies == \"coelebs\") |&gt; \n  pull(n)\n\nn_canariensis &lt;- chaff_summary |&gt; \n  filter(subspecies == \"canariensis\") |&gt; \n  pull(n)\n```"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#inline-code-reproducible-reporting",
+    "href": "modules/quarto/slide.html#inline-code-reproducible-reporting",
+    "title": "Quarto for reproducible reporting",
+    "section": "Inline code: reproducible reporting",
+    "text": "Inline code: reproducible reporting\n\nInline code is how you include a variable value, like a sample size, mean or statistical result, in a section of text.\nIn fact, any code output can be inserted directly into the text of a .qmd file using inline code.\n\n\nInline code goes between `r` and ` .\nFor example by writing:\nThe squareroot of 2 is `r sqrt(2) `\nyou will get:\nThe squareroot of 2 is 1.4142136"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#inline-code-reproducible-reporting-1",
+    "href": "modules/quarto/slide.html#inline-code-reproducible-reporting-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Inline code: reproducible reporting",
+    "text": "Inline code: reproducible reporting\n🎬 Replace the sample sizes in the Methods text with inline code\n🎬 Render"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#a-figure",
+    "href": "modules/quarto/slide.html#a-figure",
+    "title": "Quarto for reproducible reporting",
+    "section": "A figure",
+    "text": "A figure\n🎬 Add a code chunk to the Results section with:\n\n```{r}\n#| label: fig-chaff\nggplot() +\n  geom_point(data = chaff, aes(x = subspecies, y = mass),\n             position = position_jitter(width = 0.1, height = 0),\n             colour = \"gray50\") +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean - se, ymax = mean + se),\n                width = 0.3) +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean, ymax = mean),\n                width = 0.2) +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 30), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Subspecies\", \n                   labels = c(\"Canariensis\", \"Coelebs\")) +\n  theme_classic()\n```\n\n\n🎬 Render\nNote: It is automatically labelled as Figure 1!"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#cross-referencing",
+    "href": "modules/quarto/slide.html#cross-referencing",
+    "title": "Quarto for reproducible reporting",
+    "section": "Cross referencing",
+    "text": "Cross referencing\nThe label of the code chunk is important when creating figures because it is used to cross reference the figure in the text. We give cross references with @ followed by the label of the code chunk.\n\nThat is starts with a fig- prefix also matters - this is what determines what is treated as a figure numbered in order of appearance.\n🎬 Add a sentence with a cross reference to the figure:\n\n\nCanariensis have higher mass than coelebs. See @fig-chaff"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#a-figure-legend",
+    "href": "modules/quarto/slide.html#a-figure-legend",
+    "title": "Quarto for reproducible reporting",
+    "section": "A figure legend",
+    "text": "A figure legend\nThere are two ways to add a legend:\n\nAdd the fig-cap chunk option: fig-cap: \"Mass of chaffinches\" to the code chunk.\nUse a div.\n\n\n\nIs much more flexible:\n\n\nYou can include inline code, citations, special characters and formatting\nYou can more easily make multipanel figures"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#a-figure-legend-with-a-div",
+    "href": "modules/quarto/slide.html#a-figure-legend-with-a-div",
+    "title": "Quarto for reproducible reporting",
+    "section": "A figure legend with a div",
+    "text": "A figure legend with a div\n🎬 Add a div by adding:\n\nremoving the fig-cap option and the label option\n::: before and after the code chunk\nplacing the label after the opening ::: like this: ::: {#fig-chaff} Note the # is important for numbering\nPutting the legend text between the code chunk and the closing :::\n\n\nIn the example figure legend I have included inline code, formatting and a special character using inline math."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#set-the-figure-size-and-alignment",
+    "href": "modules/quarto/slide.html#set-the-figure-size-and-alignment",
+    "title": "Quarto for reproducible reporting",
+    "section": "Set the figure size and alignment",
+    "text": "Set the figure size and alignment\n🎬 Add a chunk options fig-width, fig-height and fig-align to the code chunk:\n\n```{r}\n#| fig-width: 3.5\n#| fig-height: 3.5\nggplot() +\n  geom_point(data = chaff, aes(x = subspecies, y = mass),\n             position = position_jitter(width = 0.1, height = 0),\n             colour = \"gray50\") +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean - se, ymax = mean + se),\n                width = 0.3) +\n  geom_errorbar(data = chaff_summary, \n                aes(x = subspecies, ymin = mean, ymax = mean),\n                width = 0.2) +\n  scale_y_continuous(name = \"Mass (g)\", \n                     limits = c(0, 30), \n                     expand = c(0, 0)) +\n  scale_x_discrete(name = \"Subspecies\", \n                   labels = c(\"Canariensis\", \"Coelebs\")) +\n  theme_classic()\n```"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#two-panel-figure",
+    "href": "modules/quarto/slide.html#two-panel-figure",
+    "title": "Quarto for reproducible reporting",
+    "section": "Two panel figure",
+    "text": "Two panel figure\n\n\nWe are going to add another figure, this time a figure with two panels (it’s an unnecessary figure for this data, but works for demonstration).\nThe figure will be two histogram of the mass of each subspecies.\nWe will again use a div which will contain two code chunks, one for each graph.\nTheir will be a label on the div for the figure as a whole and labels on each of the chunk to cross reference the sub figures.\nFigure layout information will be added to the div."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#two-panel-figure-1",
+    "href": "modules/quarto/slide.html#two-panel-figure-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Two panel figure",
+    "text": "Two panel figure\n🎬 Add these two chunks to the Results section below the last figure (make sure you’re outside the last div)\n\n```{r}\n#| label: fig-hist-canariensis\nchaff |&gt; filter(subspecies == \"canariensis\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\n\n```{r}\n#| label: fig-hist-coelebs\nchaff |&gt; filter(subspecies == \"coelebs\") |&gt;\n  ggplot(aes(x = mass)) +\n  geom_histogram(bins = 8) +\n  theme_minimal()\n```\n\nIf you render, you’ll see that the two figures are added as separate figures."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#two-panel-figure-2",
+    "href": "modules/quarto/slide.html#two-panel-figure-2",
+    "title": "Quarto for reproducible reporting",
+    "section": "Two panel figure",
+    "text": "Two panel figure\nTo make them into one figure we need to use a div.\n🎬 Add the div a round those chunks\n::: {##fig-histograms layout-ncol=2}\n……\n:::\n\n🎬 Render\n\n\n🎬 Add a figure legend to the two panel figure\n\n\n🎬 Add a sentence with a cross reference to the figure. Can you cross reference the sub figures?\n\n\n🎬 Change the order of the figures"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#tables",
+    "href": "modules/quarto/slide.html#tables",
+    "title": "Quarto for reproducible reporting",
+    "section": "Tables",
+    "text": "Tables\nThere are several ways to add tables to a document. We will use the knitr::kable() function to create a table from a data frame or the summary information\n\n🎬 Add a table of the summary information for the chaffinch data:\n\n\nTable 1\n\n```{r}\n#| label: tbl-chaff\nchaff_summary |&gt; \n  knitr::kable(caption = \"Summary of mass(g) for the two subspecies of chaffinch.\")\n```"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#tables-1",
+    "href": "modules/quarto/slide.html#tables-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Tables",
+    "text": "Tables\nJust as the fig- prefix matters for corrected numbering of figures, the tbl- prefix is important for the corrected numbering of figures.\nJust as the label of the code chunk is important for cross referencing of figures so it is for tables and we use @ followed by the label of the code chunk to cross reference the table in the text.\n\n🎬 Add a sentence with a cross reference to the table."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#tables---improve-format",
+    "href": "modules/quarto/slide.html#tables---improve-format",
+    "title": "Quarto for reproducible reporting",
+    "section": "Tables - improve format",
+    "text": "Tables - improve format\nThe decimal places are over-the-top. They can be set\n\nin the table by adding digits = 2 to the kable() function\nFor the document overall by adding:\n\n\n```{r}\noptions(digits = 2)\n```\n\n🎬 Do one of these."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#tables---improve-format-1",
+    "href": "modules/quarto/slide.html#tables---improve-format-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Tables - improve format",
+    "text": "Tables - improve format\nA handy tidyverse function, str_to_sentence(), can be used for converting lower case to sentence case. We will do this for column names\n\n🎬 Add col.names = names(chaff_summary) |&gt; str_to_sentence() to the kable() function"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#the-visual-editor",
+    "href": "modules/quarto/slide.html#the-visual-editor",
+    "title": "Quarto for reproducible reporting",
+    "section": "The visual editor!",
+    "text": "The visual editor!\n\n\nThe visual editor is a WYSIWYG editor for Quarto documents. It can be accessed by clicking the Visual Editor button in the top right or by Ctrl-Shift-F4\nIt makes it easier to add and edit content (although I find I often want to use the source)\nIt is especially useful for adding citations.\nEspecially if you use zotero."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#citations",
+    "href": "modules/quarto/slide.html#citations",
+    "title": "Quarto for reproducible reporting",
+    "section": "Citations",
+    "text": "Citations\nYou can add citations for R and packages, from doi, from a .bib file, or from zotero.\n🎬 Put your cursor where you want the citation to go and click the Insert button in the top right and select Citation (Ctrl-Shift-F8) and add a citation for the tidverse package.\n\n🎬 Render\n\n\n\nthe in-text citation has been added\nthe reference has been added to the references section\na references.bib file has been created in the project folder"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#citations-1",
+    "href": "modules/quarto/slide.html#citations-1",
+    "title": "Quarto for reproducible reporting",
+    "section": "Citations",
+    "text": "Citations\n🎬 Put your cursor after “plumage” in the Introduction and click the Insert button in the top right and select Citation (Ctrl-Shift-F8). Select From DOI and paste in 10.1016/j.ympev.2009.07.018\n\n🎬 Render\n\n\nYou can also add citations to the .bib file manually. E.g. for R itself"
+  },
+  {
+    "objectID": "modules/quarto/slide.html#extra-exercises",
+    "href": "modules/quarto/slide.html#extra-exercises",
+    "title": "Quarto for reproducible reporting",
+    "section": "Extra exercises",
+    "text": "Extra exercises\n🎬 Make a folder called images and save these two images of the subspecies to it: canariensis.jpg and coelebs.jpg. Then add images of each of the chaffinch subspecies to the multi-panel figure."
+  },
+  {
+    "objectID": "modules/quarto/slide.html#summary",
+    "href": "modules/quarto/slide.html#summary",
+    "title": "Quarto for reproducible reporting",
+    "section": "Summary",
+    "text": "Summary\n\n\nQuarto is a Mutli-language scientific publishing system for creating dynamic reproducible reports in a many formats. It is based on R Markdown.\nThe YAML header provides metadata and sets the default behaviour for the document\nCode chunk options determine how/whether they run whether code/output is included in the rendered document\nCode can be run interactively\n“Divs” are used to group content together and apply styling to that content.\nFigures, images, tables and equations can be numbered automatically and cross referenced in text. The fig- and tbl- (etc) prefixes are important for this.\nYou can add citations and references."
   }
 ]
