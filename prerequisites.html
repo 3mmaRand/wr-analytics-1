@@ -166,9 +166,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="computing-requirements">Computing requirements</h2>
 <p>Laptops should have the following installed prior to attending and attempting the materials.</p>
 <ul>
-<li>R version 4.4.1 or higher: https://cloud.r-project.org/</li>
-<li>RStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/</li>
-<li>these R packages from CRAN: tidyverse, janitor. Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window.</li>
+<li>R version 4.4.1 or higher:<a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></li>
+<li>RStudio Version: 2024.12.1+563 or higher: <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></li>
+<li>These R packages from CRAN: <code>{tidyverse}</code> Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window.</li>
 </ul>
 
 
@@ -266,7 +266,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("^(?:http:|https:)\/\/3mmarand\.github\.io\/wr-analytics-1-data");
+      var filterRegex = new RegExp("^(?:http:|https:)\/\/3mmarand\.github\.io\/wr-analytics-1");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
