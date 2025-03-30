@@ -6,7 +6,7 @@ toc-location: right
 
 ## 9.30am – 11am: Session 1 90 mins
 
-[Principles of reproducibility](materials/principles-of-reproducibility.qmd) 20 mins
+[Introduction and Principles of reproducibility](materials/principles-of-reproducibility.qmd) 20 mins
 
 -   Introduction 
 -   Principles of reproducibility 
