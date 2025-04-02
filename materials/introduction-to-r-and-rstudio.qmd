@@ -456,28 +456,13 @@ directory*.
 # import
 cats <- read_csv("data-raw/cat-coats.csv")
 
-# sumarise
-cats_summary <- cats |> 
-  group_by(coat) |> 
-  summarise(mean = mean(mass),
-            sd = sd(mass),
-            n = length(mass),
-            se = sd / sqrt(n))
-
 # plot
-ggplot() +
-  geom_point(data = cats, aes(x = coat, y = mass),
-             position = position_jitter(width = 0.1, height = 0),
-             colour = "gray50") +
-  geom_errorbar(data = cats_summary, 
-                aes(x = coat, ymin = mean - se, ymax = mean + se),
-                width = 0.3) +
-  geom_errorbar(data = cats_summary, 
-                aes(x = coat, ymin = mean, ymax = mean),
-                width = 0.2) +
+ggplot(data = cats, aes(x = coat, y = mass)) +
+  geom_boxplot() +
   scale_y_continuous(name = "Mass (g)", 
                      limits = c(0, 10), 
                      expand = c(0, 0)) +
+  scale_x_discrete(name = "Coat colour") +
   theme_classic()
 
 ```
@@ -496,7 +481,7 @@ ggplot() +
     mass of 62 cats - [cat-coats.csv](data-raw/cat-coats.csv)
 
 
-### Reading in data from the Project folder `cats-2`
+### Reading in data from the *Project* folder `cats-2`
 
 CSV files can be read read in with core **`tidyverse`** [@tidyverse] 
 functions.
@@ -528,7 +513,7 @@ cats <- read_csv("cat-coats.csv")
 The data from the file will be read into a dataframe called `cats` and 
 you will be able to see it in the Environment.
 
-### Reading in data from a different
+### Reading in data from a different folder
 
 To help you understand relative file paths, we will now move the data
 file.
@@ -561,178 +546,30 @@ relative path is `data-raw/cat-coats.csv`
 cats <- read_csv("data-raw/cat-coats.csv")
 ```
 
+### Creating a boxplot
 
-## Summarising discrete data: Cat coat
 
-The most appropriate way to summarise nominal data like the colour of
-cat coats is to tabulate the number of cats with each colour.
-
-🎬 Summarise the `cats` dataframe by counting the
-number of cats in each category
+🎬  Create a simple barplot using `ggplot` like this:
 
 ```{r}
-cats |> 
-  group_by(coat) |> 
-  count()
+ggplot(data = cats, aes(x = coat, y = mass)) +
+  geom_boxplot()
 ```
 
-`|>` is the pipe and can be produced with Ctrl+Shift+M
-
-This sort of data might be represented with a barchart. You have two
-options for producing that barchart:
-
-1.  plot the summary table using `geom_col()`
-
-2.  plot the raw data using `geom_bar()`
-
-We did the first of these earlier. The
-`geom_col()` function uses the numbers in a second column to determine
-how high the bars are. However, the `geom_bar()` function will do the
-tabulating for you.
-
-🎬 Plot the coat data using `geom_bar`:
-
-```{r}
-ggplot(cats, aes(x = coat)) +
-  geom_bar()
-```
-
-The gaps that `R` put automatically between the bars reflects that the
-coat colours are discrete categories.
-
-
-## Summarising continuous data
-
-### Cat mass
-
-The variable `mass` in the `cats` dataframe is continuous. Very many
-continuous variables have a normal distribution. The normal distribution
-is also known as the bell-shaped curve. If we had the mass of all the
-cats in the world, we would find many cats were near the mean and fewer
-would be away from the mean, either much lighter or much heavier. In
-fact 68% would be within one standard deviation of the mean and about
-96% would be within two standard deviations.
-
-```{r}
-#| echo: false
-mean <- mean(cats$mass)
-sd <-  sd(cats$mass)
-
-ggplot(data = data.frame(x = c(0, 9)), aes(x)) +
-  stat_function(fun = dnorm, n = 101, args = list(mean, sd)) + 
-  scale_y_continuous(breaks = NULL, 
-                     expand = c(0, 0), 
-                     name = "") +
-  scale_x_continuous(name = "Mass (kg)", 
-                     expand = c(0, 0)) +
-  geom_vline(xintercept = mean, size = 2) +
-  geom_vline(xintercept = mean - sd, 
-             colour = "darkcyan", size = 1) +
-  geom_vline(xintercept = mean + sd, 
-             colour = "darkcyan", size = 1) +
-  geom_label(x = mean, y = 0.25, 
-             label = "68%", 
-             colour = "darkcyan", 
-             size = 10, 
-             label.padding = unit(0.5, "lines")) +
-  geom_segment(aes(x = mean - sd, y = 0.225, 
-                   xend =  mean + sd, yend = 0.225),
-               arrow = arrow(length = unit(0.5, "cm"), ends = "both"),
-               colour = "darkcyan", 
-               size = 1) +
-  geom_vline(xintercept = mean - 2 * sd, 
-             colour = "mediumpurple3", size = 1) +
-  geom_vline(xintercept = mean + 2 * sd, 
-             colour = "mediumpurple3", size = 1) +
-  geom_label(x = mean, y = 0.15, 
-             label = "96%", 
-             colour = "mediumpurple3", 
-             size = 10, 
-             label.padding = unit(0.5, "lines"),) +
-  geom_segment(aes(x = mean -  2 * sd, y = 0.125, 
-                   xend =  mean + 2 * sd, yend = 0.125),
-               arrow = arrow(length = unit(0.5, "cm"), ends = "both"),
-               colour = "mediumpurple3", 
-               size = 1) +
-  theme_classic()
-
-```
-
-🎬 We can find the mean mass with:
-
-```{r}
-cats |> 
-  summarise(mean = mean(mass))
-```
-
-We can add any sort of summary by placing it inside the the summarise
-parentheses. Each one is separated by a comma. We did this to find the
-median and the interquatrile range for fly bristles.
-
-🎬 For example, another way to calculate the number
-of values is to use the `length()` function:
-
-```{r}
-cats |> 
-  summarise(mean = mean(mass),
-            n = length(mass))
-```
-
-🛝  Adapt the code to calculate the mean, the sample
-size *and* the standard deviation (`sd()`)
+🛝 Can you format the boxplot as shown above?
 
 ```{r}
 #| code-fold: true
 #| code-summary: "Answer - don't look until you have tried!"
 
-cats |> 
-  summarise(mean = mean(mass),
-            n = length(mass),
-            standard_dev = sd(mass))
+ggplot(data = cats, aes(x = coat, y = mass)) +
+  geom_boxplot() +
+  scale_y_continuous(name = "Mass (g)", 
+                     limits = c(0, 10), 
+                     expand = c(0, 0)) +
+  scale_x_discrete(name = "Coat colour") +
+  theme_classic()
 ```
-
-A single continuous variable can be plotted using a histogram to show
-the shape of the distribution.
-
-🎬 Plot a histogram of cats mass:
-
-```{r}
-ggplot(cats, aes(x = mass)) +
-  geom_histogram(bins = 15, colour = "black") 
-```
-
-Notice that there are no gaps between the bars which reflects that
-`mass` is continuous. `bins` determines how many groups the variable is
-divided up into (*i.e.*, the number of bars) and `colour` sets the colour
-for the outline of the bars. A sample of 62 is a relatively small number
-of values for plotting a distribution and the number of bins used
-determines how smooth or normally distributed the values look.
-
-
-we will find summary
-statistics about mass for each of the coat types.
-
-
-🎬 The `group_by()` function is used before the
-summarise() to do calculations for each of the coats:
-
-```{r}
-cats |> 
-  group_by(coat) |> 
-  summarise(mean = mean(mass),
-                  standard_dev = sd(mass))
-```
-
-You can read this as:
-
-> take cats *and then* group by coat *and then* summarise by finding the
-> mean of mass and the standard deviation of mass
-
-🛝 Why do we get an `NA` for the standard deviation
-of the calico cats?
-
-
-
 
 
 
