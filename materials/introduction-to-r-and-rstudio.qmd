@@ -43,8 +43,8 @@ library(tidyverse)
 
 There are several ways you can recap the demo at a later date:
 
-🖼️ Refer to this infographic [Larger format](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html)
-![infographic](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html){width="600"}
+🖼️ Refer to this infographic [Larger format](https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg)
+![infographic](https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg){width="600"}
 
 📖 Read [First Steps in RStudio](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html)
 
@@ -450,6 +450,37 @@ directory*.
 
 ### The goal
 
+```{r}
+#| echo: false
+
+# import
+cats <- read_csv("data-raw/cat-coats.csv")
+
+# sumarise
+cats_summary <- cats |> 
+  group_by(coat) |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+
+# plot
+ggplot() +
+  geom_point(data = cats, aes(x = coat, y = mass),
+             position = position_jitter(width = 0.1, height = 0),
+             colour = "gray50") +
+  geom_errorbar(data = cats_summary, 
+                aes(x = coat, ymin = mean - se, ymax = mean + se),
+                width = 0.3) +
+  geom_errorbar(data = cats_summary, 
+                aes(x = coat, ymin = mean, ymax = mean),
+                width = 0.2) +
+  scale_y_continuous(name = "Mass (g)", 
+                     limits = c(0, 10), 
+                     expand = c(0, 0)) +
+  theme_classic()
+
+```
 
 
 ### Getting set up
@@ -467,7 +498,7 @@ directory*.
 
 ### Reading in data from the Project folder `cats-2`
 
-CSV files can be read read in with core **`tidyverse`** @tidyverse 
+CSV files can be read read in with core **`tidyverse`** [@tidyverse] 
 functions.
 
 🎬 Load the packages
