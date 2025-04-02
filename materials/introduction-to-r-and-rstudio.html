@@ -208,6 +208,14 @@ div.csl-indent {
 </li>
   </ul>
 </li>
+  <li>
+<a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a>
+  <ul>
+<li><a href="#rstudio-interface" id="toc-rstudio-interface" class="nav-link" data-scroll-target="#rstudio-interface">🔧 RStudio Interface</a></li>
+  <li><a href="#core-ideas" id="toc-core-ideas" class="nav-link" data-scroll-target="#core-ideas">🧠 Core ideas</a></li>
+  <li><a href="#plotting" id="toc-plotting" class="nav-link" data-scroll-target="#plotting">📊 Plotting</a></li>
+  </ul>
+</li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></nav>
     </div>
@@ -666,8 +674,35 @@ Top Tip
 </div>
 </div>
 </div>
+</section></section></section><section id="summary" class="level1"><h1>Summary</h1>
+<section id="rstudio-interface" class="level2"><h2 class="anchored" data-anchor-id="rstudio-interface">🔧 RStudio Interface</h2>
+<ul>
+<li>Script – Write and save your code (.R or .qmd files)</li>
+<li>Console – Run commands and see immediate output</li>
+<li>Environment – Lists your objects and data</li>
+<li>Files / Plots / Help – Manage files, view plots, read help docs</li>
+</ul></section><section id="core-ideas" class="level2"><h2 class="anchored" data-anchor-id="core-ideas">🧠 Core ideas</h2>
+<ul>
+<li>Assignment – Use &lt;- to store values: x &lt;- 5</li>
+<li>Vectors – One-dimensional data: <code>c(1, 2, 3)</code>
+</li>
+<li>Data frames – Table-like structures: <code>data.frame(name = c("A", "B"))</code> but made when data is imported</li>
+<li>packages are loaded with <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>
+</li>
+<li>Use RStudio Projects and paths realtive to the project folder so your code is reproducible and portbale</li>
+</ul></section><section id="plotting" class="level2"><h2 class="anchored" data-anchor-id="plotting">📊 Plotting</h2>
+<ul>
+<li>Structure – <code>ggplot(data, aes(x, y)) + geom_*()</code>
+</li>
+<li>Common geoms – <code><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot()</a></code>, <code><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point()</a></code>
+</li>
+<li>Customize – <code>fill</code>, <code>color</code>, <code>width</code>, <code><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic()</a></code>
+</li>
+<li>Scales – Adjust axes with <code>scale_*_continuous()</code> or <code>scale_*_discrete()</code>
+</li>
+</ul>
 <p>Pages made with R <span class="citation" data-cites="R-core">(<a href="#ref-R-core" role="doc-biblioref">R Core Team 2025</a>)</span>, Quarto <span class="citation" data-cites="Allaire_Quarto_2024">(<a href="#ref-Allaire_Quarto_2024" role="doc-biblioref">Allaire et al. 2024</a>)</span>, <code>knitr</code> <span class="citation" data-cites="knitr1 knitr2 knitr3">(<a href="#ref-knitr1" role="doc-biblioref">Xie 2024</a>, <a href="#ref-knitr2" role="doc-biblioref">2015</a>, <a href="#ref-knitr3" role="doc-biblioref">2014</a>)</span>, <code>kableExtra</code> <span class="citation" data-cites="kableExtra">(<a href="#ref-kableExtra" role="doc-biblioref">Zhu 2024</a>)</span></p>
-</section></section></section><section id="references" class="level1">
+</section></section><section id="references" class="level1">
 
 
 
