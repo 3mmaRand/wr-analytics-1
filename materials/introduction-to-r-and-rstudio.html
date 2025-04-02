@@ -271,7 +271,7 @@ div.csl-indent {
 </li>
 </ul></section><section id="overview-of-demonstration" class="level3"><h3 class="anchored" data-anchor-id="overview-of-demonstration">Overview of demonstration</h3>
 <p>There are several ways you can recap the demo at a later date:</p>
-<p>🖼️ Refer to this infographic <a href="https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html">Larger format</a> <embed src="https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html" class="img-fluid" width="600"></p>
+<p>🖼️ Refer to this infographic <a href="https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg">Larger format</a> <img src="https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg" class="img-fluid" width="600" alt="infographic"></p>
 <p>📖 Read <a href="https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html">First Steps in RStudio</a></p>
 <p>📹 Watch</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/7oLLjkTNrjY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
@@ -604,6 +604,14 @@ Top Tip
 </ol>
 <p>We will first save our file for this workshop to our Project folder and read them in. Then we will then create a new folder inside our Project folder called <code>data-raw</code>, move the data file into it and read them in from there. This will allow you to see how the file paths need to be modified when a file is not in your <em>working directory</em>.</p>
 <section id="the-goal" class="level3"><h3 class="anchored" data-anchor-id="the-goal">The goal</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-18-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-18-1.svg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
 </section><section id="getting-set-up-1" class="level3"><h3 class="anchored" data-anchor-id="getting-set-up-1">Getting set up</h3>
 <ul>
 <li><p>🎬 In RStudio do File | New project | New directory Be purposeful about where you create it and name it. I suggest <code>cats-2</code></p></li>
@@ -611,7 +619,7 @@ Top Tip
 <li><p>🎬 Save this file to your <code>cats-2</code> folder: The coat colour and mass of 62 cats - <a href="data-raw/cat-coats.csv">cat-coats.csv</a></p></li>
 </ul></section><section id="reading-in-data-from-the-project-folder-cats-2" class="level3"><h3 class="anchored" data-anchor-id="reading-in-data-from-the-project-folder-cats-2">Reading in data from the Project folder <code>cats-2</code>
 </h3>
-<p>CSV files can be read read in with core <strong><code>tidyverse</code></strong> <span class="citation" data-cites="tidyverse">Wickham et al. (<a href="#ref-tidyverse" role="doc-biblioref">2019</a>)</span> functions.</p>
+<p>CSV files can be read read in with core <strong><code>tidyverse</code></strong> <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref">Wickham et al. 2019</a>)</span> functions.</p>
 <p>🎬 Load the packages</p>
 <div class="cell">
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -669,7 +677,7 @@ Top Tip
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-23-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-23-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-24-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-24-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -681,7 +689,7 @@ Top Tip
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-24-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-24-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-25-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-25-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -730,7 +738,7 @@ Top Tip
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>bins <span class="op">=</span> <span class="fl">15</span>, colour <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-28-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-28-1.svg" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-29-1.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="introduction-to-r-and-rstudio_files/figure-html/unnamed-chunk-29-1.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
