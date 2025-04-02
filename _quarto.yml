@@ -60,6 +60,8 @@ format:
     code-line-numbers: false
     toc: true
     toc-depth: 4
+    fig-format: svg
+    lightbox: true
     grid:
       sidebar-width: 250px
       body-width: 900px

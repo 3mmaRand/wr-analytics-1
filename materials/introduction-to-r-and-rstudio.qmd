@@ -41,7 +41,10 @@ library(tidyverse)
 
 ### Overview of demonstration
 
-![](https://www-users.york.ac.uk/~er13/RStudio%20Anatomy.svg){width="600"}
+There are several ways you can recap the demo at a later date:
+
+🖼️ Refer to this infographic [Larger format](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html)
+![infographic](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html){width="600"}
 
 📖 Read [First Steps in RStudio](https://3mmarand.github.io/comp4biosci/first_steps_rstudio.html)
 
