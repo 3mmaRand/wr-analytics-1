@@ -4,14 +4,14 @@
     "href": "prerequisites.html",
     "title": "Prerequisites",
     "section": "",
-    "text": "There are Windows PCs at the venue and you are not required to bring your own machine. Participants from outside of York will be provided with a temporary IT account. However, if you prefer to work on your own machine please follow the instructions below.\n\n\nLaptops should have the following installed prior to attending and attempting the materials.\n\nR version 4.4.1 or higher:https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nThese R packages from CRAN: {tidyverse} Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window."
+    "text": "There are Windows PCs at the venue and you are not required to bring your own machine. Participants from outside of York will be provided with a temporary IT account. However, if you prefer to work on your own machine please follow the instructions below.\n\n\nLaptops should have the following installed prior to attending and attempting the materials.\n\nR version 4.4.1 or higher:https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nThese R packages from CRAN: {tidyverse} {devtools} Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window."
   },
   {
     "objectID": "prerequisites.html#computing-requirements",
     "href": "prerequisites.html#computing-requirements",
     "title": "Prerequisites",
     "section": "",
-    "text": "Laptops should have the following installed prior to attending and attempting the materials.\n\nR version 4.4.1 or higher:https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nThese R packages from CRAN: {tidyverse} Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window."
+    "text": "Laptops should have the following installed prior to attending and attempting the materials.\n\nR version 4.4.1 or higher:https://cloud.r-project.org/\nRStudio Version: 2024.12.1+563 or higher: https://posit.co/download/rstudio-desktop/\nThese R packages from CRAN: {tidyverse} {devtools} Once you have installed R and RStudio, start RStudio up and go to the Packages tab in the bottom right pane; click Install and type the name of the package you want to install in the box that appears. Then wait until you get the cursor (&gt;) back in the console window."
   },
   {
     "objectID": "materials/principles-of-reproducibility.html",
