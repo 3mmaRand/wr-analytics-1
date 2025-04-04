@@ -1,5 +1,0 @@
----
-title: "Quarto for reproducible reporting"
-toc: true
-toc-location: right
----

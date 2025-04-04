@@ -587,8 +587,8 @@ ggplot(data = cats, aes(x = coat, y = mass)) +
 -   Data frames – Table-like structures: 
     `data.frame(name = c("A", "B"))`  but made when data is imported
 -   packages are loaded with `library()`
--   Use RStudio Projects and paths realtive to the project folder
-    so your code is reproducible and portbale
+-   Use RStudio Projects and paths relative to the project folder
+    so your code is reproducible and portable
 
 ## 📊 Plotting
 
@@ -599,6 +599,7 @@ ggplot(data = cats, aes(x = coat, y = mass)) +
     `scale_*_discrete()`
 
 
-Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr` [@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
+Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr` 
+[@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
 
 # References
