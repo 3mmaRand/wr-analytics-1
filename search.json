@@ -273,6 +273,13 @@
     "text": "Package citations\nYou can add citations for R and packages, from doi, from a .bib file, or from zotero.\n🎬 Put your cursor where you want the citation to go and click the Insert button in the top right and select Citation (Ctrl-Shift-F8) and add a citation for the tidverse package.\n🎬 Render\n\nthe in-text citation has been added\nthe reference has been added to the references section\na references.bib file has been created in the project folder"
   },
   {
+    "objectID": "materials/reproducible-reports-with-quarto.html#citations-from-doi",
+    "href": "materials/reproducible-reports-with-quarto.html#citations-from-doi",
+    "title": "Reproducible reports with Quarto",
+    "section": "Citations from DOI",
+    "text": "Citations from DOI\n🎬 Put your cursor after “plumage” in the Introduction and click the Insert button in the top right and select Citation (Ctrl-Shift-F8). Select From DOI and paste in 10.1016/j.ympev.2009.07.018\n🎬 Render\nYou can also add citations to the .bib file manually. E.g. for R itself"
+  },
+  {
     "objectID": "materials/reproducible-reports-with-quarto.html#extra-exercises",
     "href": "materials/reproducible-reports-with-quarto.html#extra-exercises",
     "title": "Reproducible reports with Quarto",
