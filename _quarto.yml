@@ -53,7 +53,7 @@ format:
     link-external-newwindow: true
     link-external-filter: '^(?:http:|https:)\/\/3mmarand\.github\.io\/wr-analytics-1'
     theme:
-      light: [cosmo, custom.scss]
+      light: [cosmo]
     code-copy: true
     code-link: true
     code-overflow: wrap
