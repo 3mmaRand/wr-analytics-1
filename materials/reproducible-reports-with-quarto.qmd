@@ -685,7 +685,7 @@ and add a citation for the `tidverse` package.
 
 -   a `references.bib` file has been created in the project folder
 
-# Citations from DOI
+## Citations from DOI
 
 🎬 Put your cursor after "plumage" in the Introduction and click the
 `Insert` button in the top right and select `Citation` (Ctrl-Shift-F8).
