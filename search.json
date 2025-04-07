@@ -452,42 +452,42 @@
     "href": "materials/data-manipulation.html#whole-column",
     "title": "Data manipulation",
     "section": "Whole column",
-    "text": "Whole column\n🎬 Find the mean with:\n\ncats |&gt; \n  summarise(mean(mass))\n\n# A tibble: 1 × 1\n  `mean(mass)`\n         &lt;dbl&gt;\n1         4.51\n\n\nnaming the column\n🎬 Give a name to the new column containing the mean:\n\ncats |&gt; \n  summarise(mean = mean(mass))\n\n# A tibble: 1 × 1\n   mean\n  &lt;dbl&gt;\n1  4.51\n\n\nadding other summary stats\n🎬 Find the mean, standard deviation and sample size:\n\ncats |&gt;\n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass))\n\n# A tibble: 1 × 3\n   mean    sd     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1  4.51  1.20    62\n\n\n🛝 you add se\n\ncats |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))\n\n# A tibble: 1 × 4\n   mean    sd     n    se\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1  4.51  1.20    62 0.152"
+    "text": "Whole column\nWe can use summarise() to get summary statistics for a whole column.\n🎬 Find the mean with:\n\ncats |&gt; \n  summarise(mean(mass))\n\n# A tibble: 1 × 1\n  `mean(mass)`\n         &lt;dbl&gt;\n1         4.51\n\n\nThe result is a dataframe (not a vector). This is one of the very useful features of dplyr and the tidyverse. Dataframes are the main data structure in R, and most functions in the tidyverse return dataframes. This makes it easy to chain together multiple operations using the pipe operator (|&gt;).\nBy default the name of the column is the function name. This is not very informative, so we can give it a more meaningful name.\nNaming the column\nTo name the column, we can use the name = argument in the summarise() function.\n🎬 Give a name to the new column containing the mean:\n\ncats |&gt; \n  summarise(mean = mean(mass))\n\n# A tibble: 1 × 1\n   mean\n  &lt;dbl&gt;\n1  4.51\n\n\nAnother useful feature of dataframe outputs is that it is easy to add more columns.\nAdding other summary stats\nTo add additional summary statistics, we can just add more arguments to the summarise() function. These are separated by commas.\n🎬 Find the mean, standard deviation and sample size:\n\ncats |&gt;\n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass))\n\n# A tibble: 1 × 3\n   mean    sd     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1  4.51  1.20    62\n\n\nThere is no function in R for the standard error of the mean, but we can calculate it from the standard deviation and sample size. The formula is:\n🛝 Add a column for the standard error which is given by \\(\\frac{s.d.}{\\sqrt{n}}\\). The function for the square root is sqrt().\n\nAnswer - don’t look until you have tried!cats |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))\n\n# A tibble: 1 × 4\n   mean    sd     n    se\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1  4.51  1.20    62 0.152\n\n\nSo far we have only summarised the whole column. We can also summarise by groups in another column."
   },
   {
     "objectID": "materials/data-manipulation.html#by-groups-given-in-another-column",
     "href": "materials/data-manipulation.html#by-groups-given-in-another-column",
     "title": "Data manipulation",
     "section": "By groups given in another column",
-    "text": "By groups given in another column\n\ncats |&gt; \n  group_by(coat) |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))\n\n# A tibble: 6 × 5\n  coat           mean     sd     n     se\n  &lt;chr&gt;         &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;\n1 black          4.63  1.33     23  0.278\n2 calico         2.19 NA         1 NA    \n3 ginger         4.46  1.12     10  0.353\n4 tabby          4.86  0.444     8  0.157\n5 tortoiseshell  4.50  0.929     5  0.416\n6 white          4.34  1.34     15  0.345"
+    "text": "By groups given in another column\nThe pipe operator (|&gt;) is a great way to chain together multiple operations. We can use it to group the data by a column and then summarise it.\n🎬 Find the mean, standard deviation, sample size and standard error for each coat colour:\n\ncats |&gt; \n  group_by(coat) |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))\n\n# A tibble: 6 × 5\n  coat           mean     sd     n     se\n  &lt;chr&gt;         &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;\n1 black          4.63  1.33     23  0.278\n2 calico         2.19 NA         1 NA    \n3 ginger         4.46  1.12     10  0.353\n4 tabby          4.86  0.444     8  0.157\n5 tortoiseshell  4.50  0.929     5  0.416\n6 white          4.34  1.34     15  0.345"
   },
   {
     "objectID": "materials/data-manipulation.html#save-the-results-with-assignment",
     "href": "materials/data-manipulation.html#save-the-results-with-assignment",
     "title": "Data manipulation",
     "section": "Save the results with assignment",
-    "text": "Save the results with assignment\n\ncats_summary &lt;- cats |&gt; \n  group_by(coat) |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))"
+    "text": "Save the results with assignment\nWe can save the results of the summarise operation to a new dataframe using the assignment operator (&lt;-). This is useful if we want to use the results later.\n🎬 Assign the summarised data to a new dataframe called cats_summary:\n\ncats_summary &lt;- cats |&gt; \n  group_by(coat) |&gt; \n  summarise(mean = mean(mass),\n            sd = sd(mass),\n            n = length(mass),\n            se = sd / sqrt(n))"
   },
   {
     "objectID": "materials/data-manipulation.html#filter-to-only-the-black-cats",
     "href": "materials/data-manipulation.html#filter-to-only-the-black-cats",
     "title": "Data manipulation",
-    "section": "filter to only the black cats",
-    "text": "filter to only the black cats\n\ncats_black &lt;- cats |&gt; \n  filter(coat == \"black\")"
+    "section": "Filter to only the black cats",
+    "text": "Filter to only the black cats\n🎬 Filter to only the black cats\n\ncats_black &lt;- cats |&gt; \n  filter(coat == \"black\")\n\n🎬 Or only the not black cats:\n\ncats |&gt; \n  filter(coat != \"black\")\n\n# A tibble: 39 × 2\n   coat           mass\n   &lt;chr&gt;         &lt;dbl&gt;\n 1 white          2.8 \n 2 tabby          4.96\n 3 tortoiseshell  5.86\n 4 white          4.3 \n 5 tabby          4.92\n 6 white          3.23\n 7 white          6.53\n 8 tortoiseshell  3.53\n 9 tortoiseshell  4.52\n10 ginger         5.18\n# ℹ 29 more rows\n\n\n! is the NOT operator. It negates whatever comes next. So coat != \"black\" returns all rows where the coat is not black."
   },
   {
     "objectID": "materials/data-manipulation.html#piping-is-great",
     "href": "materials/data-manipulation.html#piping-is-great",
     "title": "Data manipulation",
-    "section": "piping is great",
-    "text": "piping is great\n\ncats |&gt; \n  filter(coat == \"black\") |&gt; \n  summarise(mean = mean(mass),\n            n = length(mass))\n\n# A tibble: 1 × 2\n   mean     n\n  &lt;dbl&gt; &lt;int&gt;\n1  4.63    23"
+    "section": "Piping is great",
+    "text": "Piping is great\nWe can use the pipe operator to chain together multiple operations. For example, we can filter the data and then summarise it in one step. This means we don’t have to create a new dataframe for the filtered data. For exploratory analysis, this is often the best approach to avoid clutter.\n🎬 Summarise the black cats:\n\ncats |&gt; \n  filter(coat == \"black\") |&gt; \n  summarise(mean = mean(mass),\n            n = length(mass))\n\n# A tibble: 1 × 2\n   mean     n\n  &lt;dbl&gt; &lt;int&gt;\n1  4.63    23"
   },
   {
-    "objectID": "materials/data-manipulation.html#filter-for-cats-over-4-kilos",
-    "href": "materials/data-manipulation.html#filter-for-cats-over-4-kilos",
+    "objectID": "materials/data-manipulation.html#filtering-on-more-than-one-condition",
+    "href": "materials/data-manipulation.html#filtering-on-more-than-one-condition",
     "title": "Data manipulation",
-    "section": "filter for cats over 4 kilos",
-    "text": "filter for cats over 4 kilos\n\ncats |&gt; \n  filter(mass &gt; 6,\n         coat == \"ginger\")\n\n# A tibble: 2 × 2\n  coat    mass\n  &lt;chr&gt;  &lt;dbl&gt;\n1 ginger  6.37\n2 ginger  6.09"
+    "section": "Filtering on more than one condition",
+    "text": "Filtering on more than one condition\n\ncats |&gt; \n  filter(mass &gt; 6,\n         coat == \"ginger\")\n\n# A tibble: 2 × 2\n  coat    mass\n  &lt;chr&gt;  &lt;dbl&gt;\n1 ginger  6.37\n2 ginger  6.09"
   },
   {
     "objectID": "materials/data-manipulation.html#filter-the-raw-data-to-remove-calico",

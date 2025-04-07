@@ -115,7 +115,32 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="../styles.css">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="../styles.css">
 </head>
 <body class="nav-fixed">
 
@@ -170,8 +195,8 @@ div.csl-indent {
 <li>
 <a href="#whole-column" id="toc-whole-column" class="nav-link" data-scroll-target="#whole-column">Whole column</a>
   <ul class="collapse">
-<li><a href="#naming-the-column" id="toc-naming-the-column" class="nav-link" data-scroll-target="#naming-the-column">naming the column</a></li>
-  <li><a href="#adding-other-summary-stats" id="toc-adding-other-summary-stats" class="nav-link" data-scroll-target="#adding-other-summary-stats">adding other summary stats</a></li>
+<li><a href="#naming-the-column" id="toc-naming-the-column" class="nav-link" data-scroll-target="#naming-the-column">Naming the column</a></li>
+  <li><a href="#adding-other-summary-stats" id="toc-adding-other-summary-stats" class="nav-link" data-scroll-target="#adding-other-summary-stats">Adding other summary stats</a></li>
   </ul>
 </li>
   <li><a href="#by-groups-given-in-another-column" id="toc-by-groups-given-in-another-column" class="nav-link" data-scroll-target="#by-groups-given-in-another-column">By groups given in another column</a></li>
@@ -181,9 +206,9 @@ div.csl-indent {
   <li>
 <a href="#filtering-rows" id="toc-filtering-rows" class="nav-link" data-scroll-target="#filtering-rows">Filtering rows</a>
   <ul>
-<li><a href="#filter-to-only-the-black-cats" id="toc-filter-to-only-the-black-cats" class="nav-link" data-scroll-target="#filter-to-only-the-black-cats">filter to only the black cats</a></li>
-  <li><a href="#piping-is-great" id="toc-piping-is-great" class="nav-link" data-scroll-target="#piping-is-great">piping is great</a></li>
-  <li><a href="#filter-for-cats-over-4-kilos" id="toc-filter-for-cats-over-4-kilos" class="nav-link" data-scroll-target="#filter-for-cats-over-4-kilos">filter for cats over 4 kilos</a></li>
+<li><a href="#filter-to-only-the-black-cats" id="toc-filter-to-only-the-black-cats" class="nav-link" data-scroll-target="#filter-to-only-the-black-cats">Filter to only the black cats</a></li>
+  <li><a href="#piping-is-great" id="toc-piping-is-great" class="nav-link" data-scroll-target="#piping-is-great">Piping is great</a></li>
+  <li><a href="#filtering-on-more-than-one-condition" id="toc-filtering-on-more-than-one-condition" class="nav-link" data-scroll-target="#filtering-on-more-than-one-condition">Filtering on more than one condition</a></li>
   <li><a href="#filter-the-raw-data-to-remove-calico" id="toc-filter-the-raw-data-to-remove-calico" class="nav-link" data-scroll-target="#filter-the-raw-data-to-remove-calico">filter the raw data to remove calico</a></li>
   <li><a href="#adding-columns" id="toc-adding-columns" class="nav-link" data-scroll-target="#adding-columns">Adding columns</a></li>
   </ul>
@@ -227,6 +252,7 @@ div.csl-indent {
 <li>Writing data to a file</li>
 </ul></section><section id="summarising" class="level1"><h1>Summarising</h1>
 <section id="whole-column" class="level2"><h2 class="anchored" data-anchor-id="whole-column">Whole column</h2>
+<p>We can use <code>summarise()</code> to get summary statistics for a whole column.</p>
 <p>🎬 Find the mean with:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
@@ -238,7 +264,10 @@ div.csl-indent {
 1         4.51</code></pre>
 </div>
 </div>
-<section id="naming-the-column" class="level3"><h3 class="anchored" data-anchor-id="naming-the-column">naming the column</h3>
+<p>The result is a dataframe (not a vector). This is one of the very useful features of <code>dplyr</code> and the tidyverse. Dataframes are the main data structure in R, and most functions in the tidyverse return dataframes. This makes it easy to chain together multiple operations using the pipe operator (<code>|&gt;</code>).</p>
+<p>By default the name of the column is the function name. This is not very informative, so we can give it a more meaningful name.</p>
+<section id="naming-the-column" class="level3"><h3 class="anchored" data-anchor-id="naming-the-column">Naming the column</h3>
+<p>To name the column, we can use the <code>name =</code> argument in the <code>summarise()</code> function.</p>
 <p>🎬 Give a name to the new column containing the mean:</p>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
@@ -250,7 +279,9 @@ div.csl-indent {
 1  4.51</code></pre>
 </div>
 </div>
-</section><section id="adding-other-summary-stats" class="level3"><h3 class="anchored" data-anchor-id="adding-other-summary-stats">adding other summary stats</h3>
+<p>Another useful feature of dataframe outputs is that it is easy to add more columns.</p>
+</section><section id="adding-other-summary-stats" class="level3"><h3 class="anchored" data-anchor-id="adding-other-summary-stats">Adding other summary stats</h3>
+<p>To add additional summary statistics, we can just add more arguments to the <code>summarise()</code> function. These are separated by commas.</p>
 <p>🎬 Find the mean, standard deviation and sample size:</p>
 <div class="cell">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span></span>
@@ -264,21 +295,25 @@ div.csl-indent {
 1  4.51  1.20    62</code></pre>
 </div>
 </div>
-<p>🛝 you add se</p>
+<p>There is no function in R for the standard error of the mean, but we can calculate it from the standard deviation and sample size. The formula is:</p>
+<p>🛝 Add a column for the standard error which is given by <span class="math inline">\(\frac{s.d.}{\sqrt{n}}\)</span>. The function for the square root is <code><a href="https://rdrr.io/r/base/MathFun.html">sqrt()</a></code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<details class="code-fold"><summary>Answer - don’t look until you have tried!</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">summarise</span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">mass</span><span class="op">)</span>,</span>
 <span>            sd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">mass</span><span class="op">)</span>,</span>
 <span>            n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">mass</span><span class="op">)</span>,</span>
 <span>            se <span class="op">=</span> <span class="va">sd</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
    mean    sd     n    se
   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
 1  4.51  1.20    62 0.152</code></pre>
 </div>
 </div>
+<p>So far we have only summarised the whole column. We can also summarise by groups in another column.</p>
 </section></section><section id="by-groups-given-in-another-column" class="level2"><h2 class="anchored" data-anchor-id="by-groups-given-in-another-column">By groups given in another column</h2>
+<p>The pipe operator (<code>|&gt;</code>) is a great way to chain together multiple operations. We can use it to group the data by a column and then summarise it.</p>
+<p>🎬 Find the mean, standard deviation, sample size and standard error for each coat colour:</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">coat</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -299,6 +334,8 @@ div.csl-indent {
 </div>
 </div>
 </section><section id="save-the-results-with-assignment" class="level2"><h2 class="anchored" data-anchor-id="save-the-results-with-assignment">Save the results with assignment</h2>
+<p>We can save the results of the summarise operation to a new dataframe using the assignment operator (<code>&lt;-</code>). This is useful if we want to use the results later.</p>
+<p>🎬 Assign the summarised data to a new dataframe called <code>cats_summary</code>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_summary</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">coat</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -308,14 +345,40 @@ div.csl-indent {
 <span>            se <span class="op">=</span> <span class="va">sd</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="filtering-rows" class="level1"><h1>Filtering rows</h1>
-<section id="filter-to-only-the-black-cats" class="level2"><h2 class="anchored" data-anchor-id="filter-to-only-the-black-cats">filter to only the black cats</h2>
+<p>We often want to work with a subset of the rows in our data. This might be to focus on one group or to remove data through quality control. The <code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code> function is used to filter rows in a dataframe. It takes a logical expression as an argument and returns only the rows that match the expression.</p>
+<section id="filter-to-only-the-black-cats" class="level2"><h2 class="anchored" data-anchor-id="filter-to-only-the-black-cats">Filter to only the black cats</h2>
+<p>🎬 Filter to only the black cats</p>
 <div class="cell">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_black</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">coat</span> <span class="op">==</span> <span class="st">"black"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="piping-is-great" class="level2"><h2 class="anchored" data-anchor-id="piping-is-great">piping is great</h2>
+<p>🎬 Or only the not black cats:</p>
 <div class="cell">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">coat</span> <span class="op">!=</span> <span class="st">"black"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 39 × 2
+   coat           mass
+   &lt;chr&gt;         &lt;dbl&gt;
+ 1 white          2.8 
+ 2 tabby          4.96
+ 3 tortoiseshell  5.86
+ 4 white          4.3 
+ 5 tabby          4.92
+ 6 white          3.23
+ 7 white          6.53
+ 8 tortoiseshell  3.53
+ 9 tortoiseshell  4.52
+10 ginger         5.18
+# ℹ 29 more rows</code></pre>
+</div>
+</div>
+<p><code>!</code> is the NOT operator. It negates whatever comes next. So <code>coat != "black"</code> returns all rows where the coat is not black.</p>
+</section><section id="piping-is-great" class="level2"><h2 class="anchored" data-anchor-id="piping-is-great">Piping is great</h2>
+<p>We can use the pipe operator to chain together multiple operations. For example, we can filter the data and then summarise it in one step. This means we don’t have to create a new dataframe for the filtered data. For exploratory analysis, this is often the best approach to avoid clutter.</p>
+<p>🎬 Summarise the black cats:</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">coat</span> <span class="op">==</span> <span class="st">"black"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">summarise</span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">mass</span><span class="op">)</span>,</span>
 <span>            n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">mass</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -326,9 +389,9 @@ div.csl-indent {
 1  4.63    23</code></pre>
 </div>
 </div>
-</section><section id="filter-for-cats-over-4-kilos" class="level2"><h2 class="anchored" data-anchor-id="filter-for-cats-over-4-kilos">filter for cats over 4 kilos</h2>
+</section><section id="filtering-on-more-than-one-condition" class="level2"><h2 class="anchored" data-anchor-id="filtering-on-more-than-one-condition">Filtering on more than one condition</h2>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">mass</span> <span class="op">&gt;</span> <span class="fl">6</span>,</span>
 <span>         <span class="va">coat</span> <span class="op">==</span> <span class="st">"ginger"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -341,7 +404,7 @@ div.csl-indent {
 </div>
 </section><section id="filter-the-raw-data-to-remove-calico" class="level2"><h2 class="anchored" data-anchor-id="filter-the-raw-data-to-remove-calico">filter the raw data to remove calico</h2>
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">coat</span> <span class="op">!=</span> <span class="st">"calico"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 61 × 2
@@ -361,7 +424,7 @@ div.csl-indent {
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_summary</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_summary</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">coat</span> <span class="op">!=</span> <span class="st">"calico"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 5
@@ -375,7 +438,7 @@ div.csl-indent {
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_summary</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_summary</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">sd</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 5
@@ -389,7 +452,7 @@ div.csl-indent {
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_summary</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats_summary</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">drop_na</span><span class="op">(</span><span class="va">sd</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 5
@@ -404,21 +467,21 @@ div.csl-indent {
 </div>
 </section><section id="adding-columns" class="level2"><h2 class="anchored" data-anchor-id="adding-columns">Adding columns</h2>
 <div class="cell">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>mass_g <span class="op">=</span> <span class="va">mass</span> <span class="op">*</span> <span class="fl">1000</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>is_ginger_chonk <span class="op">=</span> <span class="va">mass</span> <span class="op">&gt;</span> <span class="fl">6</span> <span class="op">&amp;</span> <span class="va">coat</span> <span class="op">==</span> <span class="st">"ginger"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>size <span class="op">=</span> <span class="fu">case_when</span><span class="op">(</span><span class="va">mass</span> <span class="op">&lt;</span> <span class="fl">3.5</span> <span class="op">~</span> <span class="st">"small"</span>,</span>
 <span>                          <span class="va">mass</span> <span class="op">&gt;</span> <span class="fl">5</span> <span class="op">~</span> <span class="st">"large"</span>,</span>
 <span>                          .default <span class="op">=</span> <span class="st">"medium"</span>  <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cats</span> <span class="op">&lt;-</span> <span class="va">cats</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>size2 <span class="op">=</span> <span class="fu">case_when</span><span class="op">(</span></span>
 <span>    <span class="va">mass</span> <span class="op">&lt;</span> <span class="fl">3.5</span> <span class="op">~</span> <span class="st">"small"</span>,</span>
 <span>    <span class="va">mass</span> <span class="op">&gt;=</span> <span class="fl">3.5</span> <span class="op">&amp;</span> <span class="va">mass</span> <span class="op">&lt;=</span> <span class="fl">5</span> <span class="op">~</span> <span class="st">"medium"</span>,</span>
@@ -426,7 +489,7 @@ div.csl-indent {
 </div>
 </section></section><section id="writing-data-to-a-file" class="level1"><h1>Writing data to a file</h1>
 <div class="cell">
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">write_csv</span><span class="op">(</span><span class="va">cats</span>, <span class="st">"cats-added.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">write_csv</span><span class="op">(</span><span class="va">cats</span>, <span class="st">"cats-added.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Pages made with R <span class="citation" data-cites="R-core">(<a href="#ref-R-core" role="doc-biblioref">R Core Team 2025</a>)</span>, Quarto <span class="citation" data-cites="Allaire_Quarto_2024">(<a href="#ref-Allaire_Quarto_2024" role="doc-biblioref">Allaire et al. 2024</a>)</span>, <code>knitr</code> <span class="citation" data-cites="knitr1 knitr2 knitr3">(<a href="#ref-knitr1" role="doc-biblioref">Xie 2024</a>, <a href="#ref-knitr2" role="doc-biblioref">2015</a>, <a href="#ref-knitr3" role="doc-biblioref">2014</a>)</span>, <code>kableExtra</code> <span class="citation" data-cites="kableExtra">(<a href="#ref-kableExtra" role="doc-biblioref">Zhu 2024</a>)</span></p>
 </section><section id="references" class="level1">
