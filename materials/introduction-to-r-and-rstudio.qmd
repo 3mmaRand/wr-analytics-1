@@ -16,9 +16,9 @@ library(tidyverse)
 -   Typing in data and plotting it
 -   Importing data: working directories and paths
 
-## Finding your way round RStudio
+# Finding your way round RStudio
 
-### RStudio: live demonstration
+## RStudio: live demonstration
 
 -   the panels
     -   Top left: Script - write and edit code and comments to keep
@@ -39,7 +39,7 @@ library(tidyverse)
 -   types of R files: `.R`, `.RData` `.RHistory`
 
 
-### Overview of demonstration
+## Overview of demonstration
 
 There are several ways you can recap the demo at a later date:
 
@@ -55,14 +55,14 @@ There are several ways you can recap the demo at a later date:
 {{< video https://youtu.be/2Ke1FGdaMSI >}}
 
 
-## Typing in data and plotting it
+# Typing in data and plotting it
 
 🎬 We code together
 
 🛝 You try!
 
 
-### The goal 🐈 plot
+## The goal 🐈 plot
 
 We will work with some data on the coat colour of 62 cats. You are going
 to type data in R, summarise and plot it
@@ -105,7 +105,7 @@ ggplot(data = coat_data,
 ```
 
 
-### Getting set up
+## Getting set up
 
 -   🎬  In RStudio do File | New project | New directory
     Be purposeful about where you create it and name it. I 
@@ -115,7 +115,7 @@ ggplot(data = coat_data,
     rest of the work.  
 
 
-### Creating the data
+## Creating the data
 
 Start by making a vector called `coat` that holds coat colours
 
@@ -146,7 +146,7 @@ freq <- c(23, 15, 8, 10, 5, 1)
 
 ```
 
-### Packages
+## Packages
 
 Commands like `c()` and `sum()` are in packages which are part
 the 'base' R system. A package is a collection of related commands. Base
@@ -166,7 +166,7 @@ library(tidyverse)
 You will likely be warned of some function name conflicts but these will
 not be a problem for you.
 
-### Plotting the data with `ggplot()`
+## Plotting the data with `ggplot()`
 
 -   `ggplot()` takes a dataframe for an argument
 -   We can make a dataframe of the two vectors, `coat` and `freq` 
@@ -202,7 +202,7 @@ Note that `ggplot2` is the name of the package and `ggplot()` is its
 most important command.
 
 
-### Using the help manual
+## Using the help manual
 
 The manual tells us about a function. 'Arguments' can be added to 
 the `geom_col()` command inside the brackets.
@@ -413,7 +413,7 @@ ggplot(data = coat_data, aes(x = coat, y = freq)) +
 ```
 
 
-## Importing data from files
+# Importing data from files
 
 Typing in data is not practical when you have a lot of it. 
 Far more commonly, we import data from a file into R. This requires 
@@ -448,7 +448,7 @@ directory*.
 
 
 
-### The goal
+## The goal
 
 ```{r}
 #| echo: false
@@ -468,7 +468,7 @@ ggplot(data = cats, aes(x = coat, y = mass)) +
 ```
 
 
-### Getting set up
+## Getting set up
 
 -   🎬  In RStudio do File | New project | New directory
     Be purposeful about where you create it and name it. I 
@@ -480,6 +480,7 @@ ggplot(data = cats, aes(x = coat, y = mass)) +
 -   🎬  Save this file to your `cats-2` folder: The coat colour and 
     mass of 62 cats - [cat-coats.csv](data-raw/cat-coats.csv)
 
+## Learning about working directories and paths
 
 ### Reading in data from the *Project* folder `cats-2`
 
@@ -546,7 +547,7 @@ relative path is `data-raw/cat-coats.csv`
 cats <- read_csv("data-raw/cat-coats.csv")
 ```
 
-### Creating a boxplot
+## Creating a boxplot
 
 
 🎬  Create a simple barplot using `ggplot` like this:

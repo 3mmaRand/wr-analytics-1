@@ -4,3 +4,179 @@ toc: true
 toc-location: right
 ---
 
+```{r}
+#| echo: false
+library(tidyverse)
+cats <- read_csv("data-raw/cat-coats.csv")
+```
+
+
+# Introduction
+
+-   Summarising data
+    -   Whole column
+    -   By groups in another column
+-   Filtering rows
+-   Adding columns
+-   Writing data to a file
+
+# Summarising
+
+## Whole column
+
+🎬 Find the mean with:
+
+```{r}
+cats |> 
+  summarise(mean(mass))
+```
+
+
+
+### naming the column
+
+
+🎬 Give a name to the new column containing the mean:
+
+```{r}
+cats |> 
+  summarise(mean = mean(mass))
+```
+
+
+
+### adding other summary stats
+
+🎬 Find the mean, standard deviation and sample size:
+
+```{r}
+cats |>
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass))
+```
+
+
+
+
+🛝 you add se
+
+```{r}
+cats |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+```
+
+## By groups given in another column
+
+```{r}
+cats |> 
+  group_by(coat) |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+```
+
+## Save the results with assignment
+
+```{r}
+cats_summary <- cats |> 
+  group_by(coat) |> 
+  summarise(mean = mean(mass),
+            sd = sd(mass),
+            n = length(mass),
+            se = sd / sqrt(n))
+```
+# Filtering rows
+
+## filter to only the black cats
+
+```{r}
+cats_black <- cats |> 
+  filter(coat == "black")
+```
+
+
+## piping is great
+
+```{r}
+cats |> 
+  filter(coat == "black") |> 
+  summarise(mean = mean(mass),
+            n = length(mass))
+```
+
+## filter for cats over 4 kilos
+
+```{r}
+cats |> 
+  filter(mass > 6,
+         coat == "ginger")
+```
+
+
+## filter the raw data to remove calico
+
+```{r}
+cats |> 
+  filter(coat != "calico")
+```
+
+```{r}
+cats_summary |> 
+  filter(coat != "calico")
+```
+
+```{r}
+cats_summary |> 
+  filter(!is.na(sd))
+```
+
+
+```{r}
+cats_summary |> 
+  drop_na(sd)
+```
+
+## Adding columns
+
+```{r}
+cats <- cats |> 
+  mutate(mass_g = mass * 1000)
+```
+
+
+```{r}
+cats <- cats |> 
+  mutate(is_ginger_chonk = mass > 6 & coat == "ginger")
+```
+
+```{r}
+cats <- cats |> 
+  mutate(size = case_when(mass < 3.5 ~ "small",
+                          mass > 5 ~ "large",
+                          .default = "medium"  ))
+```
+
+
+```{r}
+cats <- cats |> 
+  mutate(size2 = case_when(
+    mass < 3.5 ~ "small",
+    mass >= 3.5 & mass <= 5 ~ "medium",
+    mass > 5 ~ "large"))
+```
+# Writing data to a file
+
+
+```{r}
+write_csv(cats, "cats-added.csv")
+```
+
+Pages made with R [@R-core], Quarto [@Allaire_Quarto_2024], `knitr` 
+[@knitr1; @knitr2; @knitr3], `kableExtra` [@kableExtra]
+
+# References
